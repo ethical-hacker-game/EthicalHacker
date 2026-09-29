@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Animations/Button.controller",
+      "sha256": "78508514e9e1685cad8124a56e7cd581f5db7b20fa39a02c2b681e9897e8ac00",
+      "meta_sha256": "3484d0ba9582563161d5eac3af45ce1ddef509b9ef91c82232568f7261867732",
+      "guid": "4468549ad94b20843b874135a70790d1",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    },
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Animations/HigLight.anim",
+      "sha256": "b3eccdfb282ad4848c38f095ea9ed335d5a1e3c8641fedf7af7a402747cd4fe8",
+      "meta_sha256": "65d8e19e6ee2625307ba14daee4dae8259d5f3b0a7ae3b782667818e7b4ff45f",
+      "guid": "c5885b125ffb2a74aba1c70df9c3045e",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    },
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Animations/reset.anim",
+      "sha256": "1dcb9140de5f45769bf2abe56360b7be916150a73f994d4d80f40083f1569160",
+      "meta_sha256": "4bf167bbb4533dbcd026a279f2d7e50bc806e85ef5d5e95b4fc32e3b193f3f7c",
+      "guid": "0321e6e440fedb24e93327a1e6bec8d8",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    },
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Materials/EarthMaterial.mat",
+      "sha256": "9fad3c3c1728b024cf7b8382dea19278b9106b4c3b80a62656f86ec852ee5b15",
+      "meta_sha256": "cbbfa548be783ac1e5583d66021c9ebbf9b9db597f434db0732fbba901a43e4b",
+      "guid": "aabf89805a60d3c43909d1cd2beeaa38",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    },
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Materials/PointMaterial.mat",
+      "sha256": "cbd65b3a94555075c12831b0c5ae2118205b4028d1225e041ae10c2376b3d390",
+      "meta_sha256": "b4572f4fd59a719c71418021b8bb473a519d0318ee48fff1f60a8453b9b64940",
+      "guid": "d93859f47fecd8f439e45305557c92fd",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    },
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Models/Materials/defaultMat.mat",
+      "sha256": "d06968b86c1121044efbf23c18605430f1dd89f1ce9e619288f65c82609be9bb",
+      "meta_sha256": "15bd354db33fc80ed9a5f5ae5333a3ee95f5f1cc5f3ef9bfbe0e44bdffa73f40",
+      "guid": "a5b66b98b8a23c54d95bea747780e759",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    },
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Prefabs/Point.prefab",
+      "sha256": "27f1b79883a6f217dd6a430a5ddca198bc4573c66220d3b99bbee46604b26315",
+      "meta_sha256": "9a1740179f5b1a00b00026e4f4d6a39bf14281d443f4e9982084f6744f857622",
+      "guid": "dff023814afa9c64e93e73923335bbcb",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    },
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Scenes/population.unity",
+      "sha256": "383aa59d6e0ba5e0da5247acee3b1b595421ada0989d99746c5b175f7d409cc9",
+      "meta_sha256": "e4179efc6c457d6103f6ebe5a1f30526b40c29f2015df0e2031a6fad2aaa18c7",
+      "guid": "4cc116b224f6c474b83822315acf3653",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    },
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Scenes/populationSettings.lighting",
+      "sha256": "cc0a13a38961409f162735504d74c89fca4fb53ceae39294165506303964d8e1",
+      "meta_sha256": "0e156711db8679b528f9c8125f023a12868515c06731ee2fe2b4347acac1d355",
+      "guid": "2a94f589fce2f2147a472012aa72fcfc",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    },
+    {
+      "path": "Assets/_ASSETS/Unity3DGlobe/Scripts/CameraObrbit.cs",
+      "sha256": "aa436a5cd641d0b7d7e521303237f6c2175034da8884d679ccdcab5dbcc3ece8",
+      "meta_sha256": "36401e2341042d2723929127171b51eb82395b0266bfff8d1e89d991154dcc7a",
+      "guid": "673ceb566908cd1458812bdf8f475d7b",
+      "reason": "Imported Globe 1.0 variant differs from the verified MIT upstream; supply locally with original metadata"
+    }
+  ]
+}

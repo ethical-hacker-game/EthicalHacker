@@ -1,0 +1,39 @@
+{
+  "contentId": "BaseContent",
+  "contentName": "Base Content",
+  "version": "1.0.0",
+  "scenarios": [
+    {
+      "name": "1. Footprinting and Reconnaissance",
+      "file": "01_recon.json"
+    },
+    {
+      "name": "2. Social Engineering",
+      "file": "02_social.json"
+    },
+    {
+      "name": "3. IoT Devices",
+      "file": "03_iot.json"
+    },
+    {
+      "name": "4. Network Scanning and Analysis",
+      "file": "04_networks.json"
+    },
+    {
+      "name": "5. Vulnerability Analysis",
+      "file": "05_vulnerability_analysis.json"
+    },
+    {
+      "name": "6. Password Cracking",
+      "file": "06_password.json"
+    },
+    {
+      "name": "7. Dark Web Threat Intelligence",
+      "file": "07_darkweb.json"
+    },
+    {
+      "name": "8. Insider Threats",
+      "file": "08_insider.json"
+    }
+  ]
+}

@@ -1,0 +1,2431 @@
+{
+  "id": "03_iot",
+  "contentPackId": "BaseContent",
+  "name": "3. IoT Devices",
+  "description": null,
+  "stages": [
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Logins failing strictly due to repeated multifactor authentication timeout errors on legitimate resident accounts.",
+        "A massive spike in automated login attempts from various regions using variations of reused credentials.",
+        "A sudden drop in standard API traffic accompanied by a wave of routine password reset requests from residents.",
+        "Isolated failed login attempts coming from a single local resident's home IP address over a long period of time."
+      ],
+      "incorrectAnswerText": "Credential stuffing relies on automation! Attackers take massive lists of leaked usernames and passwords from previous data breaches and feed them into automated tools to test them across other platforms simultaneously.",
+      "id": "U03Q01_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! I just got a frantic call from a smart home startup called Solstice Living. They install cloud-integrated IoT lighting and security systems for large residential complexes. Residents are complaining about creepy behavior: lights flickering on and off, random music blasting, and security cameras moving on their own. The CTO strongly suspects an account takeover campaign. I'm pulling up the central IoT device login logs right now. What indicators should we look for to confirm a credential stuffing attack?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q01_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly, the logs are flooded with automated, distributed requests from dozens of different regions. It's a massive credential stuffing wave. I've been looking into how they managed to hammer the authentication endpoint so aggressively without getting blocked. It turns out the startup's smart hub automatically syncs with the cloud for config updates, but their cloud APIs don't have any rate limiting or connection throttling enabled. The attackers are just brute-forcing thousands of combinations with zero resistance.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Because IoT device firmware is automatically encrypted and regularly patched against vulnerabilities.",
+        "Because cloud APIs inherently restrict all incoming remote user access using hardware MAC binding.",
+        "Because consumers frequently use default credentials and suffer from poor password hygiene across devices.",
+        "Because each physical smart switch allows for localized brute-force scripts to run offline."
+      ],
+      "incorrectAnswerText": "The human factor is the weakest link here. Users constantly recycle the same passwords across various websites. When one obscure forum gets breached, hackers immediately test those same credentials against high-value targets like smart home cloud portals.",
+      "id": "U03Q01_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The Solstice Living developers are huddled around my screen. They understand how the brute force script is running, but they asked a foundational question: Why are these cloud-integrated IoT ecosystems so uniquely vulnerable to widespread credential stuffing compared to traditional corporate networks?",
+      "stageType": 2
+    },
+    {
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "locationId": "SOLSTICE_BOTNET_C2",
+      "iconId": "",
+      "id": "U03Q01_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Spot on. Shoddy password habits are a hacker's best friend. I ran a reverse lookup on the primary subnet coordinating this automated botnet. The command-and-control server pushed the leaked credential database directly to an active proxy node. I've intercepted its geographic network coordinates. Let's register it on our threat map so we can issue an upstream block.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Implementing mandatory multi-factor authentication (MFA) and monitoring real-time login patterns.",
+        "Only allowing users to log into their smart home applications during standard business hours.",
+        "Forcing an automatic session logout for inactive smart home users every 60 minutes.",
+        "Encrypting static customer data stored locally on the physical IoT hardware devices."
+      ],
+      "incorrectAnswerText": "MFA shatters automated attacks! Forcing Multi-Factor Authentication completely stops credential stuffing in its tracks, because even if the hacker has the correct password, they cannot replicate the secondary token.",
+      "id": "U03Q01_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Proxy node logged. Now, the Solstice Living management is panicking about the fallout and future risks. They want us to design a layered defense architecture to protect their cloud-connected systems and stop these account takeovers for good. What is the absolute best preventative implementation we should recommend in our security advisory?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Decline the long-term retainer, collect the flat emergency fee for today's threat hunting, and close the incident file.",
+          "moneyReward": 450,
+          "honorReward": 10
+        },
+        {
+          "optionText": "Accept the retainer contract to build a hardened API rate-limiting framework and secure their cloud backend architecture.",
+          "moneyReward": 300,
+          "honorReward": 40
+        }
+      ],
+      "id": "U03Q01_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Perfect. Enforcing MFA, deploying CAPTCHAs on the login portal, and setting up an IP reputation filter will completely neutralize this threat vector. The startup's founders are incredibly relieved and just authorized our emergency response payment. They also offered to sign us up for a comprehensive security retainer to oversee their next firmware rollout. How do you want to handle this?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_IOT_CLOUD_HARDENING",
+      "id": "U03Q01_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Fantastic work. Tearing through this credential stuffing attack really highlighted how critical layered defense is for the internet of things. I've aggregated all our API throttling policies, MFA implementation parameters, and log analysis scripts into a comprehensive defense matrix. Ready to unlock this new skill and level up your toolkit?",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "An attacker compromising an end-user's mobile app credentials to manually manipulate hardware settings.",
+        "A coordinated volumetric DDoS attack designed to overwhelm cloud infrastructure managing smart grids.",
+        "An insider threat physically gaining access to residential solar arrays to tamper with physical wiring.",
+        "A malicious actor compromising a trusted vendor's update pipeline to inject hidden code into automated firmware payloads."
+      ],
+      "incorrectAnswerText": "Supply chain attacks weaponize third-party trust! By compromising the vendor's firmware update pipeline, attackers can push malicious code directly into every downstream device completely bypassing local network barriers.",
+      "id": "U03Q02_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Look at this diagnostic data from Verdant Grid. They deploy solar IoT panels across smart neighborhoods, but ever since they integrated a third-party monitoring module from a vendor called Sun Flux, things have gone sideways. Customers are reporting massive energy data inconsistencies, panels are randomly rebooting, and the IT staff discovered bizarre outbound DNS traffic. The root cause? These IoT modules automatically pull cloud-based firmware updates from the vendor with zero internal review or sandboxing. Based on this layout, how would you best define a supply chain attack in an IoT cloud context?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q02_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly. The attackers didn't breach Verdant Grid directly. They went after Sun Flux's delivery pipeline. I just managed to download the firmware update logs and extracted the latest package metadata. Take a look at these hashes. They do not match the vendor's official public release keys at all! Even worse, there is an embedded script running on the panels that generates quiet, periodic DNS queries to an unclassified domain. This is highly sophisticated.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "To silently exfiltrate harvested network data and establish a command channel using a low-visibility protocol.",
+        "To trick local residential users into performing manual factory resets on their physical hardware.",
+        "To automatically redirect web browsers on the local neighborhood network to Verdant Grid's homepage.",
+        "To immediately trigger high-voltage physical grid shutdowns across the smart neighborhoods."
+      ],
+      "incorrectAnswerText": "It's all about stealth data exfiltration. DNS tunneling allows attackers to hide command-and-control communication or stolen data inside normal-looking DNS lookup requests, completely evading standard firewalls.",
+      "id": "U03Q02_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The engineering team wants to understand the attacker's motive here. They can see the unauthorized script pulling down small payloads, but the overall system performance isn't crashing. Why would an advanced threat actor choose to implement this specific type of low-frequency DNS tunneling inside a compromised firmware update?",
+      "stageType": 2
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "False",
+        "True"
+      ],
+      "incorrectAnswerText": "It's absolutely True! Because the organization expects and trusts updates from the vendor, traditional signature blocks, firewalls, and internal monitoring systems often let the malicious code slip right through without inspection.",
+      "id": "U03Q02_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Right on the money. It's a stealth channel. Unfortunately, because Verdant Grid trusted this vendor blindly, this malicious firmware update was pushed out automatically to hundreds of deployed solar panels across multiple residential complexes. The management is in a total panic about customer trust. They asked me a theoretical question: True or False: supply chain attacks are uniquely dangerous to cloud systems because they actively exploit established vendor relationships to bypass internal security mechanisms?",
+      "stageType": 2
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Migrate all residential IoT hardware to isolated local wireless bands with hidden SSIDs.",
+        "Enforce a strict organization-wide policy requiring weekly administrative password resets.",
+        "Disable outbound DNS access entirely across all core IoT infrastructure firmware.",
+        "Mandate strict cryptographic validation and hash verification of all third-party updates before deployment."
+      ],
+      "incorrectAnswerText": "Cryptographic validation is your shield! Forcing the system to verify the digital signature and cryptographic hash of an update against a trusted public key guarantees that the code hasn't been modified in transit.",
+      "id": "U03Q02_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "We've successfully isolated the compromised firmware, but we need to hand the Verdant Grid executives an immediate, actionable strategy to build operational resilience and ensure this never happens again. Beyond setting up an internal testing sandbox, what is the most critical technical defense they must implement?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the consulting retainer to design a zero-trust architecture and automated firmware integrity validation system.",
+          "moneyReward": 350,
+          "honorReward": 45
+        },
+        {
+          "optionText": "Take the flat emergency response fee, hand off our incident report, and keep our availability open for other network emergencies.",
+          "moneyReward": 500,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q02_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Perfect. Enforcing signature verification and establishing an air-gapped staging environment to test vendor code will completely change their security posture. Verdant Grid's board is incredibly relieved and just authorized a premium payout for our incident response work. They also asked if we'd be willing to consult on a complete architecture overhaul for their next-generation smart grid routers. What's our move?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_SUPPLY_CHAIN_HARDENING",
+      "id": "U03Q02_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Working through this supply chain breach really proves that you can't assume an update is safe just because it comes from a trusted partner. I've compiled all our firmware log analysis, cryptographic verification checks, and DNS tunneling remediation steps into a comprehensive defensive module. Let's unlock this skill and permanently upgrade your technical toolkit.",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "An external ransomware payload immediately infecting the local greenhouse clients' personal smartphones.",
+        "Greenhouse employees being entirely locked out of their physical on-site administrative workstations.",
+        "Unauthorized users accessing, manipulating, or replacing the live IoT firmware updates with malicious payloads.",
+        "The smart greenhouse sensors being physically tracked down and stolen directly from the users' properties."
+      ],
+      "incorrectAnswerText": "The firmware pipeline is totally exposed! Since the IoT devices trust and download updates from this public bucket without authentication, an attacker can swap the legitimate firmware with a malicious backdoor, compromising every smart greenhouse in the network.",
+      "id": "U03Q03_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Are you online? An old friend of mine named Maya just reached out to me in a panic. She recently launched an amazing IoT-connected greenhouse startup for local crop growers, but things just took a terrifying turn. One of her clients accidentally stumbled upon her company's internal AWS S3 bucket and sent her a screenshot. I'm looking at her cloud dashboard right now, and it's a disaster: internal firmware builds, raw device logs, and employee contact lists are completely exposed to the public with absolutely no authentication required. To make things worse, her smart greenhouse devices in the field automatically ping this exact bucket for all their updates. What is the most immediate, critical risk Maya's company faces due to this misconfigured storage?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q03_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly. If an attacker injects a rogue firmware build into that bucket, every single automated greenhouse goes down. I had Maya immediately revoke public read access, rotate all active API keys, and flip the global bucket-level permission policy to strictly private. We managed to close the open window before any malicious traffic hit the endpoint.",
+      "stageType": 0
+    },
+    {
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "locationId": "SEATTLE_CLOUD_NODE",
+      "iconId": "",
+      "id": "U03Q03_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "Now that we've contained the immediate leak, we need to completely restructure how her cloud resources handle access controls. We want to ensure that only specific, authenticated developer roles can write updates to these buckets, rather than relying on global settings. I've mapped out her cloud tenant infrastructure. Let's tag the primary node on our map to deploy an Identity and Access Management audit framework.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Mandating IAM-based role access and strict credential policies for all cloud storage resources.",
+        "Migrating the entire operational data model to a completely different commercial IoT cloud provider.",
+        "Relying purely on filename encryption without changing the bucket's open access permissions.",
+        "Creating a secondary public backup bucket to replicate the exposed data in real time."
+      ],
+      "incorrectAnswerText": "IAM roles are the answer! By requiring explicit Identity and Access Management (IAM) authentication and restricting write permissions only to authorized system roles, you eliminate accidental public exposures entirely.",
+      "id": "U03Q03_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Audit node is live. Maya is reviewing the configuration with me, and she wants to understand the long-term fix. We talked about adopting the principle of least privilege and setting up strict audit logs. To permanently secure cloud storage assets tied to an IoT ecosystem, which architectural policy is essential?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Take the flat emergency response payout for saving her startup today, wrap up the documentation, and keep our queue open.",
+          "moneyReward": 350,
+          "honorReward": 5
+        },
+        {
+          "optionText": "Accept the quarterly retainer to implement automated cloud configuration compliance scanning and API security baseline testing.",
+          "moneyReward": 250,
+          "honorReward": 35
+        }
+      ],
+      "id": "U03Q03_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Nailed it. Enabling bucket-level logging and enforcing rigorous IAM roles completely locks down her supply chain. Maya is incredibly grateful. She just processed our consulting payment and even offered us a recurring contract to audit her greenhouse automated climate APIs every quarter. What do you think, should we lock this in?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_CLOUD_STORAGE_HARDENING",
+      "id": "U03Q03_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Brilliant work. Cleaning up this cloud leak really emphasizes how quickly a simple misconfiguration can jeopardize an entire IoT deployment. I've consolidated our cloud mitigation protocols, IAM policies, and bucket auditing workflows into a specialized skill module. Ready to unlock this to level up your cloud hunting capabilities?",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "An insider threat manually modifying recipes through the master administrative panel.",
+        "Attackers executing a replay attack by capturing and resending valid API requests using stolen tokens.",
+        "A distributed botnet launching a brute-force campaign specifically against local Wi-Fi credentials.",
+        "The customer mobile application continuously crashing due to a corrupted firmware package."
+      ],
+      "incorrectAnswerText": "This is an API replay attack! The attackers aren't guessing passwords; they captured real, authentic API commands and are maliciously broadcasting them again to force the machines to execute unauthorized actions.",
+      "id": "U03Q04_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Are you dynamic right now? I'm hanging out at Jules' indie coffee shop, you know, the one with that fully automated, cloud-integrated IoT barista setup. Jules called me over because her cloud dashboard is showing massive, inexplicable operational spikes in the middle of the night. Since her entire shop, from the espresso machines to the smart menus, runs on third-party IoT systems via APIs, she’s terrified someone has breached her network. I just pulled the API logs and noticed a flood of unauthorized POST requests coming from multiple unfamiliar IP addresses, but the requests look exactly like legitimate commands. Based on these symptoms, what kind of exploit are we dealing with here?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q04_STAGE_01B",
+      "characterName": "Jax",
+      "stageText": "Exactly, it's a replay attack. The attackers captured valid API requests and are just replaying them to control the shop's hardware. I started digging into how they managed to sniff those authorization tokens in the first place. It looks like someone set up a rogue access point nearby that spoofed the coffee shop's public Wi-Fi name, letting them passively harvest wireless traffic from unsuspecting devices and customers connecting to it.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "False",
+        "True"
+      ],
+      "incorrectAnswerText": "That's False! Relay and replay attacks can absolutely target live, cloud-connected environments. If API tokens are handled insecurely, sent unencrypted, or lack temporal validation, an attacker can capture them over a spoofed network and relay them anywhere across the internet to compromise the system.",
+      "id": "U03Q04_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Jules is trying to understand the full mechanics of this compromise. She's under the impression that these types of relay and replay exploits can only occur in closed, offline local network environments where the attacker has direct line-of-sight to the router. How should we answer her? Is it True or False that relay attacks are strictly limited to capturing and resending authentication tokens in offline environments?",
+      "stageType": 2
+    },
+    {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "locationId": "COFFEE_SHOP_ROGUE_AP",
+      "iconId": "",
+      "id": "U03Q04_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "We need to trace where the rogue access point is hiding. Based on signal telemetry, the attacker's harvesting node is actively routing the sniffed API tokens to a hidden proxy server nearby. Let's pinpoint its coordinate cluster on our map so we can isolate the rogue wireless hardware.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Permanently disabling wireless network access exclusively on the coffee machines.",
+        "Running frequent, automated firmware updates on the smart menus and store lighting systems.",
+        "Implementing strict token expiration windows and binding active tokens cryptographically to specific devices.",
+        "Displaying descriptive, customer-facing error messages on the store's public terminal screens."
+      ],
+      "incorrectAnswerText": "Token hygiene and device binding are vital! Implementing short token expiration windows ensures captured tokens quickly become useless, and binding tokens to unique device IDs prevents attackers from replaying commands from unauthorized machines.",
+      "id": "U03Q04_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Location flagged. Now we need to implement immediate remediation to secure Jules' automated coffee house cloud before her business takes a serious financial hit. We are already helping her rotate all her compromised API keys and forcing TLS encryption across all endpoints. However, to establish an effective, long-term architectural defense for her IoT APIs, what is the most critical security control we should integrate?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the warehouse audit contract to deploy full origin validation and design a robust, role-based access control framework for their inventory hardware.",
+          "moneyReward": 300,
+          "honorReward": 40
+        },
+        {
+          "optionText": "Decline the long-term contract, pocket the flat fee for saving the coffee shop today, and keep our calendar open for fresh threat alerts.",
+          "moneyReward": 400,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q04_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Boom. Implementing device-specific authorization and rolling out proper token expiration completely neutralizes the replay loop. Jules can finally run her shop without the espresso machines acting possessed. She's incredibly grateful and paid us our full emergency response fee, plus she wants to hire us for a larger contract next month to audit her entire regional supply warehouse's network. What's the plan?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_API_REPLAY_DEFENSE",
+      "id": "U03Q04_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Fantastic work on this. Stopping this API exploitation really underscores why standalone authentication isn't enough, you need defensive token hygiene and proper endpoint encryption to truly protect smart tech. I've synthesized our logs, traffic replays, and remediation steps into a comprehensive API security protocol. Ready to unlock this skill and add it to your profile?",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Because experimental hardware prototypes only transmit fully encrypted traffic by default.",
+        "Because wireless network sniffers strictly require physical hardware modifications to intercept signals.",
+        "Because prototype device MAC addresses automatically rotate every 15 seconds by default design.",
+        "Because many legacy and prototype IoT protocols transmit command payloads in unencrypted plain text."
+      ],
+      "incorrectAnswerText": "Plain text is an open door! Many basic IoT protocols lack built-in encryption, allowing anyone with a standard wireless adapter to capture and read raw data packets passing through the air.",
+      "id": "U03Q06_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Grab a coffee and look at this mess. I'm hanging out at the local DIY tech collective where hobbyists test their custom IoT prototypes. My buddy Theo is losing his mind because his central sensor hub keeps dropping offline, and the connected devices are lagging horribly. Knowing this place, half of these prototypes transmit their data in pure plain text over the air. I highly suspect someone in the building is running a wireless packet sniffer to spy on the collective's traffic. From a security standpoint, why are unencrypted IoT prototypes so inherently vulnerable to simple wireless sniffing attacks?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q06_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly, plain text is a goldmine for an attacker. I just fired up a wireless analyzer and isolated a rogue network node that's passively listening across multiple subnets. It's not registered anywhere in the system. Theo thinks it's just an old, forgotten lighting project, but it's actively capturing every unencrypted packet in the room. Since it's purely capturing data and not transmitting anything back, it's completely silent.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "It's False! Passive sniffing operates silently by putting the wireless interface into promiscuous or monitor mode. The device just listens to the radio waves without sending any packets, making it completely invisible to standard network logs.",
+      "id": "U03Q06_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "Theo is still skeptical about how dangerous this silent node actually is. He claims that if a device is connected to the same Wi-Fi access point, its sniffing activity will always trigger a visible alert or a collision on the network dashboard. Is his assumption True or False?",
+      "stageType": 2
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "It's absolutely True! If the command packets aren't cryptographically protected or timestamped, the device cannot tell the difference between a real command and an attacker replaying a captured plain-text packet.",
+      "id": "U03Q06_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "To prove the danger to Theo, I decided to demonstrate a live exploit. I intercepted an unencrypted plain-text control packet meant for a servo-motor project on a nearby bench. I replayed the exact same payload back into the airwaves, and boom: a motorized door swung open on its own, completely shocking the hobbyists standing next to it! Based on this, is it True or False that replay attacks using captured unencrypted traffic allow an attacker to control an IoT device without ever needing to crack credentials?",
+      "stageType": 2
+    },
+    {
+      "latitude": 52.52,
+      "longitude": 13.405,
+      "locationId": "TECH_COLLECTIVE_LAB",
+      "iconId": "",
+      "id": "U03Q06_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Theo is fully convinced now. We need to track down exactly where this rogue listening device is physically hidden inside the collective workshop. I've mapped the signal triangulation from the rogue node. Let's select the source coordinate cluster on the grid so we can go rip it out.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Place physical security stickers on the prototype enclosures that explicitly say 'Do Not Hack This Device Please'.",
+        "Switch the entire building over to a standard public Wi-Fi network with no custom credentials or segmentation at all.",
+        "Enforce end-to-end payload encryption for all IoT traffic and completely isolate the device network from general public access.",
+        "Schedule an automated script to reboot the primary gateway router on a fixed timer exactly every twenty-four hours."
+      ],
+      "incorrectAnswerText": "Encryption and network segmentation are the golden standards! Encrypting the payloads ensures that even if someone sniffs the wireless packets, they only see gibberish, and segmenting the network keeps attackers isolated from sensitive hardware.",
+      "id": "U03Q06_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Found it. It was hidden right behind an old amplifier! Now, let's help Theo and the other makers lock down the collective's entire infrastructure so this can't happen again. We're already configuring TLS for their MQTT services, disabling broadcast discovery, and enabling token authentication for command inputs. What is one more critical architectural recommendation we should give them to protect their future prototypes from packet sniffing?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Politely decline the workshop, take our flat reward token, and clear our queue to monitor for broader wireless infrastructure threats.",
+          "moneyReward": 350,
+          "honorReward": 10
+        },
+        {
+          "optionText": "Accept the speaking invitation to teach the community about secure token management, payload encryption, and defense-in-depth for IoT prototyping.",
+          "moneyReward": 200,
+          "honorReward": 50
+        }
+      ],
+      "id": "U03Q06_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Fantastic. We've got the collective running on a segmented VLAN with encrypted MQTT streams, and Theo's hub is running perfectly smooth again. The lab crew is so grateful they took up a collection to pay us a solid reward. They also asked if we'd be willing to stay and give a presentation on secure firmware design to the community next weekend. What do you think?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_IOT_TRAFFIC_HARDENING",
+      "id": "U03Q06_STAGE_08",
+      "characterName": "Jax",
+      "stageText": "Securing that collective was an awesome reminder of how fragile smart tech can be when it relies on unencrypted protocols. I've aggregated all our wireless packet analysis, network segmentation strategies, and secure MQTT configurations into a new defensive module. Let's activate this skill to boost your wireless defensive profile.",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "The attacker might download public status logs and post them across social media networks.",
+        "The attacker is strictly restricted to reading basic status logs and cannot alter active functions.",
+        "The attacker can bypass the requirement to configure a multi-factor authentication application.",
+        "The attacker can silently alter vital device functionality or completely disable critical monitoring undetected."
+      ],
+      "incorrectAnswerText": "Unrestricted local access completely destroys device integrity! By using local proximity protocols like unencrypted Bluetooth, any nearby attacker can rewrite device configurations or turn off safety sensors without the cloud management platform ever noticing.",
+      "id": "U03Q07_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "You won't believe where I am right now. I'm visiting an old friend named Callum who runs a semi-off-the-grid eco-lodge out in the wilderness. He rents out these awesome cabins that are entirely powered and monitored by IoT devices, everything from solar arrays to smart thermostats. But he's panicking because he suspects a recent guest in cabin four has been maliciously 'tinkering' with the smart hub. I pulled the system logs and saw multiple unauthorized reboots outside of maintenance hours, and someone completely disabled the cabin's temperature monitoring via an admin console over Bluetooth! The kicker? Callum never changed the default factory credentials. What is the primary operational risk of leaving unrestricted local access ports open on IoT hardware like this?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q07_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly. They just walked right past the cloud defense by leveraging local radio proximity. I fired up a RF scanner on my phone and showed Callum that several nearby smart hubs are still actively shouting out unauthenticated Bluetooth broadcast queries to anyone within range. It's a massive blind spot that a lot of deployment teams completely overlook because they assume cloud encryption protects the physical device.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "False",
+        "True"
+      ],
+      "incorrectAnswerText": "It's absolutely True! If a device doesn't authenticate local proximity-based protocols like Bluetooth or Zigbee, an attacker standing within physical range can talk directly to the hardware, completely cutting out the cloud layer and its security controls.",
+      "id": "U03Q07_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "Callum is trying to wrap his head around how his cloud dashboard didn't prevent this. He asked me a direct question: 'If an attacker is physically nearby an IoT device, can they actively bypass established cloud-based security protections to gain direct control over specific device features?'",
+      "stageType": 2
+    },
+    {
+      "latitude": 44.0521,
+      "longitude": -123.0868,
+      "locationId": "ECO_LODGE_MESH_CENTER",
+      "iconId": "",
+      "id": "U03Q07_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "We need to check the remaining cabins to see how far this guest's signal footprint reached. I've pinpointed the central mesh coordinate cluster for the lodge's local wireless network on our threat map. Let's tag the node so we can intercept any stray configuration payloads.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Enforce an administrative policy requiring the main lodge Wi-Fi password to be changed weekly.",
+        "Install high-definition physical security cameras directly facing every cabin's smart hub enclosure.",
+        "Request all incoming guests to manually report any unusual appliance behavior to the check-in office.",
+        "Completely disable unauthenticated Bluetooth access and mandate secure admin login credentials for all local changes."
+      ],
+      "incorrectAnswerText": "Shutting down unauthenticated proximity access is the priority! Disabling open Bluetooth discovery and swapping out factory default passwords forces the device to challenge local connections, shutting down drive-by proximity exploits.",
+      "id": "U03Q07_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Alright, the network bridge is secured. Now we need to help Callum and his staff lock down these hubs immediately so no other guests can hijack the lodge infrastructure. We are already teaching them how to implement MAC filtering and deploy tamper-evident physical casings on high-risk equipment. But to mitigate this local access vulnerability at its root, what is one of the very first technical steps we must perform right now?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the cooperative consulting retainer to design a secure local authentication baseline and audit their wireless sensor mesh layouts.",
+          "moneyReward": 300,
+          "honorReward": 45
+        },
+        {
+          "optionText": "Take the flat emergency response fee for today's work, package the current documentation, and keep our calendar open for fresh network alerts.",
+          "moneyReward": 450,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q07_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Boom! We disabled the open local ports, updated all the default admin credentials across every single cabin hub, and taught the staff how to spot tampered hardware. Callum is incredibly relieved and just paid us a great emergency consulting fee. He also mentioned that his eco-conscious resort cooperative wants a full security audit of their automated irrigation systems next month. What's our play?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_PROXIMITY_IOT_HARDENING",
+      "id": "U03Q07_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "This was a textbook example of why proximity security matters just as much as cloud firewalls. I've synthesized our local protocol audits, credential hardening steps, and physical anti-tampering practices into a specialized skill module. Let's unlock this to permanently upgrade your IoT defensive toolkit.",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "It consumes significantly more electrical power from the local power grid.",
+        "It causes frequent, random system reboots purely due to low-level memory leaks.",
+        "It frequently contains unpatched, publicly known vulnerabilities that allow remote code execution.",
+        "It locks down the hardware so it can only be updated manually via physical USB drives."
+      ],
+      "incorrectAnswerText": "Unpatched vulnerabilities are a jackpot for hackers! Outdated firmware often contains well-documented exploits that allow remote threat actors to completely hijack the device, steal private user data, or recruit the hardware into a botnet.",
+      "id": "U03Q08_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey, you won't believe what I just stumbled into. I was digging through a local second-hand electronics shop looking for spare parts and decided to pick up a few cheap, used smart security cameras. As soon as I took them home and plugged them in, my jaw dropped. The live footage from the previous owner's house was still broadcasting right on the screen! It turns out the camera's outdated firmware is still persistently communicating with a legacy cloud account it should have severed ties with years ago. Looking closely at the device architecture, what is the single most dangerous security risk of running outdated IoT firmware?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q08_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly. Attackers don't even need to be creative when the vulnerabilities are already published online. When I analyzed the device's update mechanism, the reality was even worse: the update feature still pulls packages over unencrypted HTTP, and the process can be triggered remotely without a single drop of authentication! It's a massive back door waiting to be abused.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "It is absolutely True! Cryptographic signing guarantees that the firmware package is genuine and hasn't been altered by an attacker, while encrypted distribution channels like HTTPS prevent threat actors from sniffing or manipulating the update in transit.",
+      "id": "U03Q08_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "I immediately drove back to the electronics shop to warn the owner, Ralphie. He had absolutely no idea that selling used smart tech could accidentally leak his customers' entire private lives. While I'm explaining the fundamentals of secure supply chains, he asks me a question to clear things up: 'True or False: IoT firmware should always be digitally signed by the manufacturer and delivered via secure, authenticated channels to ensure it hasn't been tampered with?'",
+      "stageType": 2
+    },
+    {
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "locationId": "ELECTRONICS_SHOP_BENCH",
+      "iconId": "",
+      "id": "U03Q08_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Ralphie wants us to check the rest of his inventory before he puts any more smart hardware on shelves. I've initiated a wide-spectrum firmware integrity scan on the store's test bench. Let's tag the local node on our tactical map to isolate any other active legacy cloud beacons.",
+      "stageType": 4
+    },
+    {
+      "options": [
+        {
+          "optionText": "Take a flat consulting fee for today's emergency intervention and keep our schedule flexible for active grid threats.",
+          "moneyReward": 400,
+          "honorReward": 10
+        },
+        {
+          "optionText": "Accept the ongoing partnership to build an automated firmware sandboxing and signature-checking environment for his shop.",
+          "moneyReward": 300,
+          "honorReward": 40
+        }
+      ],
+      "id": "U03Q08_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Awesome, we've flashed the cameras with secure baselines, revoked the old active tokens, and showed Ralphie how to verify cryptographic firmware hashes before reselling any smart gear. He is incredibly grateful for saving his shop's reputation from a total privacy disaster. He's offering us a steady contract to act as his official security clearinghouse for all incoming smart stock. Do we take the gig?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_FIRMWARE_FORENSICS_HARDENING",
+      "id": "U03Q08_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Incredible work today. Spotting that open update pipeline really drives home the point that physical devices require secure software lifecycles just as much as any corporate network server. I've synthesized our firmware analysis, cryptographic hash verification, and secure OTA update guidelines into a new skill block. Let's unlock this module to expand your defensive capabilities!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Randomly missing data fields scattered evenly across all of the different sensor types in the deployment at once.",
+        "The physical IoT hardware units out in the field repeatedly crashing and rebooting throughout the day on their own.",
+        "Cloud storage allocation usage spiking dramatically and unpredictably at completely random intervals of the day.",
+        "Specific, sensitive environmental sensor fields being systematically absent despite stable data transmission."
+      ],
+      "incorrectAnswerText": "Systematic absence is the red flag! When network transmission is completely stable but specific, sensitive fields vanish without an error, someone is likely filtering the data before it gets visualized.",
+      "id": "U03Q09_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Are you by your terminal? I just took a freelance look at a company called Arbor Sense. They deploy IoT air quality monitors across public parks to track temperature, humidity, and pollutant levels via a cloud dashboard. Lately, their environmental graphs have been looking incredibly weird, crucial chunks of data are just vanishing, but there's zero network downtime and no system errors being reported. I dug into the raw sensor pools and noticed something highly suspicious. Which of these signs strongly suggests that Arbor Sense's sensor data is being intentionally censored or manipulated rather than just naturally lost over the network?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q09_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly. It's too clean to be a random network drop. I brought my findings to their CTO and started tracing the operational timeline. I managed to track the issue back to a firmware update pushed three weeks ago that introduced a silent, malicious filter. If a sensor flags a high pollutant reading, the rogue firmware excludes that specific reading entirely before sending the payload to the cloud, effectively muting all the bad environmental news without raising a single alarm on the dashboard!",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "False",
+        "True"
+      ],
+      "incorrectAnswerText": "It's absolutely True! Because the firmware alters the data package directly on the edge device before it's even transmitted, the cloud receives what looks like a perfectly formed, error-free payload, completely unaware that fields were stripped out.",
+      "id": "U03Q09_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The CTO is completely stunned that their cloud alerts didn't catch this integrity breach. He's trying to understand the vector and asks us to clarify: 'Is it True or False that firmware-based censorship of sensor data can occur smoothly without triggering any errors, warnings, or alerts at the cloud infrastructure level?'",
+      "stageType": 2
+    },
+    {
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "locationId": "ARBOR_SENSE_STAGING",
+      "iconId": "",
+      "id": "U03Q09_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "We need to find out where the unauthorized firmware update was compiled. I ran a forensic trace on the deployment server and found the coordinate cluster of the staging node used to push the silent filter. Let's select it on our map so we can lock down the access point.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Physically replace all air quality sensors deployed across the parks every three months.",
+        "Restrict data collection exclusively to GPS metadata to simplify the telemetry payload.",
+        "Implement strict data validation and automated anomaly detection across all active sensor fields.",
+        "Deploy heavier cryptographic encryption protocols on the cloud storage side alone."
+      ],
+      "incorrectAnswerText": "Data validation and anomaly detection are essential! By establishing an expected baseline for data behavior and validating fields at both ends, the system can immediately flag unnatural dropouts or sudden silences in telemetry.",
+      "id": "U03Q09_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Staging node isolated. Now we need to help the Arbor Sense team implement a robust strategy to protect their environmental telemetry path from ever being compromised like this again. Beyond just flashing clean firmware, what is the best long-term engineering approach to catch future data manipulation across their sensor fields?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the quarterly audit contract to review their end-to-end edge encryption pipelines and establish secure configuration baselines.",
+          "moneyReward": 300,
+          "honorReward": 40
+        },
+        {
+          "optionText": "Take the flat emergency response fee for today's work, document the firmware fix, and keep our queue clear for new incidents.",
+          "moneyReward": 400,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q09_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Nailed it. Deploying data validation baselines and setting up real-time anomaly detection entirely neutralizes that silent data clipping trick. Arbor Sense's dashboard graphs are now completely accurate, and the CTO just authorized our freelance payout with a fantastic bonus. They even asked if we'd be available to audit their park camera feeds next quarter. What's the plan?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_IOT_DATA_INTEGRITY",
+      "id": "U03Q09_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Incredible work. Exposing that hidden firmware filter really highlights that protecting IoT isn't just about keeping the devices online, it's about ensuring the absolute integrity of the data they generate. I've packed our data validation methodologies and firmware auditing techniques into a specialized skill module. Let's unlock it to level up your field kit!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "They are required to allow automatic firmware updates to compile and execute properly over the network.",
+        "They actively help external IT departments access and troubleshoot hardware issues at a faster rate.",
+        "They strictly limit the background network bandwidth usage of connected IoT endpoints.",
+        "They are widely published and can be trivially exploited by anyone to gain instant, admin-level control over the device."
+      ],
+      "incorrectAnswerText": "Default credentials are an open invitation! Manufacturers reuse the exact same simple passwords (like 'admin' or '1234') across thousands of units, meaning anyone can find them online and instantly hijack the device's administrative functions.",
+      "id": "U03Q10_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! You around? I'm hanging out at the downtown community center volunteering for a digital literacy workshop. They recently put in this high-tech smart whiteboard for hybrid classes that does everything, screen sharing, wireless cloud syncing, and lesson recording uploads. But after class, I literally overheard a couple of students joking about 'hacking the whiteboard' using the classic password combo admin/admin. I checked it out, and it's a total disaster: the center never changed the factory default credentials, exposing the admin panel, device settings, and student data! Why exactly are default factory credentials such a catastrophic risk in an IoT setup like this?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q10_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly. Leaving those defaults active is basically rolling out a red carpet for an attacker. I logged into the board's web console using those default details just to show the center's director how bad it was. We could see every single class video recording, active user account info, and the full cloud synchronization configuration keys. Anyone on the local network could have completely rewritten the device firmware or used it as a pivot point to attack the entire community center network.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "That's completely False! Firewalls do not protect against local insider threats, compromised guest Wi-Fi users, or malware that has already bypassed the perimeter. If an attacker gets inside the network, an unhardened IoT device is a sitting duck.",
+      "id": "U03Q10_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "One of the staff members came running over, looking super worried. He tried to defend the setup by asking me: 'Is leaving default credentials unchanged safe as long as the IoT device is sitting safely behind a local network firewall?'",
+      "stageType": 2
+    },
+    {
+      "latitude": 41.8781,
+      "longitude": -87.6298,
+      "locationId": "COMMUNITY_CENTER_SERVER",
+      "iconId": "",
+      "id": "U03Q10_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "We need to make sure there aren't any other unhardened devices broadcast-beaconing on this network segment. I've initiated a local credential audit scan across the center's subnets. Let's flag the primary core router on our tactical grid so we can run a full inventory verification.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Disable all network connectivity on the smart whiteboards entirely and have the staff go back to using physical dry-erase markers.",
+        "Implement an automated script that quietly resets every classroom whiteboard back to its factory default settings each and every night.",
+        "Enforce a strict device hardening checklist that mandates changing all default credentials before any IoT hardware is deployed on the network.",
+        "Display the shared admin password in large print on the classroom wall so that busy staff members never forget what it is."
+      ],
+      "incorrectAnswerText": "An initialization policy is key! Enforcing a deployment checklist ensures that no device ever goes live on the production network with dangerous, factory-set default configurations active.",
+      "id": "U03Q10_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Perfect, network map compiled. Now let's help the center staff permanently secure their hardware environment so no one can mess with their classes again. We're already helping them swap out the default admin passwords for complex strings, configure a hardened administrative account structure, and audit the remaining media systems. What is the most effective policy recommendation we can give them moving forward?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Politely decline the long-term retainer, take our flat payout for today's fix, and keep our calendar clear for immediate cyber incidents.",
+          "moneyReward": 400,
+          "honorReward": 10
+        },
+        {
+          "optionText": "Accept the future audit contract to build a comprehensive access control matrix and establish a vulnerability management routine for all their branches.",
+          "moneyReward": 300,
+          "honorReward": 40
+        }
+      ],
+      "id": "U03Q10_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Awesome job. The whiteboards are fully patched, unique passwords are set, and the staff now understands the critical importance of foundational credential hardening. The director is incredibly grateful and approved a nice service payout for our emergency help. Plus, they asked if we'd be interested in auditing their entire multi-site network infrastructure next semester. What do you think?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_CREDENTIAL_HARDENING",
+      "id": "U03Q10_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Securing this place was a fantastic reminder that sometimes the simplest vulnerabilities are the most devastating. I've synthesized our endpoint audit procedures, credential hardening strategies, and local deployment policies into a new skill block. Let's unlock it to add credential security mastery to your profile!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Personally identifiable information (PII) and live device metrics are accessible without authentication.",
+        "Users are completely unable to trigger a password reset through the web portal.",
+        "The physical collar hardware components only synchronize telemetry once every 24 hours.",
+        "The smart pet collars are frequently dropping offline due to local radio interference."
+      ],
+      "incorrectAnswerText": "Unauthenticated PII access is the definitive sign of a critical data exposure! If sensitive user files or device logs can be read by any random web request without verifying identity first, your data perimeter is nonexistent.",
+      "id": "U03Q11_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! Drop whatever you're doing, I need your brain for a second. I just took a look at an administrative dashboard for 'Pet Tracker', a company that makes GPS-enabled smart collars so people can monitor their pets via a cloud platform. Get this: their system logs are completely public, and anyone who guesses a device ID can pull raw JSON logs straight from their cloud infrastructure without logging in! We are talking about exposed owner profiles, live geolocations, and unencrypted voice command clips. What key technical indicator tells us that Pet Tracker is suffering from a catastrophic IoT data exposure issue here?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q11_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly. It's a goldmine for stalkers or thieves. I started digging deeper into their storage layer to see where this raw JSON dump is actually hosted. It turns out all of their fleet logs are sitting inside a drastically misconfigured AWS S3 cloud storage bucket that has public read permissions enabled. Literally anyone who discovers the bucket URL can scrape the entire historical movement history of every single customer and their pet. The privacy violations here are massive.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "That's completely False! Security through obscurity is not security. Attackers routinely use automated scanning tools to discover open S3 buckets and guess or enumerate common file paths, completely exposing everything inside without needing a shared file name.",
+      "id": "U03Q11_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The company's lead infrastructure engineer is trying to downplay the crisis. He claims that as long as the specific, random file names aren't explicitly shared or published on the internet, a cloud misconfiguration like an open bucket doesn't actually count as exposing sensitive data. Is his claim True or False?",
+      "stageType": 2
+    },
+    {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "locationId": "PET_TRACKER_CLOUD_GATEWAY",
+      "iconId": "",
+      "id": "U03Q11_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "We need to identify where the primary unencrypted API endpoints are broadcasting from before we start blocking access. I've mapped the routing layout for Pet Tracker's cloud cluster. Let's tag the storage gateway on our threat map so we can deploy a temporary access policy override.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Allocate a large amount of additional network bandwidth to the cloud cluster so that data uploads finish faster.",
+        "Disable the voice command feature entirely on every one of the physical collar hardware prototypes in the field.",
+        "Offer free replacement collar accessories to all registered customers as a friendly gesture of goodwill and apology.",
+        "Lock down all exposed endpoints, enforce signed URL tokens, and secure cloud storage with strict access control policies."
+      ],
+      "incorrectAnswerText": "Locking down storage and endpoints is paramount! Enforcing strict IAM policies, deploying signed URL tokens, and ensuring data encryption at rest guarantees that only authorized, authenticated users can ever touch the data.",
+      "id": "U03Q11_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Gateway isolated. Now we need to draft an immediate incident response strategy to secure the Pet Tracker infrastructure and restore trust for their thousands of users. We've already advised them to implement proper role-based permission enforcement and token signatures. To fix the immediate vulnerability at its root, what is the most critical technical step they must take right now?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the retainer contract to build a continuous security posture management pipeline for all their cloud assets.",
+          "moneyReward": 350,
+          "honorReward": 40
+        },
+        {
+          "optionText": "Decline the retainer, collect today's flat incident management payout, and keep our calendar open for critical system alerts.",
+          "moneyReward": 450,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q11_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Outstanding. The S3 buckets are officially private, API token authentication is live, and the data fields are safely encrypted. The executives at Pet Tracker are so relieved they avoided a massive PR disaster that they just sent over our consulting bonus. They want to know if we can stay on retainer to audit their automated logistics tracking database next month. What's our play?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_CLOUD_STORAGE_HARDENING",
+      "id": "U03Q11_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Working on this case really highlights why cloud configuration audits are non-negotiable for IoT deployments. I've compiled our bucket lockdown procedures, signed token implementations, and cloud IAM strategies into a new skill block. Ready to activate this module and add cloud hardening to your arsenal?",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "The raw RTSP streams are accessible globally over the internet without any authentication requirements.",
+        "The internal device logs display encrypted traffic spikes across internal subnets.",
+        "The physical surveillance camera hardware automatically executes a hard reboot every 60 seconds.",
+        "The structural diagnostic LED indicator on the camera casing flashes red exactly once per minute."
+      ],
+      "incorrectAnswerText": "Open RTSP ports are an absolute disaster! Real-Time Streaming Protocol (RTSP) on port 554 will broadcast raw video feeds directly to any client that requests it if authentication mechanisms are completely disabled or omitted by the firmware.",
+      "id": "U03Q12_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Wake up! I just got an urgent call from a contact at a private security firm that manages IoT surveillance for high-profile corporate clients. One of their high-end security cameras has randomly started publicly streaming its live feed to a rogue ghost site on the web! I ran a quick look on the compromised unit's configuration and saw unauthorized external connections flooding port 554 (RTSP) with zero authentication prompts recorded. Looking at the current setup, what specific technical indicator confirms to us that this camera feed has been completely hijacked?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q12_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly, it's broadcasting straight to the open web. I decided to map out the client's local camera subnets manually and initiated a targeted port scan on the vulnerable hardware cluster. A real-time packet capture confirms exactly what we feared: the video payload is passing over the airwaves in completely unencrypted plain text, allowing an external viewer to masquerade on the local IP space and enumerate device ports at will.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "False",
+        "True"
+      ],
+      "incorrectAnswerText": "It's absolutely True! Threat actors use public IoT search engines like Shodan or ZoomEye to index open ports across the global IPv4 space, meaning unauthenticated RTSP feeds are automatically scraped and exposed without the attacker ever running a manual scan.",
+      "id": "U03Q12_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The security firm's operations manager is trying to figure out how the attackers found the stream in the first place. He asks us: 'Is it True or False that completely unencrypted RTSP camera feeds with zero authentication can be systematically discovered by attackers manually, even without utilizing complex network scanning tools?'",
+      "stageType": 2
+    },
+    {
+      "latitude": 35.6762,
+      "longitude": 139.6503,
+      "locationId": "TOKYO_STREAM_RELAY",
+      "iconId": "",
+      "id": "U03Q12_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "We need to identify the exact origin network gateway where this rogue ghost site is capturing the proxy stream. I've mapped out the routing hops of the illicit stream. Let's tag the targeted external relay hub on our threat grid so we can sever the broadcast pipe.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Configure all high-definition camera feeds to automatically mute audio channels unless active recording is tripped.",
+        "Apply opaque physical paint over the device's diagnostic LEDs to reduce its physical visibility in dark rooms.",
+        "Mandate encrypted access tunnels for all video traffic and restrict remote stream access exclusively to authenticated VPN endpoints.",
+        "Enforce a strict administrative retention policy to permanently delete all historical footage every 72 hours."
+      ],
+      "incorrectAnswerText": "Encrypted tunnels and endpoint restriction are non-negotiable! Forcing all RTSP traffic through secure VPN endpoints and encrypting the streams ensures that even if an attacker discovers the device, they cannot view or capture the media payload without valid cryptographic clearance.",
+      "id": "U03Q12_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Streaming relay knocked offline! Now let's implement a permanent architectural fix for this security firm so their high-profile clients don't end up on public broadcast sites ever again. We're already rotating all local device credentials, forcing two-factor administrative logins, and auditing their future firmware update pipeline to ensure unsafe factory defaults are completely stripped out. To secure the media path itself, what is the most effective long-term defense strategy?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Politely decline the continuous retainer contract, accept today's flat incident response payout, and keep our schedule free for fresh anomalies.",
+          "moneyReward": 450,
+          "honorReward": 10
+        },
+        {
+          "optionText": "Accept the consulting retainer to build a secure network segmentation framework and review the perimeter control protocols across all client sites.",
+          "moneyReward": 350,
+          "honorReward": 45
+        }
+      ],
+      "id": "U03Q12_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Brilliant. The client feeds are now locked behind encrypted VPN tunnels, multi-factor auth is required for management consoles, and the public stream leak is completely plugged. The private security company is so relieved they just transferred over our emergency response fee with an amazing bonus. They also asked if we'd be willing to stay on call to audit the automated access gates for their client compounds next month. What's the verdict?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_STREAM_PROXIMAL_HARDENING",
+      "id": "U03Q12_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Handling this live breach was an absolute masterclass in why streaming media requires robust border defense. I've compiled our RTSP diagnostic workflows, VPN tunnel architectures, and firmware hardening guidelines into a specialized skill module. Ready to unlock this capability and maximize your network defensive engineering profile?",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Stray radio frequency (RF) signals from nearby electronics causing physical hardware interference.",
+        "An incorrect regional time zone configuration stored deep within the localized device firmware.",
+        "Expired SSL certificates causing the internal audio processing loops to stall and reset.",
+        "A hidden developer debug mode left active in the firmware, enabling passive audio buffer logging."
+      ],
+      "incorrectAnswerText": "Hidden debug configurations are incredibly dangerous! Manufacturers or malicious sellers sometimes leave developer features like 'passive buffer logging' active, allowing the hardware to dump raw voice metrics directly into memory or outbound pipes without needing the actual wake-word trigger.",
+      "id": "U03Q13_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! You free to chat? I just stopped by my grandmother's place, Nana Lou, to help her troubleshoot a brand new smart home assistant she bought from some 'nice young man at a store'. She was so excited about using it for music and lights, but she had to completely unplug it. Get this: the device keeps triggering its microphone and making the 'listening' chime constantly, even when the room is completely silent and nobody says the wake word! I pulled up the companion app on her tablet and confirmed it's active in the dead of night or when she isn't even home. What do you think is the most likely culprit behind an IoT device capturing audio without a proper wake word?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q13_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly, it's a massive privacy bypass. I hooked the speaker up to my diagnostic rig and packet-sniffed the outbound stream. Even though we can't extract the encrypted audio payload directly, the device is constantly transmitting dense metadata packets back to an unknown rogue cloud server every time it falsely triggers. This means whoever is on the other side is essentially mapping out Nana Lou's entire daily routine based on her home's ambient noise levels.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "It's absolutely True! Passive voice assistant metadata can easily be used for advanced pattern recognition, revealing exactly when you wake up, when you leave the house, how many people are in the room, and even what appliances are running in the background.",
+      "id": "U03Q13_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "Nana Lou sees me frantically typing away and looks super confused. She asked me: 'Jax, if they aren't listening to my exact words or full conversations, can this passive audio metadata actually reveal anything useful or dangerous to a third party?' What should we tell her, True or False?",
+      "stageType": 2
+    },
+    {
+      "latitude": 45.5017,
+      "longitude": -73.5673,
+      "locationId": "ROGUE_TELEMETRY_RECEIVER",
+      "iconId": "",
+      "id": "U03Q13_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "I did a deep dive into the firmware image that this shady seller flashed onto the hardware. The guy intentionally cranked the acoustic trigger sensitivity to the maximum limit so that almost any random background noise tricks the chip into activating the mic. We need to map out where this device is beaconing its stolen telemetry. Let's tag the primary endpoint on the map so we can analyze the rogue collection server.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Reducing the primary speaker playback volume automatically during late-night hours.",
+        "Completely disabling the front LED indicator to run the hardware in a stealth mode.",
+        "Turning off all remote cloud logging dependencies and forcing local-only voice processing.",
+        "Executing a manual hard reset back to factory defaults exactly once every seven days."
+      ],
+      "incorrectAnswerText": "Enforcing local processing is the gold standard! By disabling remote cloud streaming logging and restricting the device to local-only chip parsing, the voice data stays entirely inside the physical home network perimeter, meaning it never reaches an external vendor or attacker.",
+      "id": "U03Q13_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Alright, the server is identified and blacklisted. Nana Lou decided she absolutely doesn't trust this specific sketchy device anymore and wants me to get rid of it, but she still wants a safe smart speaker in the future. I told her she should only buy from reputable official sellers, but when we set up a secure assistant next weekend, what is the single most effective setting we can configure to preserve her absolute data privacy?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the neighborly job to establish a baseline security audit for the local community's smart peripherals and check for configuration leaks.",
+          "moneyReward": 150,
+          "honorReward": 50
+        },
+        {
+          "optionText": "Decline the extra task, take our reward tokens, and get back to the terminal to check the global grid for broader firmware exploitation campaigns.",
+          "moneyReward": 300,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q13_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Perfect. We've thrown away the compromised hardware, and I promised Nana Lou that I'll help her audit and configure her next smart device from scratch to enforce strict local privacy controls. She's so happy she gave us some cash for our trouble and baked an entire tray of fresh cookies. She also asked if we could check her neighbor's automated smart garage door tomorrow. What's our next move?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_VOICE_ASSISTANT_HARDENING",
+      "id": "U03Q13_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Helping family stay secure is an awesome reminder that the threat model inside our living rooms is very real. I've compiled our wake-word analysis, acoustic sensitivity tuning, and local processing enforcement methods into a brand new defensive module. Let's activate this skill to strengthen your smart environment defense profile!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "The network environment's local Wi-Fi password being publicly known to nearby residents.",
+        "Static Bluetooth identifiers combined with unencrypted wireless metadata transmissions.",
+        "The mechanical step counter sensor triggering too frequently inside the wearable casing.",
+        "A complete lack of specialized endpoint antivirus software installed on the users' mobile phones."
+      ],
+      "incorrectAnswerText": "Static identifiers are a tracker's dream! When a device constantly shouts out the exact same unencrypted Bluetooth address along with localized router data, malicious receiver grids can easily map that unique ID to a physical person and log their movements.",
+      "id": "U03Q14_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! Glad I caught you. I just took a look at an emergency ticket for a startup that manufactures smart IoT pedometers. These fitness devices sync steps via Bluetooth and Wi-Fi to a mobile app and cloud dashboard. A user accidentally found their exact, historical daily movement paths published on a random third-party tracking site! I ran a baseline diagnostic on the units and noticed something horrible: every single pedometer broadcasts a completely static identifier during synchronization, alongside raw, unencrypted GPS and local router proximity metadata. Which component of this IoT architecture is directly responsible for leaking the users' precise location tracking data?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q14_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly, it's basically a digital breadcrumb trail. To prove the exploit to the development team, I grabbed one of the retail pedometers and went for a walk around downtown while running a basic BLE sniffer on my phone. Sure enough, the exact same device ID popped up perfectly across multiple different physical locations, allowing me to build a highly accurate, stalker-like movement profile of myself in real-time!",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "It is absolutely True! Correlation is an incredibly powerful tool. If an attacker correlates a static wireless signature appearing at a specific office building every day and a specific residential house every night, they can effortlessly deduce the user's identity and entire routine.",
+      "id": "U03Q14_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The startup's project lead looks completely baffled. She thinks that since the transmissions don't explicitly include real names, home addresses, or direct usernames, it's not a real security issue. She asks us: 'Is it True or False that persistent, static beacon broadcasts can successfully track a person's physical location over time even without transmitting explicit usernames or direct GPS coordinates?'",
+      "stageType": 2
+    },
+    {
+      "latitude": 52.2297,
+      "longitude": 21.0122,
+      "locationId": "COOPERATIVE_BEACON_SINK",
+      "iconId": "",
+      "id": "U03Q14_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "We need to identify the open data collection endpoint where these harvested pedometer beacons are uploading their telemetry. I've tracked the coordinate path of the illicit scraping cluster. Let's tag this node on our threat map so we can deploy an immediate network block.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Force the mobile application to only execute synchronization tasks late at night when fewer wireless sniffers are active.",
+        "Require explicit manual user confirmation pop-ups every single time the wearable attempts a local step sync.",
+        "Implement rolling cryptographic randomization for the broadcast ID and encrypt all location-based metadata before transmission.",
+        "Provide a button in the application settings menu to turn off network synchronization features permanently."
+      ],
+      "incorrectAnswerText": "ID randomization and metadata encryption are the standard! Constantly rotating the Bluetooth broadcast address ensures that sniffer networks can never link separate signals to the same physical device, while encryption prevents eavesdroppers from parsing location data in transit.",
+      "id": "U03Q14_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Rogue server blocked. Now let's help this company completely redesign their wireless sync routine to preserve customer privacy. We are already removing passive metadata gathering from the app and building a user privacy dashboard so customers can audit their stored records. To fix the core hardware beacon tracking issue immediately, what is the best first technical step we must enforce?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Take the flat emergency response fee for today's work, package our remediation documentation, and keep our queue clear for critical infrastructure alerts.",
+          "moneyReward": 450,
+          "honorReward": 10
+        },
+        {
+          "optionText": "Accept the retainer contract to establish secure BLE/Wi-Fi communication baselines and design an automated firmware audit pipeline for their medical gear.",
+          "moneyReward": 350,
+          "honorReward": 40
+        }
+      ],
+      "id": "U03Q14_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Fantastic! Dynamic ID rotation is officially integrated, the synchronization data is completely encrypted, and the passive metadata leaks are plugged tight. The startup executives are incredibly grateful we saved their launch from a massive privacy scandal and authorized our payout. They're also asking if we want a retainer contract to audit their upcoming smart medical wearable line next month. What do you think?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_BLE_BEACON_HARDENING",
+      "id": "U03Q14_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Fixing this leak really demonstrates that physical privacy is completely dependent on secure wireless protocols. I've synthesized our BLE address rotation patterns, metadata filtering techniques, and proximity telemetry encryption standards into a new skill module. Let's unlock it to permanently upgrade your IoT hardening toolkit!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "The previous owner's primary cloud profile account was still actively authenticated in the background.",
+        "A local firewall misconfiguration allowed the device to automatically pull the old files back down from the cloud.",
+        "The standard microchip reset execution sequence failed to trigger entirely due to low voltage limits.",
+        "The hardware caches telemetry and media inside a hidden partition never targeted by standard UI deletion tools."
+      ],
+      "incorrectAnswerText": "Hidden partitions are a massive data retention trap! Many IoT devices utilize undocumented developer directories or raw cache partitions that are completely ignored by the standard user-facing 'reset' buttons, leaving user data physically intact on the storage chips.",
+      "id": "U03Q15_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! You won't believe what I just ran into. An artist friend of mine asked me to look at their AI-powered digital sketchpad. It's a neat IoT canvas that records brush strokes and ambient creative sessions, syncing them automatically to a cloud server. My friend is preparing to sell the device to another creator and wanted to make absolutely sure all personal data was completely cleaned off it first. We ran the device's built-in factory reset, but when I ran a forensic raw scan on the flash storage, I uncovered a secondary, undocumented partition still packed with cached sketch images and recorded voice clips! What is the most likely technical reason this sensitive creative data remained fully accessible even after running standard deletion protocols?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q15_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly, the standard UI tools completely lied to us. The artist was absolutely horrified to see their private studio recordings and draft concepts still perfectly retrievable on the hardware. This is a huge data retention and privacy violation. It means anyone who bought this sketchpad second-hand could have used basic open-source data recovery tools to scrape my friend's entire intellectual property portfolio and personal history.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "That's completely False! Leftover metadata logs can be a goldmine for an attacker. They frequently store precise timestamps, device geolocations, network names, API keys, and behavioral patterns that completely compromise user privacy, even if the main media payload is gone.",
+      "id": "U03Q15_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "My friend is trying to process this and asks: 'Jax, I see there are still persistent metadata files and system logs left over here too. Do those leftover metadata logs actually pose any real privacy risk to me as long as the primary visual art files are wiped out?' What's the technical truth here, True or False?",
+      "stageType": 2
+    },
+    {
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "locationId": "SEATTLE_IOT_FIRMWARE_DEPOT",
+      "iconId": "",
+      "id": "U03Q15_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "To fully understand how deep this unmapped storage directory goes, I need to compare this device's file system layout with the manufacturer's master staging repository. I've tracked down the hosting server for their engineering partition maps. Let's select it on our map so we can extract the true block storage architecture.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Simply uninstalling the companion mobile management application from the owner's personal smartphone.",
+        "Flashing the device's operating system firmware to the absolute latest version available online.",
+        "Powering down the hardware component completely and sealing it inside specialized anti-static film.",
+        "Explicitly identifying and wiping hidden partitions, verifying all local block storage is securely overwritten."
+      ],
+      "incorrectAnswerText": "Targeting hidden volumes and verifying the overwrite is essential! True hardware sanitization requires identifying all unmapped block layers, securely wiping them, and explicitly verifying that no residual sectors or cached metadata remain behind.",
+      "id": "U03Q15_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Partition blueprint downloaded. Now let's help my friend permanently purge this canvas so it can be safely handed off to the buyer. I'm helping them write a secure purging script that mounts the hidden volumes, executes a multi-pass block overwrite, and disables further automated cloud syncing. To ensure absolute data sanitization on any IoT device before reselling it, what is the most critical step?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept a follow-up contract to draft an open-source privacy auditing toolkit for consumer IoT devices and creative hardware pipelines.",
+          "moneyReward": 300,
+          "honorReward": 40
+        },
+        {
+          "optionText": "Collect today's flat incident resolution fee, archive our storage forensic logs, and keep the main console ready for incoming network breaches.",
+          "moneyReward": 400,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q15_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Outstanding work! The hidden partitions are completely zeroed out, a secure multi-pass rewrite is finished, and the cloud sync hooks have been safely decommissioned. My friend is incredibly relieved and paid us a generous consulting fee. They're also planning to alert other creators in their workshop network to check their gear for similar hidden storage vulnerabilities. What's our next objective?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_FORENSIC_STORAGE_WIPING",
+      "id": "U03Q15_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Securing that sketchpad really emphasizes that you can't just trust a basic 'Delete' button when dealing with smart hardware. I've integrated our partition isolation techniques, secure block-wiping mechanics, and storage verification workflows into a new skill block. Let's unlock this module to permanently advance your hardware forensics toolkit!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Command-and-control activity is being actively routed through unexpected third-party services.",
+        "The device's baseline firmware version is outdated compared to the vendor repository.",
+        "The user interface language setting automatically reverted to factory defaults.",
+        "A neighboring building reports identical network spikes inside a completely separate system."
+      ],
+      "incorrectAnswerText": "Unexpected third-party command routing is a definitive red flag! Trojans embedded in IoT firmware often establish hidden connections back to rogue command-and-control infrastructure to receive malicious operational instructions.",
+      "id": "U03Q16_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Yo! You need to hear this, I just got called in for a high-stakes emergency job by Polaris, an international smart device vendor. One of their high-profile clients has a luxury apartment complex fully decked out with a complete Polaris IoT ecosystem, lighting, HVAC, water control, and security. The entire building just experienced a total remote lockout, the lights are flickering, and the security panels are spitting out errors in multiple languages! The internal team thinks it's a firmware bug, but I suspect a malicious Trojan. I decrypted the traffic logs from the erratic HVAC systems and saw weird commands routing through a third-party API that Polaris doesn't even use. What initial sign here indicates we are dealing with a Trojan-infected IoT system?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q16_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Spot on. That third-party traffic was highly suspicious. I managed to track down a rogue firmware update file hosted on a mirror server tied to a known malicious domain. The cryptographic signature doesn't match official Polaris builds at all. When I unpacked the binary image, I found a hidden silent loader designed to execute a secondary malicious payload upon first boot! This is a classic dropper Trojan, designed to slip into the system disguised as a legitimate software update to plant worse threats on the hardware.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "That's completely False! Droppers are intentionally silent and don't alter regular user behavior right away. They are primary uncovered through static binary inspection, code analysis, and verifying firmware file integrity signatures against official vendor hashes.",
+      "id": "U03Q16_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The junior infrastructure dev at Polaris is reviewing my notes. He mentions: 'If these dropper Trojans act so quietly during deployment, they are typically discovered through standard user behavioral analysis rather than direct binary inspection, right?' What do you think, is his statement True or False?",
+      "stageType": 2
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 20,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Reviewing the internal system hardware usage logs manually once every week.",
+        "Manually updating the local DNS server configurations on the central network gateway.",
+        "Monitoring outbound network traffic for anomalies and unauthorized destination mismatches.",
+        "Completely disabling Bluetooth pairing functionalities across all hardware endpoints."
+      ],
+      "incorrectAnswerText": "Monitoring outbound traffic is vital! Info-stealer Trojans must transmit their stolen telemetry to an external destination; continuous monitoring for outbound traffic anomalies and unrecognized IPs will expose these hidden leaks.",
+      "id": "U03Q16_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "It gets worse. While checking the smart building's water usage infrastructure, I noticed the local logs have been quietly exfiltrating raw data to an unknown IP address over non-standard obfuscated ports to bypass monitoring, a textbook info-stealer Trojan harvesting client behavioral metrics. What is the most effective technical way to detect an info-stealer Trojan hidden inside an IoT device?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q16_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Exactly. Follow the data flow and you find the threat. Digging even deeper into the water system's update files, I discovered a hidden remote shell backdoor accessible via a forgotten API endpoint. It turns out this specific code branch was used for factory demo units but was mistakenly pushed to production in a bad deployment build, leaving a wide-open gateway for attackers.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 20,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "It was left inside an outdated development build that was mistakenly pushed out to production.",
+        "It was configured to be controlled exclusively via physical, on-site USB port access.",
+        "It immediately triggered a mechanism that locked all residential users out of their personal profiles.",
+        "It forced the hardware devices to instantly execute a hard reboot whenever a network scan occurred."
+      ],
+      "incorrectAnswerText": "Development artifacts in production are a massive liability! Leaving administrative backdoors or debugging APIs from internal demo or testing builds active inside a production deployment allows anyone to bypass regular authentication protocols entirely.",
+      "id": "U03Q16_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "The Polaris team wants to know why this backdoor Trojan code was able to cause such extensive damage across the ecosystem. Based on our analysis, what made this specific backdoor Trojan especially dangerous to the client's home network?",
+      "stageType": 2
+    },
+    {
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "locationId": "PARIS_BOTNET_C2_RELAY",
+      "iconId": "",
+      "id": "U03Q16_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Hold on... my network monitor just started flashing red. I'm seeing massive, synchronized outbound traffic bursts originating from the apartment's smart ecosystem that align perfectly with a known DDoS botnet command structure! The infected devices are actively being used to assault external targets web-wide. We need to map the primary command relay hub immediately. Let's isolate this beacon on our threat grid.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 200,
+      "legendReward": 25,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Wipe the affected endpoints and immediately re-download the latest public app from the commercial cloud store.",
+        "Change the administrative web portal password and file an immediate support ticket with the local ISP.",
+        "Wait for the active outbound DDoS traffic burst to subside naturally before attempting to apply patches.",
+        "Isolate all infected hardware, perform rigorous firmware validation, and implement strict network segmentation."
+      ],
+      "incorrectAnswerText": "Isolation, validation, and segmentation are the core pillars! Quarantining compromised devices stops the attack spread, firmware validation purges the hidden Trojans, and network segmentation prevents lateral movement across the rest of the infrastructure.",
+      "id": "U03Q16_STAGE_08",
+      "characterName": "Jax",
+      "stageText": "Command node mapped and localized! Now we need to deliver an immediate incident mitigation plan to the Polaris engineering team before their entire brand reputation is completely destroyed by this botnet activity. What is the correct technical response we should recommend to handle this multi-layered IoT infection?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Decline the long-term retainer, collect today's emergency response fee, and keep our terminal clear for immediate global cyber-threats.",
+          "moneyReward": 650,
+          "honorReward": 15
+        },
+        {
+          "optionText": "Accept the contract to build a comprehensive secure firmware distribution pipeline and establish continuous integrity scanning policies.",
+          "moneyReward": 500,
+          "honorReward": 50
+        }
+      ],
+      "id": "U03Q16_STAGE_09",
+      "characterName": "Jax",
+      "stageText": "Incredible response! The infected units are isolated, the rogue firmware builds have been completely overwritten with validated signatures, and the network is safely segmented. The directors at Polaris are incredibly impressed by our forensic workflow and have transferred a premium payout to our account. They've also offered us an exclusive contract to oversee security governance for their entire next-gen smart appliance line. What's the plan?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_IOT_TROJAN_FORENSICS",
+      "id": "U03Q16_STAGE_10",
+      "characterName": "Jax",
+      "stageText": "Uncovering that layered Trojan campaign was an intense reminder that smart devices require absolute integrity verification from development to deployment. I've synthesized our binary analysis workflows, traffic anomaly detection, and firmware validation methods into a specialized skill module. Let's unlock this asset to master IoT Trojan forensics!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "The network management system is fully patched but still processes requests slowly.",
+        "A primary localized endpoint hardware peripheral stops accepting manual user input keys.",
+        "The active device telemetry exhibits rigid, repeating patterns entirely disconnected from real-world states.",
+        "The collective Wi-Fi radio signal strength measured across the lab zone is unusually strong."
+      ],
+      "incorrectAnswerText": "Rigid, detached telemetry patterns indicate automated logic loops! When data readings fluctuate perfectly on a hard-coded time interval regardless of physical room conditions, it signifies that devices are accidentally feeding looped or cached metrics into each other due to systemic integration errors.",
+      "id": "U03Q17_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! You won't believe the weird panic call I just got. A small biotech startup named CellSense utilizes an extensive IoT network to manage their research labs, controlling climate controls, smart refrigerators, chemical sensors, and badge-locked security doors. One of their research teams just got completely locked out of a high-containment lab for two full hours while internal fridge temperatures fluctuated wildly and sensor logs looped! The IT staff scanned everything and couldn't find a single trace of malware. I analyzed the logs and noticed the fridge readings fluctuate exactly every nine minutes, completely independent of the actual room environment. Which specific technical detail here strongly points to a non-malicious but highly dangerous ecosystem anomaly rather than an outside hacker?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q17_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly! It turns out their chemical sensors were accidentally looping back raw data directly into the central HVAC controller because of a terrible misconfiguration in their building automation platform. It's a pure architecture conflict, not a malicious hack, but it's causing absolute chaos in a live bio-lab environment.",
+      "stageType": 0
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q17_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "As I keep monitoring their environment, things are getting worse. Multiple lab environment sensors are repeatedly broadcasting rapid synchronization requests to a central local hub. Since these specific edge sensors weren't engineered to handle complex message queues, they are actively overwriting each other's data payloads and corrupting the lab's critical research metrics.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "That's completely False! While data floods can mirror a DoS attack, poorly integrated IoT ecosystems frequently cause devastating cascading failures, systemic data corruption, and broadcast storms all on their own due to basic engineering flaws and missing validation barriers.",
+      "id": "U03Q17_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "One of the panicked lab scientists grabs my arm and asks: 'Jax, does this mean repeated, overwhelming device broadcasts inside an integrated IoT network like this should always be interpreted as a definitive indicator of an active external compromise?' What's the correct verdict here, True or False?",
+      "stageType": 2
+    },
+    {
+      "latitude": 42.3601,
+      "longitude": -71.0589,
+      "locationId": "BOSTON_BIOTECH_CLUSTER",
+      "iconId": "",
+      "id": "U03Q17_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "We need to fetch the clean configuration templates for this automation platform to override the looping logic. I've tracked down the staging hub where CellSense hosts their environment backups. Let's select this facility on our map to secure the clean system blueprints.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Physically decommission and replace every edge sensor across the entire facility once every six months.",
+        "Deploy a secondary high-bandwidth Wi-Fi mesh network to boost the raw internet connection speed of the devices.",
+        "Enforce an administrative policy requiring all default passwords to be changed manually once per week.",
+        "Implement continuous behavior-based monitoring solutions and strictly validate all multi-device integrations."
+      ],
+      "incorrectAnswerText": "Behavioral monitoring and integration validation are paramount! Relying on continuous behavioral analysis allows systems to catch anomalous loops before they manifest physically, while rigorous integration validation guarantees that interconnected devices cannot introduce unhandled protocol conflicts.",
+      "id": "U03Q17_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Configurations retrieved! I immediately severed the broken integration bridge between the HVAC system and the core network, rerouted the raw sync commands safely through an authenticated control API layer, and implemented strict rate-limiting thresholds on all local broadcast traffic. To prevent these complex, interconnected IoT ecosystem failures from threatening their physical lab assets again, what is the best long-term engineering strategy we should recommend to their board?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the contract to build an continuous automated validation pipeline for all interconnected lab environments.",
+          "moneyReward": 400,
+          "honorReward": 45
+        },
+        {
+          "optionText": "Collect today's flat incident resolution fee, document our ecosystem findings, and keep our terminal available for imminent active network compromises.",
+          "moneyReward": 500,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q17_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Incredible job! The broadcast loops are cleared, rate-limiting is fully enforced on the sensors, and the research doors have safely unlocked. CellSense's director is so incredibly relieved they avoided a multi-million dollar lab sample spoilage that they just wired over our consulting fee. They want to know if we can stay on call to audit their automated chemical synthesis grid next week. What's the play?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_IOT_ECOSYSTEM_AUDITING",
+      "id": "U03Q17_STAGE_08",
+      "characterName": "Jax",
+      "stageText": "Untangling that loop really emphasizes that complex systems can fail catastrophically even without an active threat actor in play. I've compiled our integration auditing rules, broadcast rate-limiting patterns, and behavioral tracking thresholds into a new skill block. Ready to activate this module and master IoT integration security?",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "A counterfeit unit was deliberately introduced into the network using spoofed device credentials.",
+        "The sensor microprocessor was unintentionally overclocked during the initial factory manufacturing phase.",
+        "The sensor hardware is stuck in a legacy maintenance mode and requires immediate manual baseline calibration.",
+        "The satellite GPS signals are naturally experiencing atmospheric degradation during peak commuting hours."
+      ],
+      "incorrectAnswerText": "Counterfeit hardware is a massive supply chain vector! Attackers manufacture cheap, clone hardware that uses spoofed MAC addresses or stolen credentials to look exactly like trusted units while injecting malicious data or establishing unauthorized backdoors.",
+      "id": "U03Q18_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! I just landed an emergency consulting gig with Nova Transit, they handle major transportation infrastructure grids. They recently bought a massive bulk order of smart traffic sensors from a new third-party supplier, but the system logs are already a complete nightmare. We are seeing jittery GPS data, sudden reboot cycles, and a bunch of devices responding with firmware signatures that don't exist in the vendor's official library! I think someone slipped malicious, clone hardware into their supply chain. What's the most likely explanation for these rogue devices causing such chaotic anomalies on the transit network?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q18_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly, we are looking at full-blown hardware emulation. I started analyzing the raw packet logs from the suspicious traffic sensors. Get this: every couple of hours, the rogue units try to initiate outbound connections using a collection of completely outdated, legacy protocols that Nova Transit officially deprecated and stopped supporting years ago! The legitimate sensors on the grid don't do this at all, giving us a perfect metric to isolate the infected units.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "False",
+        "True"
+      ],
+      "incorrectAnswerText": "It's absolutely True! Threat actors intentionally build malicious logic inside legacy protocol stacks because modern network monitoring systems often ignore or fail to deeply inspect outdated traffic, making it the perfect cloaking mechanism for clone devices.",
+      "id": "U03Q18_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "One of the transit network engineers is looking over my shoulder and scratches his head. He asks: 'Jax, is the use of outdated communication protocols by an IoT device a definitive technical indicator that a malicious unit is actively impersonating a legacy product to bypass modern security gates?' What's the right response here, True or False?",
+      "stageType": 2
+    },
+    {
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "locationId": "NEW_YORK_TRANSIT_DEPOT",
+      "iconId": "",
+      "id": "U03Q18_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "We need to intercept the primary distribution point where these counterfeit sensors were originally provisioned so we can extract the malicious firmware source images. I've tracked the shipping ledger back to a regional transit hub. Let's select this location on our threat map to inspect the deployment logs.",
+      "stageType": 4
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Disabling all local Bluetooth synchronization capabilities across the entire physical traffic network.",
+        "Installing a specialized mobile tracking application on technician smartphones to monitor sensor health metrics.",
+        "Enforcing continuous firmware integrity validation and segmenting unverified vendor hardware onto a dedicated VLAN.",
+        "Encrypting the local sensor log repositories once every 24 hours to prevent unauthorized reading."
+      ],
+      "incorrectAnswerText": "Firmware validation and network segmentation are mandatory! Isolating unverified third-party hardware on a separate VLAN guarantees that even if a counterfeit device slips into the supply chain, it cannot communicate laterally with core transit systems or access sensitive data streams.",
+      "id": "U03Q18_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Distribution node isolated! Now let's help Nova Transit lock down their infrastructure so no future supply chain clones can ever threaten their transit operations again. We are already issuing formal vendor challenges to verify original hardware authenticity and setting up continuous automated firmware hash checks. To secure the active network topology immediately, what is the best defensive control to implement?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Decline the continuous retainer contract, pocket today's flat incident response payout, and keep our terminal ready for critical network anomalies.",
+          "moneyReward": 600,
+          "honorReward": 15
+        },
+        {
+          "optionText": "Accept the consulting retainer to design an end-to-end secure provisioning pipeline for all incoming third-party transit hardware.",
+          "moneyReward": 450,
+          "honorReward": 50
+        }
+      ],
+      "id": "U03Q18_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Magnificent work! The counterfeit traffic sensors have been isolated onto a quarantined VLAN, firmware integrity validation blocks unverified code, and Nova Transit has completely neutralized the supply chain breach. The infrastructure directors are so impressed they authorized a massive contract payout. They also asked if we'd be willing to stay on retainer to audit the automated light-rail signalling systems next quarter. What do you think?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_SUPPLY_CHAIN_HARDENING",
+      "id": "U03Q18_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Stopping that supply chain exploit highlights exactly why we can never blindly trust a device just because it comes in an official-looking vendor box. I've structured our hardware emulation tracking patterns, firmware verification metrics, and vendor VLAN isolation rules into a new skill asset. Let's unlock this capability to permanently defend against supply chain risks!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "ICMP echo flooding executed directly for active network reconnaissance purposes.",
+        "Automated vertical port scanning targeting the local gateway infrastructure.",
+        "Man-in-the-middle gateway spoofing to intercept neighbor traffic streams.",
+        "DNS tunneling utilized as a covert channel for command-and-control communication."
+      ],
+      "incorrectAnswerText": "Port 53 UDP traffic points straight to DNS! Attackers frequently exploit standard DNS queries to establish 'DNS tunneling,' allowing them to sneak malicious command-and-control instructions right past traditional firewall rules.",
+      "id": "U03Q19_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! You free to look at something weird? My neighbor from two floors up just called me over for coffee because their new smart heater is acting possessed. It keeps randomly turning itself on in the middle of the night at maximum heat, and the manufacturer's support line has been completely useless. I hooked up a packet sniffer to the local Wi-Fi network to monitor the heater's wireless stream, and I'm seeing a relentless flood of UDP packets heading out to port 53 exactly every 90 seconds! What kind of cyber attack technique is most likely happening under the hood here?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q19_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly! This is a textbook data exfiltration and control pipeline. I cross-referenced the precise timestamps of those strange outbound DNS packets with the companion app's internal operational logs. The companion app shows absolutely zero user commands or heat adjustments matching those times, meaning someone else is steering this appliance from the outside.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "The device triggers its operational cycles at precise intervals without any real user input.",
+        "The smart heater occasionally emits unstructured localized Bluetooth broadcasts.",
+        "The smartphone companion application experiences high latency and freezes frequently.",
+        "The heater's base operating system firmware version is currently outdated."
+      ],
+      "incorrectAnswerText": "Automated execution patterns without local logs are a dead giveaway! When an IoT device fires up at rigid, repeating intervals with no user interactions recorded in the software, it means an off-path attacker is feeding it operational instructions remotely.",
+      "id": "U03Q19_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "My neighbor is watching me pull up the hex dump and asks: 'Jax, which of these physical behaviors actually proves that the smart heater is actively executing hidden remote C2 instructions from a malicious actor instead of just glitching out?' What should we point out to them?",
+      "stageType": 2
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "False",
+        "True"
+      ],
+      "incorrectAnswerText": "It's absolutely True! Because DNS traffic on port 53 is required for regular internet browsing, and because tunneling attacks can use tiny, low-volume payloads, traditional firewalls frequently ignore it, making it incredibly difficult to detect without specialized behavioral analytics.",
+      "id": "U03Q19_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "The neighbor is completely stunned that a heater can be hijacked like this. They asked me: 'Why on earth didn't the manufacturer's automated platform or standard security software catch this background behavior in the first place?' Let's give them the hard technical truth. Is it True or False that DNS tunneling as a C2 channel is routinely missed by standard detection tools because it relies on entirely normal network ports and low-volume traffic patterns?",
+      "stageType": 2
+    },
+    {
+      "latitude": 35.6762,
+      "longitude": 139.6503,
+      "locationId": "ROGUE_DNS_TUNNEL_RESOLVER",
+      "iconId": "",
+      "id": "U03Q19_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "We need to identify the rogue domain name system endpoint that this malicious heater is querying to fetch its night-time instructions. I've pinpointed the malicious upstream resolver cluster handling these queries. Let's select this coordinates block on our threat map to flag the command hub.",
+      "stageType": 4
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the neighborhood request to implement a custom DNS firewall policy and baseline packet inspection rules across their small business perimeter.",
+          "moneyReward": 200,
+          "honorReward": 40
+        },
+        {
+          "optionText": "Politely decline the follow-up task, collect our standard consultation bounty, and head back to the console to monitor high-priority infrastructure networks.",
+          "moneyReward": 350,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q19_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Awesome. I've completely disabled the heater's unauthenticated DNS access at the router level and documented the packet capture payload to submit a formal vulnerability report to the vendor. I strongly advised my neighbor to keep the unit completely disconnected until the firm releases a hardened firmware patch. They were so grateful they covered our tab and asked if we could take a look at their small business smart security cameras tomorrow. How should we proceed?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_DNS_TUNNELING_ANALYSIS",
+      "id": "U03Q19_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Resolving this incident proves that standard network protocols can easily be weaponized if IoT configurations are left unmonitored. I've compiled our port 53 analysis, low-volume traffic profiling, and off-path C2 blocking logic into a new security module. Let's unlock this skill to expand your protocol forensics toolkit!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "The device maintaining an exceptionally high wireless signal strength throughout the day.",
+        "The active network architecture relying heavily on default device names and administrative passwords.",
+        "Identical, rigid activation timestamps repeating daily without any external physical triggers.",
+        "Inconsistent or lagging response times during peak daylight usage hours."
+      ],
+      "incorrectAnswerText": "Rigid, repeating activation timestamps are a definitive indicator of an automated network event! Real user interactions and physical motion triggers are inherently unpredictable; a device acting precisely at the same minute every day points to a hardcoded cron job or a remote command-and-control signal.",
+      "id": "U03Q20_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Hey! Good to connect with you again. I'm actually hanging out at my old university campus right now. One of my former professors reached out because the IT department is completely stumped by a bizarre glitch in the newly upgraded dorm rooms. They installed automated IoT lighting systems featuring motion-sensing LEDs that sync with student schedules. The maintenance logs show that one specific light in Building B activates itself exactly at 2:11 AM every single night, completely independent of any physical motion triggers or manual companion app inputs! Even during spring break and holidays when the dorm is totally empty, the main campus wireless router logs massive periodic data spikes right at 2:11 AM. Which behavioral anomaly strongly suggests this is command-based signaling rather than a random hardware glitch?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q20_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Spot on! That 2:11 AM pattern is way too precise to be accidental. I isolated the MAC address of the rogue lighting unit and extracted its flash memory to check the operating code. When I compared the local binary hash against the manufacturer's official release repository, it didn't match at all! I uncovered a hidden, secondary firmware loader running silently in the background. It was purposefully configured to intercept wireless commands and flash the lights without committing a single event log to the local interface.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 120,
+      "legendReward": 20,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "The local firmware memory space was naturally corrupted during a routine over-the-air update sequence.",
+        "An unauthorized local user discovered a physical way to bypass authentication and access the control panel.",
+        "The default power-saving configuration thresholds created false environmental behavior triggers.",
+        "The devices were covertly modified to execute scheduled, non-human signaling as part of a botnet."
+      ],
+      "incorrectAnswerText": "It's a classic IoT botnet tactic! Attackers inject silent secondary bootloaders into smart electronics to enslave them into a botnet. The scheduled activations allow the devices to beacon back to a central command server or synchronize non-human signaling campaigns without alerting local users.",
+      "id": "U03Q20_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "I've successfully purged the rogue loader, flashed a clean, vendor-signed firmware update, and hardened the update permissions across the campus segment so nobody can push unverified code again. My professor just emailed me saying the logs are perfectly clean and the light hasn't misbehaved once in the last forty-eight hours! He's fascinated by the forensics and asks: 'Jax, what core technical conclusion explains why an attacker would modify these campus lights to flash on a fixed schedule like this?' What should we tell him?",
+      "stageType": 2
+    },
+    {
+      "latitude": 50.0647,
+      "longitude": 19.945,
+      "locationId": "ROGUE_FIRMWARE_DISTRIBUTION_NODE",
+      "iconId": "",
+      "id": "U03Q20_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "To ensure that this malicious firmware mirror isn't distributing infected binaries to other campuses, we need to locate the staging repository the attacker used to host the unauthorized code. I managed to trace the source network route of the malicious update payload. Let's tag this coordinate block on the map so we can neutralize the server.",
+      "stageType": 4
+    },
+    {
+      "options": [
+        {
+          "optionText": "Decline the testing contract, collect today's flat resolution reward, and head back to the terminal to watch for widespread firmware injection campaigns.",
+          "moneyReward": 450,
+          "honorReward": 15
+        },
+        {
+          "optionText": "Accept the university contract to audit the core climate controls and build an automated firmware validation framework for all campus infrastructure.",
+          "moneyReward": 350,
+          "honorReward": 45
+        }
+      ],
+      "id": "U03Q20_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "The rogue repository is blacklisted and the university's IoT infrastructure is officially secure. The administration is incredibly grateful that we stopped a potential campus-wide botnet recruitment drive before it spread to the main lecture halls, and they've issued a nice bounty payment to us. The facilities manager just reached out asking if we'd be willing to run a comprehensive penetration test on the university's centralized smart HVAC grid next weekend. What's our next move?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_FIRMWARE_SIGNATURE_VALIDATION",
+      "id": "U03Q20_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Cleaning up that dorm room network is a perfect lesson in why cryptographic integrity verification is absolutely essential for smart infrastructure. I've compiled our firmware hash analysis, bootloader isolation workflows, and update permission restrictions into a brand new defensive asset. Let's unlock this skill to maximize your hardware validation capabilities!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Disconnect every single known legitimate smart appliance from the Wi-Fi network immediately.",
+        "Conduct a rigorous manual physical sweep of the entire household to look for a hidden device.",
+        "Cross-reference the active rogue MAC address against verified manufacturer hardware repositories.",
+        "Perform a hard factory reboot on the central routing appliance and reset the primary access point."
+      ],
+      "incorrectAnswerText": "Cross-referencing the MAC address is the definitive first step! Isolating the Organizationally Unique Identifier (OUI) from the rogue MAC address and comparing it to vendor registration databases lets us pinpoint the exact manufacturer and device profile, proving it has no legitimate place in Juno's inventory.",
+      "id": "U03Q21_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Juno just served dinner and dropped a massive technical headache on my lap. They recently configured a brand new smart speaker system to sync up the lighting, thermostat, and a smart mirror in the house. The problem is, whenever they trigger a manual bandwidth test on the home network, the system encounters this horrific network lag at the most unpredictable hours. I decided to run an open-source network discovery utility to list out all active MAC addresses connected to the local gateway. Looking closely at the asset logs, I spotted an active smart toothbrush profile completely authenticated to the Wi-Fi, but Juno absolutely does not own one, and it's been silently connected since last week! What is our most effective first technical step to officially confirm this hardware is unauthorized?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q21_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly, the hardware database don't lie, this thing is an absolute ghost signature. I immediately accessed the router's core management panel and blacklisted that rogue MAC address to block it from routing any further packets. Right now, I'm executing a deep passive radio scan across the local spectrum to ensure this unauthorized device isn't dropping alternate beacon profiles to sneak back into the system.",
+      "stageType": 0
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q21_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "Juno is pacing around the kitchen looking totally creeped out and asked me: 'Why would someone target a regular apartment network with a hidden smart device like a toothbrush?' It's a valid question. We need to explain the real architectural danger of leaving an unauthorized IoT node unmonitored.",
+      "stageType": 0
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q21_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "I broke it down for them plainly: a tiny, unmonitored IoT asset hidden inside a home network can mapping out your connected environment over time, intercept unencrypted local broadcast streams, act as a real-time presence beacon for physical monitoring, or eventually be leveraged as a soft pivot point to launch an invasive, high-tier exploit across your personal computers.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 20,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Enforcing rigid MAC address whitelisting paired with strict network segmentation policies.",
+        "Enforcing static IP allocations for all deployment endpoints across the smart system network.",
+        "Consolidating all trusted IoT systems and highly sensitive personal endpoints onto a single router pool.",
+        "Modifying local device hostname strings to highly complex, non-default identification labels."
+      ],
+      "incorrectAnswerText": "Whitelisting and segmentation are your primary shields! Implementing strict MAC whitelisting completely locks out unregistered hardware from associating with the access point, while network segmentation guarantees that even if a rogue node manages to spoof its way in, it is permanently isolated from sensitive data pipelines.",
+      "id": "U03Q21_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "To completely secure the household perimeter, I went ahead and disabled WPS entirely, built a custom MAC address whitelist, and migrated all legitimate smart appliances onto a dedicated guest VLAN with strict access control filtering. Looking back at the defensive workflow we just deployed, which security tactic is the absolute most reliable method to prevent unauthorized IoT hardware from quietly compromising a network infrastructure?",
+      "stageType": 2
+    },
+    {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "locationId": "DOWNTOWN_APARTMENT_NETWORK_GRID",
+      "iconId": "",
+      "id": "U03Q21_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "Let's check if this specific rogue device footprint is isolated or if it's part of a broader proximity-sniffing sweep targeting this entire high-rise block. I've aggregated the surrounding wireless packet traces. Let's select the coordinates on our threat map with the densest cluster of unauthorized network beacons so we can investigate further.",
+      "stageType": 4
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the commercial contract to deploy automated MAC profiling frameworks and segmented network pools across their design studio.",
+          "moneyReward": 300,
+          "honorReward": 40
+        },
+        {
+          "optionText": "Collect today's flat incident reward, archive the rogue toothbrush hardware signature in our personal database, and keep the main terminal clear for active perimeter breaches.",
+          "moneyReward": 400,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q21_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "The local airspace is thoroughly analyzed, the perimeter rules are locked down tight, and Juno's network lag has vanished entirely. They are incredibly relieved to have their privacy restored and insisted on sending us a premium troubleshooting bounty for the rapid response. They also mentioned that the boutique design studio they manage downtown needs a comprehensive security audit on their wireless point-of-sale systems tomorrow morning. What's the plan?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_ROGUE_DEVICE_ISOLATION",
+      "id": "U03Q21_STAGE_08",
+      "characterName": "Jax",
+      "stageText": "Rooting out that rogue device is a textbook reminder that any unmonitored node can easily mutate into a major security blind spot if the perimeter isn't continuously policed. I've synthesized our passive signature discovery logs, whitelisting enforcement policies, and VLAN isolation tactics into a specialized security skill asset. Let's activate this capability to master rogue asset mitigation!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "It completely eliminates the administrative need for enforcing strong passwords on smart endpoints.",
+        "It automatically scans for and purges pre-existing malware payloads already installed on the hardware.",
+        "It restricts system communication exclusively to pre-approved devices or network services.",
+        "It dynamically expands and increases the available wireless bandwidth allocated to guest profiles."
+      ],
+      "incorrectAnswerText": "Whitelisting is all about default-deny! Instead of trying to detect every bad device out there, whitelist enforcement ensures the system only talks to explicitly approved assets, instantly shutting out everything else at the MAC, application, or physical layer.",
+      "id": "U03Q22_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "You won't believe where I am right now, I'm volunteering with a local tech literacy nonprofit that sets up smart IoT medical devices for elderly residents inside a senior apartment complex. They deploy things like heart monitors, automated pill dispensers, and emergency alert sensors. Lately, the entire network has been hit with severe, unconfirmed outages and mysterious slowdowns, which is an absolute nightmare when people's health is on the line. I suspect that forgotten or unmonitored smart devices nearby are congesting the local network bandwidth and creating high latency for these critical medical tools. To fix this definitively, I want to deploy a strict whitelist enforcement strategy. What would be the absolute core benefit of utilizing a whitelist approach in this critical medical IoT environment?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q22_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly, it's like hosting a private event, if your name isn't on the list, you're not getting through the door. I just finished configuring the central access control matrix, hardcoding the exact MAC addresses and internal IP blocks of the verified medical hardware. To test our new defense, I tried to ping the smart pill dispenser subnet using an unlisted smartphone connected to the guest Wi-Fi pool, and it got completely dropped.",
+      "stageType": 0
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q22_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "While monitoring the central admin dashboard to confirm the drop, I noticed an unauthorized smart watch repeatedly trying to connect through an open local port. It wasn't actively malicious, just a random resident's watch trying to auto-pair, but its constant background chatter was causing the massive latency spike! Now that the whitelist has isolated it, the entire medical network is running perfectly smooth again.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 120,
+      "legendReward": 20,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "It permitted unknown devices to associate safely using an isolated guest authentication mode.",
+        "It matched traffic signatures against a global database to block only known malicious indicators.",
+        "It forced all connected edge hardware to instantly execute signed vendor firmware upgrades.",
+        "It proactively denied all unrecognized endpoints before they could initiate communication pipelines."
+      ],
+      "incorrectAnswerText": "Proactive denial is the key! Whitelisting doesn't wait to see if an unknown device is friendly or hostile; it flags it as unrecognized and cuts off its ability to transmit data before it can disrupt vulnerable systems.",
+      "id": "U03Q22_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "One of the senior home staff coordinators wants to write up a report for the nonprofit's board. She asks us: 'Can you help me summarize exactly how our new whitelist enforcement framework successfully safeguarded this medical network?' Which statement best answers her question?",
+      "stageType": 2
+    },
+    {
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "locationId": "SAN_FRANCISCO_HEALTH_HUB",
+      "iconId": "",
+      "id": "U03Q22_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "We need to ensure that the nonprofit's sister facility down the street doesn't suffer from the same configuration vulnerabilities. I've mapped out the non-profit's regional hub network. Let's head over to the secondary location on our map to push these identical whitelist profiles to their gateway.",
+      "stageType": 4
+    },
+    {
+      "options": [
+        {
+          "optionText": "Politely decline the long-term project, accept today's emergency configuration bounty, and keep our platform ready for core infrastructure exploits.",
+          "moneyReward": 350,
+          "honorReward": 15
+        },
+        {
+          "optionText": "Accept the contract to design a secure network baseline policy for all associated regional senior care centers.",
+          "moneyReward": 250,
+          "honorReward": 50
+        }
+      ],
+      "id": "U03Q22_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "The network rules are pushed, the medical devices are safe, and the elderly residents have completely stable, lag-free health monitoring. The non-profit's director is incredibly grateful and put together a small community grant reward for us. They also asked if we'd be open to auditing their main community healthcare database server next month. What should we do?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_MEDICAL_IOT_WHITELISTING",
+      "id": "U03Q22_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "Securing those health monitors really drives home the point that even non-malicious devices can become critical security hazards if your network doesn't enforce strict boundaries. I've structured our medical IoT whitelisting mechanics, port filtering baselines, and MAC layer isolation rules into a new skill module. Let's unlock this asset to master hardware endpoint containment!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "It permanently locks out and blocks unauthorized remote users from accessing smart system nodes.",
+        "It captures an immutable record of system events that would otherwise remain unmonitored or lost entirely.",
+        "It physically prevents power grid loss from degrading local hardware processing performance.",
+        "It automatically encrypts outbound healthcare information to meet strict HIPAA compliance baselines."
+      ],
+      "incorrectAnswerText": "Logging provides essential visibility! Without a continuous event log, transient system failures, subtle hardware reboots, and quiet modifications go completely unnoticed, leaving security teams entirely blind to the root cause of an outage.",
+      "id": "U03Q23_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "You won't believe the urgent case I just took on! A small assisted living facility for adults reached out to me because their critical IoT systems completely stopped broadcasting emergency alerts. This is an incredibly dangerous situation because they rely on these connected smart devices to monitor medication cabinets, nighttime movement doors, and temperature parameters for the residents. There aren't any immediate physical signs of tampering, but the staff is terrified of losing visibility. They want to stick with their current setup but need a definitive way to track exactly what's happening under the hood. Why is deploying a proper system-wide logging strategy absolutely critical in an unmonitored environment like this?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q23_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Exactly! Visibility is everything here. I immediately went to work setting up comprehensive logging across every single smart motion sensor and digital access panel in the facility. I'm capturing full telemetry: device IDs, precise trigger timestamps, power cycle events, and remote configuration changes. Within 48 hours of collecting data, a bizarre anomaly popped out in the audit trail: two specific motion devices are completely dropping offline and resetting right before a nearby medicine cabinet is accessed.",
+      "stageType": 0
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q23_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "I spent the last hour filtering the timeline logs for anomalies and discovered a rigid pattern. The exact same medicine cabinet and adjacent motion sensors are triggering simultaneous reboots every single morning between 2:50 AM and 2:55 AM! I deep-dived into the hardware specs and tracked it down to a buggy legacy firmware issue that causes the entire device to crash and restart whenever it tries to automatically synchronize its local hardware clock.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 130,
+      "legendReward": 20,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "It guarantees that historical log data is protected from being erased or lost during abrupt reboots and firmware faults.",
+        "It vastly minimizes the physical storage space required to run edge operating systems on IoT hardware.",
+        "It enables guest users and unauthenticated visitors to monitor sensitive facility activity logs much more easily.",
+        "It optimizes the core hardware processing layer to guarantee faster device boot times and lower response latency."
+      ],
+      "incorrectAnswerText": "External log accumulation preserves historical evidence! When resource-constrained IoT devices experience unexpected hardware failures, firmware crashes, or malicious power wipes, any locally stored logs are often completely wiped out. Offloading logs to a secure server ensures the audit trail remains intact.",
+      "id": "U03Q23_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "I've successfully patched the firmware bugs, disabled that broken background sync behavior, and configured the system to forward all raw IoT logs to a secure, external dashboard instead of saving them only on volatile local storage. What is the primary operational benefit of forwarding these IoT system logs to an external, secure location rather than keeping them stored locally on the edge devices?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U03Q23_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Before wrapping up the physical deployment, I sat down with the facility's main operations coordinator. I walked her through the new secure dashboard, showing her how to interpret the live traffic streams, trace system behaviors, and configure custom notification alerts that will instantly ping her phone if an entry is missing or an endpoint drops offline.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 60,
+      "legendReward": 10,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "False",
+        "True"
+      ],
+      "incorrectAnswerText": "It is absolutely True! You don't need a computer science degree to navigate a well-designed dashboard. Clear, real-time logging interfaces allow regular administrative staff to instantly catch anomalous gaps and coordinate rapid technical remediation before patients or residents are left vulnerable.",
+      "id": "U03Q23_STAGE_06",
+      "characterName": "Jax",
+      "stageText": "She looked closely at the automated alert panels and asked me: 'Jax, is it really True or False that a properly configured, centralized IoT logging dashboard can empower non-technical staff members to safely monitor device integrity and accurately respond to critical infrastructure issues before they cause physical harm?' What's the right verdict here?",
+      "stageType": 2
+    },
+    {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "locationId": "REGIONAL_CARE_NETWORK_NODE",
+      "iconId": "",
+      "id": "U03Q23_STAGE_07",
+      "characterName": "Jax",
+      "stageText": "To ensure that other medical care centers managed by this same provider aren't vulnerable to this quiet logging blackout, we need to upload our custom alert scripts to their central regional network directory. Let's pinpoint their administrative data headquarters on our grid map to secure the entire network.",
+      "stageType": 4
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the contract retainer to build a secure, continuous monitoring framework for all critical medical utility automation pipelines.",
+          "moneyReward": 300,
+          "honorReward": 45
+        },
+        {
+          "optionText": "Politely decline the recurring contract, take today's flat incident resolution fee, and keep our platform ready for imminent critical network compromises.",
+          "moneyReward": 400,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q23_STAGE_08",
+      "characterName": "Jax",
+      "stageText": "The updates are finalized, the remote logging pipeline is fully operational, and the assisted living facility's medical security is rock-solid. The director is incredibly relieved that their critical safety alerts are running flawlessly, and they've wired over our consulting payment. They've also asked if we'd be willing to stay on a retainer contract to run a comprehensive digital security audit on their automated backup generator grids next week. What's our play?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_IOT_LOG_AUDITING",
+      "id": "U03Q23_STAGE_09",
+      "characterName": "Jax",
+      "stageText": "Hardening that facility's alert system is a great reminder that data integrity and proactive visibility are the absolute foundations of effective cyber defense. I've synthesized our time-correlation log workflows, external dashboard architectures, and automated alert threshold parameters into a new security module. Let's unlock this skill block to master enterprise IoT forensic auditing!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "The smart refrigerator is running an outdated, localized temperature control loop.",
+        "The primary vendor intentionally offloaded their firmware hosting to a regional content delivery network.",
+        "The facility's local Wi-Fi network frequencies are directly interfering with secure data transmissions.",
+        "The automated update mechanism has been hijacked to serve cryptographically modified firmware to the devices."
+      ],
+      "incorrectAnswerText": "The update channel was completely hijacked! When IoT devices pull unauthenticated code from spoofed domains, attackers can rewrite device logic remotely, allowing them to falsify inventory metrics, mask physical theft, or use the appliances as persistent network backdoors.",
+      "id": "U03Q24_STAGE_01",
+      "characterName": "Neon",
+      "stageText": "You will not believe the bizarre ticket that just hit my queue! A family-owned grocery store is trying to modernize their operations by deploying new smart refrigerators and IoT inventory trackers. Everything seemed fine initially, but the store manager just called me in panic because their high-value stock, mostly specialty dairy and milk, is completely vanishing from the physical shelves! Here is the kicker: the digital inventory logs show authorized product removals, but their physical security footage proves absolutely nobody has touched those shelves! I immediately inspected one of the smart fridges and cross-referenced its active firmware against the manufacturer's official release hashes. They don't match at all! Digging deeper into the update history, I found the device is secretly pulling its code from a malicious third-party mirror using a spoofed domain name. What does this chaotic scenario most likely indicate?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_n_03",
+      "id": "U03Q24_STAGE_02",
+      "characterName": "Neon",
+      "stageText": "Bingo! The attackers turned those automated cloud updates into a total trojan horse vector. They manipulated the background firmware so the smart fridges would silently push fraudulent inventory depletion entries, throwing off the store's entire supply tracking. I explained to the store owners that leaving IoT auto-update loops completely unauthenticated or running over insecure channels is an open invitation for firmware poisoning.",
+      "stageType": 0
+    },
+    {
+      "characterSpriteId": "npc_n_03",
+      "id": "U03Q24_STAGE_03",
+      "characterName": "Neon",
+      "stageText": "To fix this mess, I completely disabled the automated update routines right away. I reconfigured the system to enforce a strict manual authorization workflow where the store manager receives an alert whenever an update is available, but nothing actually installs until it is vetted. Furthermore, I locked down the network so that any future updates must be pulled exclusively from the verified vendor URL while strictly validating cryptographic signatures beforehand. To wrap it all up, I deployed a local firewall to explicitly block any traffic attempting to reach unapproved update mirrors.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 140,
+      "legendReward": 20,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Enforcing strict cryptographic firmware validation and restricting raw update execution permissions.",
+        "Allowing the IoT hardware to dynamically select from multiple fallback update mirrors across the web.",
+        "Enacting an automated hardware reboot sequence immediately following every single update to maintain stability.",
+        "Configuring the local operating system to download and run updates much more frequently to overwrite exploits."
+      ],
+      "incorrectAnswerText": "Firmware validation and rigid permissions are mandatory! By requiring absolute cryptographic signature verification before a binary can execute, and stripping out automatic execution rights, you completely neutralize malicious or spoofed third-party firmware packages.",
+      "id": "U03Q24_STAGE_04",
+      "characterName": "Neon",
+      "stageText": "The manager is watching me wrap up the firewall rules and asks a really solid question: 'Neon, looking at the entire hardening process we just implemented for our smart appliances, what core security strategy best represents how we secured our automated update pipeline from future exploits?' What is the best technical summary we should give them?",
+      "stageType": 2
+    },
+    {
+      "latitude": 52.3676,
+      "longitude": 4.9041,
+      "locationId": "ROGUE_FIRMWARE_MIRROR_HOST",
+      "iconId": "",
+      "id": "U03Q24_STAGE_05",
+      "characterName": "Neon",
+      "stageText": "We need to make sure the attacker's malicious firmware hosting mirror is completely torn down so other businesses aren't targeted by this exact same spoofed domain campaign. I tracked the background update packets back to a rogue hosting provider cluster. Let's select these exact coordinates on our network threat map to file an emergency take-down notice.",
+      "stageType": 4
+    },
+    {
+      "options": [
+        {
+          "optionText": "Decline the follow-up project, collect today's immediate incident response bounty, and keep our terminal clear for critical infrastructure operations.",
+          "moneyReward": 350,
+          "honorReward": 15
+        },
+        {
+          "optionText": "Accept the contract retainer to build a secure, hardened firmware deployment baseline across all their retail electronics.",
+          "moneyReward": 250,
+          "honorReward": 45
+        }
+      ],
+      "id": "U03Q24_STAGE_06",
+      "characterName": "Neon",
+      "stageText": "Fantastic! The rogue update mirror has been taken offline, the store's smart refrigerators are fully secured, and their inventory logs are perfectly stable again with no more vanishing stock. The family who owns the store is so incredibly grateful they gave us a hefty flat payout and a lifetime supply of snacks! They also asked if we'd be willing to take a look at the automated point-of-sale cash registers and security cameras at their secondary boutique location next week. What do you think?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_FIRMWARE_UPDATE_HARDENING",
+      "id": "U03Q24_STAGE_07",
+      "characterName": "Neon",
+      "stageText": "Locking down that retail network shows exactly how easily automated 'convenience' features can turn into dangerous attack vectors if they aren't properly authenticated. I've compiled our firmware signature validation logic, update permission rules, and mirror-blocking firewall mechanics into a brand-new defensive skill asset. Let's unlock this capability to maximize your supply chain and update security!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Device logs reporting unusual temperature fluctuations inside the mechanical hardware.",
+        "Low battery or power loss warning indicators flashing on the washer control panels.",
+        "Severe ARP flooding traffic and foreign connection attempts originating from spoofed nodes.",
+        "Delayed physical start cycles occurring during high-volume business hours."
+      ],
+      "incorrectAnswerText": "ARP flooding from spoofed IDs is a dead giveaway! Attackers frequently spin up virtual clones of IoT devices on a subnet to intercept data or exhaust network resources, flooding the airwaves with malicious ARP packets that cripple local bandwidth.",
+      "id": "U03Q25_STAGE_01",
+      "characterName": "Cipher",
+      "stageText": "You caught me at the perfect time! I'm sitting in a 24-hour laundromat after finishing a grueling late-night contract job, waiting for my clothes to dry. To pass the time, I connected to the local public Wi-Fi, but my connection is crawling, it's severely slowing down my terminal. Something feels incredibly wrong here, so I flashed my credentials to the owner and got full permission to inspect the network. I just ran a rapid scan of the local subnet and it shows 25 active washer control devices online... but I'm looking around right now and there are literally only 12 physical washing machines in this entire building! What kind of network behavior should we look out for as the absolute strongest indicator of an active IoT intrusion?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_n_02",
+      "id": "U03Q25_STAGE_02",
+      "characterName": "Cipher",
+      "stageText": "Bingo! I set up a passive intrusion detection scan, and the logs are absolutely lighting up. Multiple spoofed washer device IDs are flooding the local subnet with relentless ARP traffic every 45 seconds, routing data out to an unlisted, external IP address! This explains exactly why the local network is entirely choked out.",
+      "stageType": 0
+    },
+    {
+      "characterSpriteId": "npc_n_02",
+      "id": "U03Q25_STAGE_03",
+      "characterName": "Cipher",
+      "stageText": "I've debriefed the laundromat owner on the rogue virtual machines eating up their bandwidth. They confirmed that they haven't upgraded or expanded their laundry system recently, meaning this is a 100% unauthorized intrusion. I went straight into the core router configuration, blacklisted the unrecognized MAC addresses, and advised them to set up a dedicated, lightweight Intrusion Detection System (IDS) to catch future anomalies.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 120,
+      "legendReward": 20,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "It automatically applies military-grade encryption to all local device traffic channels.",
+        "It completely hides the active SSID broadcast from unknown or unauthorized hardware.",
+        "It proactively blocks and patches all firmware-level software vulnerabilities automatically.",
+        "It continuously monitors network traffic and alerts on anomalous behaviors or spoofing attempts."
+      ],
+      "incorrectAnswerText": "An IDS is your radar! It doesn't patch bugs or encrypt data, but it acts as an early warning system by continuously analyzing traffic patterns to instantly flag spoofed identities, unexpected protocol anomalies, and malicious background behavior.",
+      "id": "U03Q25_STAGE_04",
+      "characterName": "Cipher",
+      "stageText": "The owner is taking notes but looks a bit confused by the jargon. They ask me: 'Cipher, why is having an active IDS so critical for a business network that relies heavily on smart IoT hardware?' Let's explain it perfectly. What's the primary benefit of deploying an IDS in an IoT-dense environment?",
+      "stageType": 2
+    },
+    {
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "locationId": "COVERT_TELEMETRY_DROP_ZONE",
+      "iconId": "",
+      "id": "U03Q25_STAGE_05",
+      "characterName": "Cipher",
+      "stageText": "Before hitting the road with my clean clothes, I want to trace the geographic location of that unlisted external IP address where the hijacked data packets were being routed. I managed to pinpoint the server cluster handling this rogue telemetry pool. Let's select these coordinates on our active global threat map to flag the data dump.",
+      "stageType": 4
+    },
+    {
+      "options": [
+        {
+          "optionText": "Accept the commercial contract to deploy unified IDS sensor baselines and automated MAC filtering across their regional facilities.",
+          "moneyReward": 350,
+          "honorReward": 45
+        },
+        {
+          "optionText": "Politely decline the long-term contract, pocket today's successful incident bounty, and head back to the workstation to monitor high-severity infrastructure alerts.",
+          "moneyReward": 450,
+          "honorReward": 10
+        }
+      ],
+      "id": "U03Q25_STAGE_06",
+      "characterName": "Cipher",
+      "stageText": "Awesome job. The malicious route is logged, the public network lag has completely vanished, and the owner just emailed me to say they forwarded our packet captures directly to the hardware manufacturer, the vendor is already building an emergency firmware patch based on our alerts! To show their appreciation, they handed us a cash reward and a bunch of free laundry vouchers. But get this: a regional commercial laundromat franchise down the street just heard about our fix and wants us to run a security audit on their entire fleet of smart facilities next week. Are we taking the gig?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_IOT_IDS_DEPLOYMENT",
+      "id": "U03Q25_STAGE_07",
+      "characterName": "Cipher",
+      "stageText": "Cleaning up that laundromat subnet is a classic example of how easily attackers can weaponize unmonitored IoT spaces using simple spoofing techniques. I've aggregated our passive behavioral profiling, ARP flood identification, and lightweight IDS alerting rules into a comprehensive new skill asset. Let's unlock this capability to step up your network perimeter diagnostics!",
+      "stageType": 3
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Side-channel leakage exploitation.",
+        "Unsecured external interface.",
+        "Over-the-air patching pipeline bug.",
+        "Wireless credential over-exposure."
+      ],
+      "incorrectAnswerText": "This is a textbook unsecured external interface! Leaving active, authenticated physical ports accessible on the exterior of a device allows anyone with physical access to interact directly with the internal operating system without network-based restrictions.",
+      "id": "U03Q26_STAGE_01",
+      "characterName": "Voxel",
+      "stageText": "You won't believe what I just ran into at this tech startup's shared coworking hub! They recently deployed a fleet of smart vending machines that handle wireless inventory and credit card processing via a cloud dashboard. The staff suspected something was off, so they gave me full permission to perform a physical vulnerability audit. I pulled off a basic sticker on the exterior and found fully powered, exposed USB ports! When I plugged in my laptop, the appliance immediately granted me access to the administrative menu without asking for a single password. What is the best engineering classification for this specific type of hardware vulnerability?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_n_01",
+      "id": "U03Q26_STAGE_02",
+      "characterName": "Voxel",
+      "stageText": "Exactly! It's a massive physical oversight. I decided to open the lower access panel to inspect the main board, and things got worse: there is a fully soldered UART header sitting completely uncovered. I hooked up my USB-to-UART adapter, hit enter on my terminal, and boom: instant, unauthenticated root shell access to the entire vending machine operating system.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 120,
+      "legendReward": 20,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "They allow local users to accelerate official vendor patch deployments.",
+        "They drastically reduce power consumption states during system sleep cycles.",
+        "They provide an immediate path for privilege escalation and direct firmware access.",
+        "They protect the underlying operating system against rogue application installations."
+      ],
+      "incorrectAnswerText": "Exposed debug interfaces are a goldmine for privilege escalation! UART headers allow attackers to bypass standard software authentication entirely, read local memory, extract firmware binaries, or interact with root shells directly.",
+      "id": "U03Q26_STAGE_03",
+      "characterName": "Voxel",
+      "stageText": "Leaving development interfaces wide open on production hardware is incredibly dangerous. What core security risk does this startup face by having exposed debug interfaces like UART active on their deployment floor?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_n_01",
+      "id": "U03Q26_STAGE_04",
+      "characterName": "Voxel",
+      "stageText": "Spot on. While I was digging around the internal service bay, I spotted another disaster: a removable microSD card labeled 'boot'. I pulled it out, threw it into my card reader, and discovered that all the configuration files are completely unencrypted, storing plaintext API keys and the coworking hub's primary Wi-Fi credentials.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 120,
+      "legendReward": 20,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "They can be physically removed, cloned, or modified without any detection.",
+        "They severely degrade the system boot time during power-on self-tests.",
+        "They introduce magnetic fields that interfere with wireless signal propagation.",
+        "They require highly frequent over-the-air microcode synchronization cycles."
+      ],
+      "incorrectAnswerText": "Removable storage offers zero physical data integrity! Anyone can covertly pull out an unencrypted SD card, clone its contents, alter configuration flags or binaries on a separate machine, and plug it back in without generating a single system log.",
+      "id": "U03Q26_STAGE_05",
+      "characterName": "Voxel",
+      "stageText": "It's shocking how many vendors treat physical access security as an afterthought. From a defensive perspective, what inherent risk makes relying on removable media like microSD cards for core IoT boot configurations such a severe threat?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_n_01",
+      "id": "U03Q26_STAGE_06",
+      "characterName": "Voxel",
+      "stageText": "To top it all off, on the adjacent machine I noticed a physical toggle switch on the internal board labeled 'Debug Mode' that was flipped ON. The vendor completely forgot to remove their pre-production testing tools! This switch completely disables the system's hardware watchdog timer and leaves a persistent, unauthenticated root console open forever, even if the machine is hard rebooted.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 150,
+      "legendReward": 25,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Applying standard electrical tape tightly over the physical toggle switches.",
+        "Epoxy-sealing the debug toggles and UART pins or removing them post-production.",
+        "Encrypting logical hard drive partitions on the remote cloud logging dashboard.",
+        "Flipping the toggle out of debug mode and leaving the cabinet enclosure unlocked."
+      ],
+      "incorrectAnswerText": "Industrial epoxy or component removal is the only permanent solution! Software controls are useless if an attacker can simply reopen the case and flip a switch. Sealing interfaces in hard epoxy or physically desoldering the headers ensures they can never be exploited again.",
+      "id": "U03Q26_STAGE_07",
+      "characterName": "Voxel",
+      "stageText": "I'm compiling the final remediation report for the startup right now. I'm advising them to have the vendor remove external USB ports from production models, migrate the boot files to on-board soldered flash, and permanently disable the debug mode lines. But for the existing machines right here, what is the most effective post-production hardening step to secure these exposed debug headers and switches?",
+      "stageType": 2
+    },
+    {
+      "characterSpriteId": "npc_n_01",
+      "id": "U03Q26_STAGE_08",
+      "characterName": "Voxel",
+      "stageText": "I'm wrapping up the physical modifications now. I filled down the exposed pins, applied permanent non-conductive epoxy resin over the debug headers, and replaced the standard casing screws with tamper-evident security screws so no one can slip inside undetected. The final boot and signature validation check looks beautiful, zero open shells and zero loose data!",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 50,
+      "legendReward": 10,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "True",
+        "False"
+      ],
+      "incorrectAnswerText": "It is absolutely True! Traditional firewalls and network intrusion detection systems are completely blind to an attacker who physically hooks up a hardware debugging tool to an exposed board interface. Physical defense is your initial line of containment.",
+      "id": "U03Q26_STAGE_09",
+      "characterName": "Voxel",
+      "stageText": "The office manager is reviewing my report and asks one final fundamental question before signing off on our invoice: 'Voxel, is it True or False that physical security is a critical pillar of IoT defense because a device can be entirely compromised even when there are absolutely no signs of a network-based intrusion?' What should we tell them?",
+      "stageType": 2
+    },
+    {
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "locationId": "COWORKING_HARDWARE_DISTRIBUTION_CENTER",
+      "iconId": "",
+      "id": "U03Q26_STAGE_10",
+      "characterName": "Voxel",
+      "stageText": "Excellent job! Let's double check our global map to tag the regional hardware warehouse where this vendor distributes these unhardened systems. Marking this coordinate will allow us to notify other regional tech hubs about these physical vulnerabilities.",
+      "stageType": 4
+    },
+    {
+      "options": [
+        {
+          "optionText": "Decline the on-site contract, collect today's immediate payload bounty, and return to the primary terminal to monitor wireless perimeter alerts.",
+          "moneyReward": 500,
+          "honorReward": 15
+        },
+        {
+          "optionText": "Accept the contract retainer to execute a full hardware auditing and component-hardening project for their corporate vault systems.",
+          "moneyReward": 400,
+          "honorReward": 50
+        }
+      ],
+      "id": "U03Q26_STAGE_11",
+      "characterName": "Voxel",
+      "stageText": "The threat advisories are dispatched, and the startup's office hub is completely secured against local exploitation. The founders are so impressed they authorized a generous contract bonus! They also mentioned that their main smart secure-storage vault at their downtown headquarters needs an on-site physical bypass audit next week. What's our next move?",
+      "stageType": 1
+    },
+    {
+      "skillId": "SKILL_PHYSICAL_IOT_HARDENING",
+      "id": "U03Q26_STAGE_12",
+      "characterName": "Voxel",
+      "stageText": "Deconstructing those smart appliances proves that great network defense means nothing if someone can plug directly into the root motherboard logic. I've aggregated our physical attack vector diagnostics, UART interface mitigation steps, and epoxy-hardening procedures into a specialized skill module. Let's unlock this capability to master hardware tamper protection!",
+      "stageType": 3
+    }
+  ],
+  "skills": [
+    {
+      "id": "SKILL_API_REPLAY_DEFENSE",
+      "name": "API Security & Replay Attack Mitigation",
+      "description": "Analyzing captured IoT network traffic, implementing secure token hygiene with strict expiration windows, and enforcing device-specific cryptographic binding over TLS.",
+      "cost": 150
+    },
+    {
+      "id": "SKILL_CLOUD_STORAGE_HARDENING",
+      "name": "Cloud Storage Security & IAM Hardening",
+      "description": "Auditing public S3 buckets, enforcing the principle of least privilege via Identity and Access Management (IAM) roles, and establishing continuous bucket-level logging.",
+      "cost": 150
+    },
+    {
+      "id": "SKILL_SUPPLY_CHAIN_HARDENING",
+      "name": "IoT Supply Chain Validation & Network Hardening",
+      "description": "Analyzing third-party firmware updates, enforcing cryptographic signature checks, detecting low-visibility DNS tunneling, and implementing zero-trust deployment sandboxes.",
+      "cost": 180
+    },
+    {
+      "id": "SKILL_IOT_CLOUD_HARDENING",
+      "name": "IoT Cloud Infrastructure Hardening",
+      "description": "Implementing layer-defense protocols for cloud-connected smart systems, including automated API rate limiting, IP reputation filtering, and adaptive MFA policies.",
+      "cost": 150
+    },
+    {
+      "id": "SKILL_IOT_TRAFFIC_HARDENING",
+      "name": "Wireless Traffic Cryptography & Network Segmentation",
+      "description": "Detecting passive packet sniffing, mitigating unauthorized command replays, implementing secure MQTT over TLS, and establishing isolated network segments for IoT hardware.",
+      "cost": 170
+    },
+    {
+      "id": "SKILL_PROXIMITY_IOT_HARDENING",
+      "name": "Proximity Protocol Security & Hardening",
+      "description": "Auditing and disabling insecure Bluetooth/local access ports, mitigating physical proximity exploits, and enforcing localized device authentication baselines.",
+      "cost": 160
+    },
+    {
+      "id": "SKILL_FIRMWARE_FORENSICS_HARDENING",
+      "name": "IoT Firmware Forensics & Secure Update Engineering",
+      "description": "Performing firmware vulnerability analysis, verifying digital cryptographic signatures, and enforcing secure, authenticated over-the-air (OTA) update channels via HTTPS.",
+      "cost": 160
+    },
+    {
+      "id": "SKILL_IOT_DATA_INTEGRITY",
+      "name": "IoT Data Integrity & Firmware Audit",
+      "description": "Identifying firmware-level data manipulation, verifying sensor transmission consistency, and deploying continuous data validation and anomaly detection frameworks.",
+      "cost": 160
+    },
+    {
+      "id": "SKILL_CREDENTIAL_HARDENING",
+      "name": "Firmware Credential Hardening & Access Control",
+      "description": "Auditing physical and network-facing IoT endpoints for factory-default configurations, establishing strong multi-tenant access controls, and mitigating unauthorized administrative takeover.",
+      "cost": 150
+    },
+    {
+      "id": "SKILL_CLOUD_STORAGE_HARDENING",
+      "name": "Cloud Storage Hardening & IAM Governance",
+      "description": "Auditing cloud storage buckets for public exposure, implementing Role-Based Access Control (RBAC), and securing telemetry APIs via authenticated token signatures.",
+      "cost": 160
+    },
+    {
+      "id": "SKILL_STREAM_PROXIMAL_HARDENING",
+      "name": "Media Stream Cryptography & Boundary Access Control",
+      "description": "Auditing streaming protocols (RTSP), mitigating unauthenticated remote boundary exposure, implementing encrypted transport tunnels, and enforcing multi-factor management baselines.",
+      "cost": 180
+    },
+    {
+      "id": "SKILL_VOICE_ASSISTANT_HARDENING",
+      "name": "Voice Assistant Privacy & Firmware Optimization",
+      "description": "Auditing wake-word detection triggers, disabling hidden developer debug logging modes, and restricting outbound cloud-telemetry exposure for voice-activated hardware.",
+      "cost": 150
+    },
+    {
+      "id": "SKILL_BLE_BEACON_HARDENING",
+      "name": "BLE Beacon Anonymization & Metadata Cryptography",
+      "description": "Auditing static Bluetooth Low Energy (BLE) broadcast signals, implementing rotating MAC/Device IDs, and hardening proximity telemetry against unauthorized physical tracking.",
+      "cost": 160
+    },
+    {
+      "id": "SKILL_FORENSIC_STORAGE_WIPING",
+      "name": "Forensic Storage Wiping & Partition Hardening",
+      "description": "Auditing IoT local flash storage for undocumented backup partitions, eliminating persistent cached artifacts, and deploying secure multi-pass data-erasure scripts.",
+      "cost": 160
+    },
+    {
+      "id": "SKILL_IOT_TROJAN_FORENSICS",
+      "name": "IoT Trojan Countermeasures & Firmware Integrity",
+      "description": "Auditing smart ecosystem deployments for malicious dropper profiles, intercepting unauthorized outbound command-and-control telemetry, and enforcing strict cryptographic firmware validation.",
+      "cost": 200
+    },
+    {
+      "id": "SKILL_IOT_ECOSYSTEM_AUDITING",
+      "name": "IoT Ecosystem Auditing & Integration Hardening",
+      "description": "Diagnosing automated systemic loops, mitigating cascading protocol failures in integrated building systems, and configuring rate-limiting thresholds on interconnected sensor bridges.",
+      "cost": 170
+    },
+    {
+      "id": "SKILL_SUPPLY_CHAIN_HARDENING",
+      "name": "Supply Chain Assurance & Hardware Emulation Defense",
+      "description": "Auditing third-party vendor hardware for emulated legacy stacks, deploying firmware integrity signature validation, and implementing strict isolation policies for unverified supply chain components.",
+      "cost": 190
+    },
+    {
+      "id": "SKILL_DNS_TUNNELING_ANALYSIS",
+      "name": "IoT DNS Tunneling Detection & Mitigation",
+      "description": "Auditing malicious low-volume DNS tunneling channels, identifying anomalies in UDP port 53 traffic profiles, and implementing strict off-path Command-and-Control (C2) blocks on smart home hardware.",
+      "cost": 140
+    },
+    {
+      "id": "SKILL_FIRMWARE_SIGNATURE_VALIDATION",
+      "name": "Firmware Code Integrity & Bootloader Hardening",
+      "description": "Auditing IoT memory spaces for secondary firmware loaders, validating cryptographic binary signatures, and locking down remote flashing permissions against botnet exploitation.",
+      "cost": 180
+    },
+    {
+      "id": "SKILL_ROGUE_DEVICE_ISOLATION",
+      "name": "Rogue IoT Device Isolation & Perimeter Hardening",
+      "description": "Performing passive MAC address signature analysis, tracking unauthorized localized network beacons, and deploying strict multi-tier network segmentation for consumer smart hardware pipelines.",
+      "cost": 150
+    },
+    {
+      "id": "SKILL_MEDICAL_IOT_WHITELISTING",
+      "name": "Medical IoT Whitelist Enforcement & Traffic Control",
+      "description": "Designing strict operational boundaries at the MAC and application layers to safeguard volatile healthcare telemetry and quarantine unapproved consumer peripherals.",
+      "cost": 160
+    },
+    {
+      "id": "SKILL_IOT_LOG_AUDITING",
+      "name": "Enterprise IoT Log Auditing & Aggregation",
+      "description": "Designing centralized log-forwarding pipelines for resource-constrained edge hardware, performing time-correlation forensics on device reboot cycles, and establishing behavioral alert thresholds.",
+      "cost": 150
+    },
+    {
+      "id": "SKILL_FIRMWARE_UPDATE_HARDENING",
+      "name": "Automated Update Hardening & Integrity Enforcement",
+      "description": "Securing automated over-the-air (OTA) update channels, establishing rigid cryptographic signature checks on incoming firmware, and deploying local boundary firewalls to block unauthorized third-party mirrors.",
+      "cost": 170
+    },
+    {
+      "id": "SKILL_IOT_IDS_DEPLOYMENT",
+      "name": "IoT Intrusion Detection & ARP Mitigation",
+      "description": "Analyzing baseline IoT behavioral profiles, identifying spoofed device signatures within a local subnet, and deploying lightweight network IDS controls to mitigate severe ARP flooding.",
+      "cost": 160
+    },
+    {
+      "id": "SKILL_PHYSICAL_IOT_HARDENING",
+      "name": "Physical IoT Hardware Hardening & Tamper Resistance",
+      "description": "Identifying unsecured physical interfaces, auditing debug headers (UART), securing unencrypted boot storage media, and implementing post-production anti-tamper mitigations.",
+      "cost": 190
+    }
+  ],
+  "pointsOfInterest": []
+}

@@ -1,0 +1,2878 @@
+{
+  "id": "04_networks",
+  "contentPackId": "BaseContent",
+  "name": "4. Network Scanning and Analysis",
+  "description": "Understand network architecture, protocol behavior, and traffic analysis, then apply authorized scanning, packet inspection, and defensive reasoning to map exposure safely.",
+  "stages": [
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q01_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "An online retailer puts its public web servers, mail relay, and internal database on one flat subnet and asks why that worries the auditors. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "It quietly encrypts absolutely all of the traffic that leaves the building, in both directions at once.",
+        "It noticeably speeds up the public website by caching its pages a lot closer to the visiting users.",
+        "It isolates public-facing services in a buffer zone so a breach there does not directly reach the internal network.",
+        "It completely removes the need for the organization to maintain any firewall rules at all anymore."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q01_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What is the purpose of a DMZ in network architecture?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Recommend moving public services into a DMZ segment with controlled paths to internal systems, and document the current exposure.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Leave absolutely everything sitting on one single flat subnet, but simply rename that subnet the secure zone on the network diagram.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q01_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "locationId": "LONDON_DMZ_DESIGN",
+      "iconId": "",
+      "id": "U04Q01_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q01_DMZ_DESIGN",
+      "id": "U04Q01_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock DMZ Design Review before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q02_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A hospital network lets ward tablets, billing servers, and medical imaging devices all talk to each other with no internal boundaries. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "It mainly just makes the whole network noticeably faster for video calls right across the office.",
+        "It cleverly hides the entire internal network away from all of the major public search engines.",
+        "It completely replaces the need for any of the users to remember any passwords at all anymore.",
+        "It limits how far an attacker or malware can move once a single device is compromised."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q02_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why does network segmentation reduce risk?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Suggest just one single large VLAN for the whole site, on the grounds that keeping separate segments is simply far too much paperwork.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Propose segmenting clinical, administrative, and guest systems with controlled inter-segment rules, and explain the lateral-movement risk.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q02_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 52.3676,
+      "longitude": 4.9041,
+      "locationId": "AMSTERDAM_SEGMENTATION",
+      "iconId": "",
+      "id": "U04Q02_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q02_SEGMENTATION",
+      "id": "U04Q02_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Network Segmentation Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q03_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A consulting firm mixes LAN, a site-to-site WAN link, and a cloud VPC, and a junior analyst labels them all \"the network\" in the report. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Different network types have different scopes, ownership, and exposure that change how you test and defend them.",
+        "All of the network types are completely identical to one another the very moment they are cabled up.",
+        "Only the local LAN can ever realistically be attacked; all of the other types are perfectly safe.",
+        "The network type only ever affects the physical color of the cables that end up being used for it."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q03_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why does distinguishing network types matter in an assessment?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Map each environment by type, owner, and trust boundary so scope and risk are clear before testing.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just treat the LAN, the WAN, and the cloud all as one single undifferentiated target so as to save a little time.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q03_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 52.52,
+      "longitude": 13.405,
+      "locationId": "BERLIN_NETWORK_TYPES",
+      "iconId": "",
+      "id": "U04Q03_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q03_NETWORK_TYPES",
+      "id": "U04Q03_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Network Type Recognition before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q04_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "An IT team gave a 24-host office a /24 block and a 4000-host campus a /28, then wonders why devices keep failing to connect. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "It defines the maximum physical length that the network cable running between two hosts can be.",
+        "Which portion of an IP address identifies the network and which identifies the host, setting the size of the subnet.",
+        "It sets the encryption strength that protects all of the data on the connection from any snooping.",
+        "It defines the raw speed of the network link itself, measured in megabits for every single second."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q04_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What does a subnet mask define?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just assign random subnet masks one after another until something finally connects, and then skip the documentation.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Recalculate the subnet sizes to match real host counts and document the corrected addressing plan.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q04_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 40.4168,
+      "longitude": -3.7038,
+      "locationId": "MADRID_ADDRESSING",
+      "iconId": "",
+      "id": "U04Q04_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q04_ADDRESSING",
+      "id": "U04Q04_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Addressing and Subnetting before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q05_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A startup exposes its whole internal address range publicly, then asks why a properly configured neighbor only shows one public IP for hundreds of devices. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "It maps internal private addresses to one or more public addresses, hiding internal structure from outside.",
+        "It permanently deletes all of the private addresses from every single device on the whole network.",
+        "It automatically encrypts every single packet that happens to cross the gateway, entirely by default.",
+        "It assigns the exact same single IP address to every device that is attached to the whole network."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q05_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What does Network Address Translation (NAT) do?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Explain how NAT conserves public addresses and limits external visibility, and review the gateway for safe translation rules.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Recommend simply giving every single internal device its very own dedicated public IP address purely for the sake of simplicity.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q05_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 41.9028,
+      "longitude": 12.4964,
+      "locationId": "ROME_NAT",
+      "iconId": "",
+      "id": "U04Q05_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q05_NAT",
+      "id": "U04Q05_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock NAT Behavior Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q06_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A capture from a branch office shows HTTP, DNS, SMTP, and SSH traffic, and a trainee cannot tell which service each belongs to. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Network protocols really only ever matter to the companies that physically manufacture the networking cables and connectors.",
+        "Each protocol uses typical ports and behavior, so recognizing them helps you understand what services are running and where risk lives.",
+        "All of the different network protocols behave in exactly the same identical way once their packets are out on the wire.",
+        "Recognizing which protocols are in use is only ever genuinely useful when it comes to preparing the monthly billing report."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q06_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why is recognizing common protocols important?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just label all of the observed traffic as web traffic, simply because doing that is much easier to write down quickly.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Identify each protocol and its typical port, then note which carry data in clear text and deserve attention.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q06_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "locationId": "PARIS_COMMON_PROTOCOLS",
+      "iconId": "",
+      "id": "U04Q06_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q06_COMMON_PROTOCOLS",
+      "id": "U04Q06_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Protocol Identification before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q07_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A manufacturing site exposes an old clear-text management protocol to the internet alongside its modern encrypted equivalent. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "It is simply the total number of physical network cables that a given protocol happens to need in order to run.",
+        "It is just the manufacturer brand name that happens to be printed on the side of the router running it.",
+        "The set of ways a protocol's design or exposure can be abused, such as clear-text credentials or unauthenticated commands.",
+        "It refers only to the raw speed at which the protocol is able to move data across the network link."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q07_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What is a protocol attack surface?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Catalog exposed protocols, flag clear-text and unauthenticated ones, and recommend restricting or replacing them.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Simply ignore the insecure legacy protocol entirely, on the grounds that the modern one is also available anyway.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q07_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 48.2082,
+      "longitude": 16.3738,
+      "locationId": "VIENNA_ATTACK_SURFACE",
+      "iconId": "",
+      "id": "U04Q07_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q07_ATTACK_SURFACE",
+      "id": "U04Q07_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Protocol Attack Surface Mapping before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q08_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A defender sees a single source touch hundreds of ports across a subnet in seconds and asks what that pattern means. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "It reveals the precise physical location of the attacker who is actually performing the scan.",
+        "It reveals the entire contents of every single file that is stored on the target host.",
+        "It reveals the password of every single user account that exists on the target host.",
+        "Which ports are open, closed, or filtered, hinting at the services and exposure of a host."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q08_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What does a port scan typically reveal?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just assume that any port scan at all is entirely harmless, and so take no further note of it whatsoever in any of the records.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Interpret the scan as service discovery, confirm scope and authorization, and decide whether it is sanctioned testing or suspicious activity.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q08_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 50.0755,
+      "longitude": 14.4378,
+      "locationId": "PRAGUE_PORT_SCAN_BEHAVIOR",
+      "iconId": "",
+      "id": "U04Q08_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q08_PORT_SCAN_BEHAVIOR",
+      "id": "U04Q08_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Port Scan Interpretation before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q09_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A monitoring tool flags that a video stream uses UDP while a file transfer uses TCP, and an intern thinks one of them is misconfigured. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "TCP is the connectionless one of the two, while UDP is the protocol that actually guarantees full and ordered delivery.",
+        "TCP provides ordered, reliable, connection-based delivery, while UDP is connectionless and favors speed over guaranteed delivery.",
+        "UDP always carefully encrypts the data that it carries, whereas TCP never bothers to encrypt anything at all.",
+        "They are in truth the very same single protocol, just referred to by two completely different names in practice."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q09_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What is a key difference between TCP and UDP?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Explain why each service correctly chose its transport protocol and note what that means for scanning and monitoring.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Recommend simply forcing absolutely all of the traffic onto one single transport protocol just to standardize everything.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q09_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 52.2297,
+      "longitude": 21.0122,
+      "locationId": "WARSAW_TCP_UDP",
+      "iconId": "",
+      "id": "U04Q09_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q09_TCP_UDP",
+      "id": "U04Q09_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Transport Protocol Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q10_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A network goes quiet to troubleshooting tools after an admin blanket-blocks all ICMP, and outages get harder to diagnose. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "It is used mainly for transferring very large files back and forth between two different servers reliably.",
+        "It is used purely for encrypting the web browsing sessions between a client and a remote web server.",
+        "Diagnostic and control messages such as echo requests, unreachable notifications, and time-exceeded replies.",
+        "It is responsible for automatically assigning fresh IP addresses to all of the devices on the network."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q10_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What is ICMP primarily used for?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply block all of the ICMP traffic everywhere on the network permanently, and just accept the complete loss of diagnostics.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Recommend allowing necessary ICMP types for diagnostics while rate-limiting and monitoring them, instead of a blanket block.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q10_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 59.9139,
+      "longitude": 10.7522,
+      "locationId": "OSLO_ICMP",
+      "iconId": "",
+      "id": "U04Q10_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q10_ICMP",
+      "id": "U04Q10_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock ICMP Behavior Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q11_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "During an authorized assessment, a team captures traffic on a switch span port and sees login data crossing in clear text. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Packet sniffing is simply impossible to carry out on any modern switched network anywhere these days at all.",
+        "Captured network packets always stay completely private and can never actually be read by any other person.",
+        "Only wireless networks can ever be sniffed at all; traffic that travels over wired networks is always perfectly safe.",
+        "Sensitive data sent without encryption can be read by anyone who can observe the traffic, so encryption in transit matters."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q11_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What is the defensive lesson from packet sniffing analysis?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Report the clear-text exposure, recommend encryption in transit, and handle the capture as sensitive evidence under scope.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Save the entire full packet capture onto an open shared drive so that absolutely everyone is able to browse the credentials.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q11_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 60.1699,
+      "longitude": 24.9384,
+      "locationId": "HELSINKI_PACKET_SNIFFING",
+      "iconId": "",
+      "id": "U04Q11_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q11_PACKET_SNIFFING",
+      "id": "U04Q11_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Traffic Capture Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q12_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A monitoring system shows DNS responses far larger than normal and HTTP requests with malformed headers from one host. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Traffic that deviates from a protocol's expected structure or behavior, which can signal misconfiguration or attack.",
+        "It is simply any network traffic at all that happens to be using some form of strong encryption on it.",
+        "It is just the perfectly normal network traffic that you would expect to see during the busy peak hours.",
+        "It is any protocol that happens to be running noticeably faster than it usually does on the network."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q12_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What is a protocol anomaly?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply dismiss the odd, anomalous traffic entirely, on the grounds that the network as a whole still appears to work fine.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Baseline normal behavior, flag the deviations with evidence, and investigate whether they indicate tunneling, abuse, or faults.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q12_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 55.6761,
+      "longitude": 12.5683,
+      "locationId": "COPENHAGEN_PROTOCOL_ANOMALY",
+      "iconId": "",
+      "id": "U04Q12_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q12_PROTOCOL_ANOMALY",
+      "id": "U04Q12_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Protocol Anomaly Detection before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q13_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A capture shows a request split into many tiny fragments that only make sense once reassembled, and an alert was missed because of it. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Packet fragments are essentially always corrupted somewhere in transit and so they can simply be ignored entirely.",
+        "Fragmentation of packets only ever has any real effect at all on the documents that are being sent off to a printer.",
+        "Fragmented packets simply never actually manage to reach their intended destination anywhere on the network anyway.",
+        "Reassembly is needed to see the full payload, and fragmentation can be abused to slip past inspection that does not reassemble."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q13_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why does packet fragmentation matter for analysis?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Reassemble the fragments for analysis and verify that inspection tools reassemble before deciding, then document the gap.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just judge each individual packet fragment completely in isolation, and then simply assume that all the traffic is benign.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q13_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 53.3498,
+      "longitude": -6.2603,
+      "locationId": "DUBLIN_FRAGMENTATION",
+      "iconId": "",
+      "id": "U04Q13_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q13_FRAGMENTATION",
+      "id": "U04Q13_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Fragmentation Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q14_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A TCP stream shows sequence and acknowledgment numbers that jump unexpectedly, and an analyst wonders if the session was tampered with. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "They are used to establish the specific brand and model of the network interface card inside the host.",
+        "They are used to establish the secret encryption key that protects all the data in the current session.",
+        "Ordered, reliable delivery and the legitimate state of a connection, so anomalies can hint at injection or spoofing.",
+        "They establish the rough physical distance between the two communicating hosts out on the network."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q14_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What do TCP sequence numbers help establish?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply ignore all of the TCP sequence numbers entirely, on the grounds that the connection still transfers its data fine.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Trace the sequence behavior to judge whether the session is consistent, and flag jumps that suggest injection or spoofing.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q14_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 38.7223,
+      "longitude": -9.1393,
+      "locationId": "LISBON_SEQUENCE",
+      "iconId": "",
+      "id": "U04Q14_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q14_SEQUENCE",
+      "id": "U04Q14_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Sequence Behavior Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q15_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "Flow records show one internal host steadily sending small amounts of data to an unfamiliar external address every night. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Patterns of who talks to whom, how much, and when, which can expose exfiltration, beaconing, or unusual relationships.",
+        "It reveals only the grand total bandwidth bill that the company will end up owing at the end of the month.",
+        "It reveals the exact plaintext passwords that are currently being typed and used right across the network.",
+        "It reveals nothing genuinely useful at all unless you first go and decrypt every single packet on the wire."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q15_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What can traffic flow analysis reveal?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Characterize the flow's destination, timing, and volume, then investigate it as possible beaconing or exfiltration within scope.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just assume that the nightly outbound traffic is always simply a routine backup, and then go ahead and close the ticket.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q15_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 47.3769,
+      "longitude": 8.5417,
+      "locationId": "ZURICH_TRAFFIC_FLOW",
+      "iconId": "",
+      "id": "U04Q15_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q15_TRAFFIC_FLOW",
+      "id": "U04Q15_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Traffic Flow Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q16_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A firewall ruleset has grown to hundreds of lines with a permissive \"any any allow\" rule near the top that shadows everything below. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Its core function is simply to speed up all of the downloads for everyone on the whole network.",
+        "To enforce a policy that allows or blocks traffic based on rules, controlling what can cross a boundary.",
+        "Its core function is to store complete backups of all of the files that exist on the network.",
+        "Its core function is to assign fresh IP addresses to all of the connected devices on the network."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q16_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What is the core function of a firewall?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just leave the permissive any-to-any rule in place, on the grounds that the firewall is at least technically present.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Flag the overly permissive rule, recommend least-privilege ordering, and document which traffic should actually be allowed.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q16_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 50.8503,
+      "longitude": 4.3517,
+      "locationId": "BRUSSELS_FIREWALL",
+      "iconId": "",
+      "id": "U04Q16_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q16_FIREWALL",
+      "id": "U04Q16_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Firewall Rule Review before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q17_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Analysts notice SSH-like traffic wrapped inside what looks like ordinary HTTPS, carrying data the firewall would normally block. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Encapsulating one protocol inside another, which can bypass controls by hiding traffic in an allowed channel.",
+        "It refers to the work of physically digging trenches in the ground in order to lay network cable.",
+        "It is a technique used purely for speeding up the slow DNS name lookups happening across the network.",
+        "It is a specific type of dedicated firewall hardware that you install right at the network edge."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q17_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What is tunneling in a network context?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Investigate the encapsulated traffic, confirm whether it is sanctioned, and recommend egress controls and inspection where appropriate.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Simply allow the tunneled traffic through, on the grounds that HTTPS is normally trusted and the whole thing looks fine.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q17_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 48.1351,
+      "longitude": 11.582,
+      "locationId": "MUNICH_TUNNELING",
+      "iconId": "",
+      "id": "U04Q17_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q17_TUNNELING",
+      "id": "U04Q17_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Tunneling Detection before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q18_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "An organization put its IDS sensor behind a NAT and its firewall inside the trusted zone, so neither sees the traffic it should. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Where a security device is physically placed really only ever affects the precise terms of its hardware warranty.",
+        "A control only protects or observes the traffic that actually flows through its position, so placement determines effectiveness.",
+        "Security devices all work in exactly the same identical way no matter where on the whole network they happen to sit.",
+        "Where a security device is placed only ever matters at all when it comes to running the power cabling out to it."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q18_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why does the placement of security devices matter?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just leave all of the security devices wherever they currently are, on the grounds that they are powered on and blinking.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Reposition sensors and filters at the boundaries where the relevant traffic passes, and document the visibility gaps found.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q18_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 45.4642,
+      "longitude": 9.19,
+      "locationId": "MILAN_DEVICE_PLACEMENT",
+      "iconId": "",
+      "id": "U04Q18_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q18_DEVICE_PLACEMENT",
+      "id": "U04Q18_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Security Device Placement before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q19_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "An IDS logs a burst of failed logins followed by a successful one from a new country, but no one reviews the alerts. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Its role is to prevent the network from ever actually being used by anyone for anything at all.",
+        "Its role is simply to completely replace each and every one of the existing network firewalls.",
+        "Its role is to quietly encrypt all of the files that happen to be stored on the network.",
+        "To recognize signs of malicious activity in traffic and alert defenders so they can respond in time."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q19_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What is the role of network attack detection?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Correlate the failed-then-successful login pattern, raise it as a likely credential attack, and recommend alert review workflows.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Simply silence all of the detection alerts entirely, on the grounds that there are far too many of them to ever read.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q19_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 37.9838,
+      "longitude": 23.7275,
+      "locationId": "ATHENS_ATTACK_DETECTION",
+      "iconId": "",
+      "id": "U04Q19_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q19_ATTACK_DETECTION",
+      "id": "U04Q19_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Network Attack Detection before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q20_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "After detecting repeated exploit attempts against one service, a team debates whether to keep only watching or to actively block. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Prevention and detection are really just two different names for one and the very same single activity.",
+        "Prevention only ever begins to actually work at all after a breach has already completely happened.",
+        "Detection identifies malicious activity, while prevention actively blocks or limits it, ideally before harm occurs.",
+        "Detection is the part that actively blocks the traffic, while prevention only ever quietly writes log entries."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q20_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "How does prevention differ from detection?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just keep on passively watching the traffic, on the grounds that actively blocking it might annoy some real user one day.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Recommend layered prevention such as blocking the source, patching the service, and tightening rules, alongside continued monitoring.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q20_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 39.7392,
+      "longitude": -104.9903,
+      "locationId": "DENVER_ATTACK_PREVENTION",
+      "iconId": "",
+      "id": "U04Q20_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q20_ATTACK_PREVENTION",
+      "id": "U04Q20_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Network Attack Prevention before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q21_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A new engagement begins and the tester is tempted to scan everything reachable, including addresses outside the signed scope. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "It completely removes and replaces the need to ever obtain any kind of authorization or permission first.",
+        "It extends reconnaissance by actively probing in-scope systems to learn their structure, hosts, and services.",
+        "It is only ever legal to perform it against your own personal laptop at home and against nothing else at all.",
+        "It reveals absolutely nothing at all that ordinary passive reconnaissance could not already have found."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q21_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "How does network scanning relate to reconnaissance?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Confirm the authorized address ranges and timing, then scan only in-scope targets and log the boundaries you respected.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just go ahead and scan every single reachable address out there, since the network responded to all the probes anyway.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q21_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "locationId": "NEW_YORK_SCAN_SCOPE",
+      "iconId": "",
+      "id": "U04Q21_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q21_SCAN_SCOPE",
+      "id": "U04Q21_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Scanning Scope Planning before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q22_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A tester needs to know which of 1,000 possible addresses are actually in use before spending time on deeper probes. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Its goal is to crash every single device that happens to be connected to the target subnet.",
+        "Its goal is to read all of the files that are stored on each and every one of the discovered hosts.",
+        "To determine which addresses have live, responding hosts so later scanning focuses on real systems.",
+        "Its goal is to assign brand-new IP addresses to all of the hosts that it happens to find."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q22_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What is the goal of host discovery?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Run the very heaviest possible scan against all one thousand addresses at once, regardless of whether they even exist.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Use light discovery probes to find live hosts within scope, then prioritize them for further authorized scanning.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q22_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 43.6532,
+      "longitude": -79.3832,
+      "locationId": "TORONTO_HOST_DISCOVERY",
+      "iconId": "",
+      "id": "U04Q22_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q22_HOST_DISCOVERY",
+      "id": "U04Q22_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Host Discovery before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q23_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A discovery sweep returns a list of responding addresses, some static servers and some short-lived DHCP clients. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Accurate address identification ties findings to the right host and avoids blaming a device that later held a reassigned address.",
+        "Addresses on a network simply never change at all over time, so carefully recording them is just pointless busywork.",
+        "IP addresses are really just purely decorative and carry no genuine meaning of any kind during an assessment.",
+        "Only the single gateway address of the whole network ever actually matters at all when you are scanning."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q23_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why identify and record IP addresses carefully during scanning?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Record each live address with a timestamp and context so findings map to the correct host despite dynamic assignment.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just note down only the subnet itself, and then simply assume that every single address on it is permanent for good.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q23_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 41.8781,
+      "longitude": -87.6298,
+      "locationId": "CHICAGO_IP_IDENTIFICATION",
+      "iconId": "",
+      "id": "U04Q23_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q23_IP_IDENTIFICATION",
+      "id": "U04Q23_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock IP Address Identification before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q24_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A scan of a server returns several open ports, some expected and one unusual high port that no one can explain. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "It indicates that the target host is currently completely offline and unreachable on the network.",
+        "It indicates that the port itself is physically broken on the actual hardware of the target host.",
+        "It indicates that the target host does not have any kind of firewall protecting it at all.",
+        "That a service is listening on that port and may accept connections, marking a potential entry point."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q24_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What does an open port indicate?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply ignore the one unusual open port, on the grounds that most of the other ports all looked perfectly normal.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "List the open ports, flag the unexplained one for investigation, and tie each to an expected service or a question.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q24_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "locationId": "SAN_FRANCISCO_OPEN_PORTS",
+      "iconId": "",
+      "id": "U04Q24_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q24_OPEN_PORTS",
+      "id": "U04Q24_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Open Port Identification before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q25_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "Two hosts both show port 8080 open, but one runs a patched app server and the other an outdated admin console. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "The port number on its own already fully and completely describes the entire risk of the host.",
+        "The actual service and its version determine real exposure, since the same port can host very different software.",
+        "The running services never actually differ in any way at all between one host and the very next one.",
+        "Actually identifying the specific running service behind a port is strictly illegal during any test."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q25_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why identify the running service, not just the open port?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Fingerprint the service and version behind each port, then prioritize the outdated console for closer review.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just assume that both of the services found on port 8080 are completely identical, and then simply move on.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q25_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "locationId": "SEATTLE_SERVICE_ID",
+      "iconId": "",
+      "id": "U04Q25_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q25_SERVICE_ID",
+      "id": "U04Q25_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Service Identification before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q26_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A report lists open ports as bare numbers, and the client cannot tell which business systems they correspond to. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Because the port numbers themselves are entirely random and carry no real meaning whatsoever to anyone.",
+        "Because carefully mapping the ports actually serves to hide important information away from the client.",
+        "Mapping ports to recognizable services makes findings understandable and actionable for the people who own the systems.",
+        "Because the services and the ports genuinely have no real relationship to one another at all in practice."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q26_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why map ports to services in findings?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply hand over the raw list of open port numbers, and then leave the client to figure all of it out for themselves.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Translate each open port into the service and business function it represents so owners can act on the findings.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q26_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 42.3601,
+      "longitude": -71.0589,
+      "locationId": "BOSTON_PORT_SERVICE_MAP",
+      "iconId": "",
+      "id": "U04Q26_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q26_PORT_SERVICE_MAP",
+      "id": "U04Q26_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Port to Service Mapping before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q27_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A server runs an old file-sharing service and a debug interface that nobody uses but everyone forgot to disable. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Every exposed service is attack surface, so unnecessary or insecure ones add risk for no business benefit.",
+        "Because every unused service that is left running actually quietly improves the overall performance.",
+        "Because the risky services on a host are in fact always genuinely required to be running there.",
+        "Because disabling any running service at all on a host is something that is simply never allowed."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q27_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why flag unnecessary or risky services?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Recommend disabling the unused debug interface and replacing the legacy service, documenting the reduced attack surface.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just keep both of the unnecessary services running, purely on the grounds that actually removing them would take effort.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q27_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 30.2672,
+      "longitude": -97.7431,
+      "locationId": "AUSTIN_RISKY_SERVICES",
+      "iconId": "",
+      "id": "U04Q27_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q27_RISKY_SERVICES",
+      "id": "U04Q27_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Risky Service Triage before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q28_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "Scan results suggest one host is a years-old, unsupported operating system while another is current. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Because it conveniently tells you what the user's single favorite color happens to be on the day.",
+        "Because the operating system that is in use never has any effect at all on the security of the host.",
+        "Because operating system detection is always perfectly and completely accurate each and every time.",
+        "Knowing the OS and version helps gauge likely vulnerabilities, patch state, and appropriate testing."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q28_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "How does operating system identification help an assessment?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just treat the operating system detection result as completely certain, and skip recording any confidence level at all.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Note the likely OS and version with confidence levels, and prioritize the unsupported host for patch and risk review.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q28_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 19.4326,
+      "longitude": -99.1332,
+      "locationId": "MEXICO_CITY_OS_FINGERPRINT",
+      "iconId": "",
+      "id": "U04Q28_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q28_OS_FINGERPRINT",
+      "id": "U04Q28_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock OS Fingerprint Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q29_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A service responds differently depending on whether it runs on a 32-bit or 64-bit, ARM or x86 backend, affecting which issues apply. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Architecture influences which software, exploits, and weaknesses are relevant, refining the picture of exposure.",
+        "The underlying system architecture genuinely has no effect at all on which vulnerabilities will apply.",
+        "It only ever genuinely matters at all when it comes to the graphics and overall display quality of the host.",
+        "Every single system that exists shares one and the very same underlying hardware architecture anyway."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q29_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why identify system architecture during scanning?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Record architecture clues with their evidence and use them to narrow which weaknesses realistically apply.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just assume one single architecture for everything, purely in order to keep the written notes short and simple.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q29_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": -23.5505,
+      "longitude": -46.6333,
+      "locationId": "SAO_PAULO_ARCHITECTURE_ID",
+      "iconId": "",
+      "id": "U04Q29_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q29_ARCHITECTURE_ID",
+      "id": "U04Q29_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Architecture Identification before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q30_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "After mapping services, a tester needs to choose which exposed points realistically matter as ways into the environment. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "It is purely a locked physical server-room door, and nothing else on the whole network counts.",
+        "It is simply the company's main front lobby, where all of the visitors first arrive each day.",
+        "It is any network port at all that currently happens to be closed and is not listening for traffic.",
+        "An exposed, reachable service or interface through which an attacker could attempt to gain access."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q30_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What is an entry point in network terms?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just list every single open port as being equally important, completely regardless of whether it is even reachable.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Catalog reachable entry points with their exposure and likely risk, focusing effort on the most realistic ones.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q30_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": -33.8688,
+      "longitude": 151.2093,
+      "locationId": "SYDNEY_ENTRY_POINT",
+      "iconId": "",
+      "id": "U04Q30_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q30_ENTRY_POINT",
+      "id": "U04Q30_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Entry Point Mapping before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q31_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "Combining open ports, service versions, and OS data, a tester begins forming hypotheses about where weaknesses likely exist. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "By directly proving each of the exploits themselves without ever doing any further checking at all.",
+        "By combining host, service, and version data into hypotheses about likely weaknesses to verify safely later.",
+        "By simply guessing completely at random which particular weaknesses each host probably happens to have.",
+        "By completely ignoring all of the software versions that were actually found during the scanning."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q31_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "How do scan results lead to potential vulnerability identification?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Turn the combined scan data into prioritized, testable hypotheses and mark them for safe, authorized verification.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just declare each and every host vulnerable based on the version banners alone, with no actual verification at all.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q31_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 19.076,
+      "longitude": 72.8777,
+      "locationId": "MUMBAI_VULN_SURFACE",
+      "iconId": "",
+      "id": "U04Q31_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q31_VULN_SURFACE",
+      "id": "U04Q31_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Vulnerability Surface Identification before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q32_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A team must choose between a full TCP connect scan and lighter techniques against a sensitive, monitored host. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "It only counts the number of hosts on a network.",
+        "It checks software versions against a vulnerability database.",
+        "It maps which ports are open on specific hosts to find listening services.",
+        "It measures internet bandwidth."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q32_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What distinguishes port scanning from other scan types?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just run the single loudest and most aggressive scan possible against the sensitive host, purely in order to be thorough.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Choose an authorized scan technique appropriate to the host's sensitivity and monitoring, and record the rationale.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q32_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 37.5665,
+      "longitude": 126.978,
+      "locationId": "SEOUL_PORT_SCAN_TYPE",
+      "iconId": "",
+      "id": "U04Q32_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q32_PORT_SCAN_TYPE",
+      "id": "U04Q32_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Port Scan Technique Review before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q33_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "Before deep testing, a tester needs a map of how many live hosts exist across several subnets and how they connect. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Discovering live hosts and the layout of a network across address ranges, building a map of the environment.",
+        "Its main focus is on reading through the actual contents of the files that are stored on the hosts.",
+        "Its main focus is on cracking the passwords of all the user accounts that it happens to find.",
+        "Its main focus is on carefully measuring the CPU temperature of each and every one of the hosts."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q33_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What is the focus of network scanning?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Plan a staged network scan across the in-scope subnets to build an accurate host-and-topology map.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just scan one single host very deeply, and then simply assume the rest of the network looks exactly the same.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q33_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 1.3521,
+      "longitude": 103.8198,
+      "locationId": "SINGAPORE_NETWORK_SCAN_TYPE",
+      "iconId": "",
+      "id": "U04Q33_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q33_NETWORK_SCAN_TYPE",
+      "id": "U04Q33_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Network Scan Planning before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q34_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "An automated vulnerability scanner returns a long list including several findings that look like false positives. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "It comes with a firm guarantee of exactly zero false positives anywhere in any of its findings at all.",
+        "It completely replaces and removes the need for any kind of human judgment at all during the process.",
+        "It only ever works at all against the systems that happen to be fully offline and disconnected from everything.",
+        "It checks discovered hosts and services against known-weakness signatures, producing findings that still need validation."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q34_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What does vulnerability scanning add beyond port and network scans?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply forward the entire raw scanner output straight to the client and present it to them as the final results.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Validate the scanner's findings, separate likely false positives, and prioritize confirmed issues with context.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q34_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": -33.9249,
+      "longitude": 18.4241,
+      "locationId": "CAPE_TOWN_VULN_SCAN_TYPE",
+      "iconId": "",
+      "id": "U04Q34_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q34_VULN_SCAN_TYPE",
+      "id": "U04Q34_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Vulnerability Scan Review before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q35_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A trainee watches a connection set up, exchange data, and tear down, but cannot explain the stages of the conversation. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "By sending just one single packet across the network and then simply hoping that it actually arrives.",
+        "Through a three-way handshake (SYN, SYN-ACK, ACK) that synchronizes both sides before reliable data exchange.",
+        "By carefully encrypting only the very first packet of the entire connection and none of the others.",
+        "By broadcasting the connection request out to every single host on the whole local network at once."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q35_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "How does TCP/IP communication establish a reliable connection?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Walk through the handshake, data, and teardown stages so the team can recognize normal versus abnormal connection behavior.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just tell the trainee that the individual handshake stages do not really matter at all, as long as the data still moves.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q35_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 22.3193,
+      "longitude": 114.1694,
+      "locationId": "HONG_KONG_TCPIP_COMM",
+      "iconId": "",
+      "id": "U04Q35_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q35_TCPIP_COMM",
+      "id": "U04Q35_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock TCP/IP Communication Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q36_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A capture shows packets with unusual flag combinations that do not match any normal stage of a connection. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "They indicate the specific color coding that is used on the network cable for that particular link.",
+        "They indicate the particular encryption algorithm that is currently in use on the connection.",
+        "Control states of a connection, like initiation, acknowledgment, graceful close, and abrupt reset.",
+        "They indicate only the physical port number that the connection happens to be using right now."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q36_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What do TCP flags such as SYN, ACK, FIN, and RST indicate?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply ignore all of the TCP flag combinations entirely, on the grounds that the packets themselves still arrived just fine.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Decode the flag combinations against expected connection states and flag the abnormal ones as possible crafted or scanning traffic.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q36_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 32.0853,
+      "longitude": 34.7818,
+      "locationId": "TEL_AVIV_TCP_FLAGS",
+      "iconId": "",
+      "id": "U04Q36_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q36_TCP_FLAGS",
+      "id": "U04Q36_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock TCP Flag Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q37_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A scanner sends crafted probes and an analyst must read whether the SYN-ACK, RST, or silence reveals each port's state. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "The port is open and waiting.",
+        "The data was successfully delivered.",
+        "The host is encrypting the session.",
+        "The port is closed or actively refusing the connection."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q37_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What does a RST response to a connection attempt usually mean?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Map each response (SYN-ACK, RST, no reply) to the likely port state and document how you interpreted them.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just treat every single type of response that comes back as automatically meaning that the port must be open.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q37_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 12.9716,
+      "longitude": 77.5946,
+      "locationId": "BENGALURU_HANDSHAKE_RESPONSE",
+      "iconId": "",
+      "id": "U04Q37_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q37_HANDSHAKE_RESPONSE",
+      "id": "U04Q37_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Handshake Response Analysis before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q38_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "In an authorized lab, a tester builds a custom packet with specific flags to see how a device handles unexpected input. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "It mainly lets a tester quietly fabricate convincing fake billing records for the whole company.",
+        "It is a technique that is only ever used in order to deliberately slow whole networks right down.",
+        "It lets a tester control packet fields precisely to study how systems respond to specific or unusual inputs.",
+        "It genuinely has no legitimate testing purpose of any kind in any real network assessment at all."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q38_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why is packet crafting useful in network testing?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just send crafted, malformed packets straight at the live production systems in order to see what ends up breaking.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Craft and send test packets only against authorized lab targets, record the responses, and keep within the agreed scope.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q38_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": -36.8485,
+      "longitude": 174.7633,
+      "locationId": "AUCKLAND_PACKET_CRAFT",
+      "iconId": "",
+      "id": "U04Q38_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q38_PACKET_CRAFT",
+      "id": "U04Q38_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Packet Crafting Fundamentals before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q39_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A tester wants to confirm whether a firewall really drops a certain traffic type, using carefully shaped test packets. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "It genuinely proves absolutely nothing at all about the real configurations of any of the systems involved.",
+        "By observing exactly how a device responds to known inputs, you can confirm rules, filtering, and handling behavior.",
+        "It only ever works at all in cases where encryption happens to have been disabled everywhere on the network.",
+        "It completely replaces and removes the need for any kind of ongoing monitoring of the network at all."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q39_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "How does crafted-packet testing help validate network behavior?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Design a minimal authorized test that confirms the firewall behavior, capture the result, and document the configuration evidence.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just flood the firewall with as much traffic as possible until it eventually changes its behavior under the heavy load.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q39_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 25.033,
+      "longitude": 121.5654,
+      "locationId": "TAIPEI_BEHAVIOR_TEST",
+      "iconId": "",
+      "id": "U04Q39_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q39_BEHAVIOR_TEST",
+      "id": "U04Q39_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Network Behavior Testing before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q40_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "An assessment covered the IPv4 range thoroughly but completely missed the IPv6 addresses the same hosts also use. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Its vast address space makes sweeping impractical, so discovery relies on other clues, and forgotten IPv6 exposure is a real gap.",
+        "IPv6 networks simply cannot be scanned in any way at all using any of the tools that are currently available.",
+        "IPv6 is genuinely identical to IPv4 in every single respect, so nothing at all about the scanning ever changes.",
+        "Every host that happens to use IPv6 is automatically and completely secure without any further effort at all."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q40_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why does IPv6 change how scanning is approached?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just skip over all of the IPv6 addresses entirely, purely on the grounds that the IPv4 scan has already finished running.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Include in-scope IPv6 addresses in the assessment, use appropriate discovery methods, and flag the previously missed exposure.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q40_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 25.2048,
+      "longitude": 55.2708,
+      "locationId": "DUBAI_IPV6_SCAN",
+      "iconId": "",
+      "id": "U04Q40_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q40_IPV6_SCAN",
+      "id": "U04Q40_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock IPv6 Scanning Awareness before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U04Q41_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Authorized testing shows that a naive scan is fully blocked by a firewall, hiding services that are actually reachable another way. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "So that you can help real attackers reliably avoid being detected during their actual live intrusions.",
+        "So that you are then able to disable each of the security controls permanently and for good afterwards.",
+        "Because the security controls in place never have any real effect at all on the actual results of a scan.",
+        "To accurately assess real exposure and to test whether controls behave as intended, all within authorized scope."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q41_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why understand how scans interact with security controls?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Document how the control shaped the scan, retest within scope to gauge true exposure, and report the control's effectiveness.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Quietly use stealth techniques against the production systems in order to bypass the monitoring, all without any authorization.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q41_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": -1.2921,
+      "longitude": 36.8219,
+      "locationId": "NAIROBI_CONTROL_AWARE",
+      "iconId": "",
+      "id": "U04Q41_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q41_CONTROL_AWARE",
+      "id": "U04Q41_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Control-Aware Scanning before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U04Q42_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A defender studies how fragmentation and spoofed source addresses could let scans slip past simple inspection, to harden against it. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "So that you are then able to teach the attackers a set of brand-new tricks that they did not already know about.",
+        "To recognize and close the inspection gaps these techniques exploit, such as devices that do not reassemble or verify sources.",
+        "Because these particular evasion techniques are simply completely impossible for anyone at all to ever detect.",
+        "So that you are then able to go and quietly disable all of the logging right across the entire network."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q42_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "From a defensive view, why study fragmentation and spoofing evasion?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Go ahead and replicate the full set of evasion techniques against the live production systems, purely to prove it can be done.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Recommend reassembling inspection, anti-spoofing filters, and alerting so these evasion techniques are caught, and note the current gaps.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U04Q42_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 47.6062,
+      "longitude": -120.5,
+      "locationId": "WASHINGTON_EVASION_AWARENESS",
+      "iconId": "",
+      "id": "U04Q42_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q42_EVASION_AWARENESS",
+      "id": "U04Q42_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Evasion Technique Awareness before the next network case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U04Q43_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "Logs show traffic arriving through a chain of proxies that obscure its true origin, complicating an investigation. Map the behavior, stay inside the rules of engagement, and turn it into a defensible network insight.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "They make attribution harder, so defenders must rely on behavior, correlation, and logging rather than source IP alone.",
+        "They conveniently make every single incoming network connection completely trustworthy by default.",
+        "They serve as a firm guarantee that all of the traffic in question has definitely originated internally.",
+        "They genuinely have no effect of any kind at all on the eventual course of a security investigation."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the network behavior to real exposure, authorized scope, and defensive value.",
+      "id": "U04Q43_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why do proxies and source obfuscation matter to defenders?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Recommend richer logging, behavioral correlation, and threat intelligence so attribution does not depend on a single, spoofable source.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Simply block the single proxy IP address that you found, and then go ahead and consider the entire investigation closed.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U04Q43_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The team needs a next step. Which response best balances real insight with safe, authorized operation?",
+      "stageType": 1
+    },
+    {
+      "latitude": 35.6762,
+      "longitude": 139.6503,
+      "locationId": "TOKYO_PROXY_ATTRIBUTION",
+      "iconId": "",
+      "id": "U04Q43_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Pin this network case on the map so the assessment links the finding to a real environment.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U04Q43_PROXY_ATTRIBUTION",
+      "id": "U04Q43_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Solid work. You turned the observation into clear reasoning and a safe next step. Unlock Proxy and Attribution Analysis before the next network case.",
+      "stageType": 3
+    }
+  ],
+  "skills": [
+    {
+      "id": "SKILL_U04Q01_DMZ_DESIGN",
+      "name": "DMZ Design Review",
+      "description": "Evaluate how public-facing services are isolated and whether a buffer zone limits reach into internal networks.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q02_SEGMENTATION",
+      "name": "Network Segmentation Analysis",
+      "description": "Assess internal boundaries and trust zones to limit how far compromise can spread inside a network.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q03_NETWORK_TYPES",
+      "name": "Network Type Recognition",
+      "description": "Distinguish LAN, WAN, and cloud environments by scope, ownership, and exposure during assessment scoping.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q04_ADDRESSING",
+      "name": "Addressing and Subnetting",
+      "description": "Read IP addressing and subnet masks to understand network size, host ranges, and boundaries.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q05_NAT",
+      "name": "NAT Behavior Analysis",
+      "description": "Analyze how address translation maps internal addresses outward and what it reveals or hides about a network.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q06_COMMON_PROTOCOLS",
+      "name": "Protocol Identification",
+      "description": "Recognize common protocols by behavior and typical ports to understand the services running on a network.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q07_ATTACK_SURFACE",
+      "name": "Protocol Attack Surface Mapping",
+      "description": "Map how a protocol's design and exposure create opportunities for abuse, then prioritize safer alternatives.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q08_PORT_SCAN_BEHAVIOR",
+      "name": "Port Scan Interpretation",
+      "description": "Interpret port-scan patterns to understand exposed services and distinguish authorized testing from suspicious probing.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q09_TCP_UDP",
+      "name": "Transport Protocol Analysis",
+      "description": "Compare TCP and UDP behavior to interpret how services communicate and how they respond to probing.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q10_ICMP",
+      "name": "ICMP Behavior Analysis",
+      "description": "Analyze ICMP diagnostic and control messages and how they aid troubleshooting and reconnaissance.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q11_PACKET_SNIFFING",
+      "name": "Traffic Capture Analysis",
+      "description": "Analyze captured traffic to identify exposed data and reinforce the need for encryption in transit.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q12_PROTOCOL_ANOMALY",
+      "name": "Protocol Anomaly Detection",
+      "description": "Compare observed traffic against expected protocol behavior to surface misconfiguration or malicious activity.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q13_FRAGMENTATION",
+      "name": "Fragmentation Analysis",
+      "description": "Reassemble fragmented traffic for accurate analysis and recognize how fragmentation can evade inspection.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q14_SEQUENCE",
+      "name": "Sequence Behavior Analysis",
+      "description": "Interpret TCP sequence and acknowledgment behavior to judge session integrity and spot manipulation.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q15_TRAFFIC_FLOW",
+      "name": "Traffic Flow Analysis",
+      "description": "Analyze who communicates with whom, how much, and when to surface beaconing, exfiltration, or unusual relationships.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q16_FIREWALL",
+      "name": "Firewall Rule Review",
+      "description": "Review firewall rules for least-privilege policy and spot permissive entries that undermine the boundary.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q17_TUNNELING",
+      "name": "Tunneling Detection",
+      "description": "Detect protocols encapsulated inside allowed channels and assess how tunneling can bypass network controls.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q18_DEVICE_PLACEMENT",
+      "name": "Security Device Placement",
+      "description": "Evaluate where firewalls and sensors sit so they observe and control the traffic that actually matters.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q19_ATTACK_DETECTION",
+      "name": "Network Attack Detection",
+      "description": "Recognize signatures and behavioral patterns of network attacks and turn alerts into timely response.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q20_ATTACK_PREVENTION",
+      "name": "Network Attack Prevention",
+      "description": "Translate detected threats into layered preventive controls that block or limit attacks before harm occurs.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q21_SCAN_SCOPE",
+      "name": "Scanning Scope Planning",
+      "description": "Plan active scanning as authorized, in-scope reconnaissance with clear boundaries and timing.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q22_HOST_DISCOVERY",
+      "name": "Host Discovery",
+      "description": "Identify which addresses host live systems so deeper scanning targets real, in-scope hosts.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q23_IP_IDENTIFICATION",
+      "name": "IP Address Identification",
+      "description": "Identify and document responding addresses accurately so findings attach to the correct hosts over time.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q24_OPEN_PORTS",
+      "name": "Open Port Identification",
+      "description": "Interpret open ports as listening services and potential entry points worth confirming.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q25_SERVICE_ID",
+      "name": "Service Identification",
+      "description": "Determine the actual service and version behind a port to judge real exposure rather than guessing from the number.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q26_PORT_SERVICE_MAP",
+      "name": "Port to Service Mapping",
+      "description": "Connect open ports to recognizable services and business functions so findings are clear and actionable.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q27_RISKY_SERVICES",
+      "name": "Risky Service Triage",
+      "description": "Identify unnecessary or insecure services that add attack surface without business value, and recommend safe reduction.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q28_OS_FINGERPRINT",
+      "name": "OS Fingerprint Analysis",
+      "description": "Estimate operating system and version from scan signals to gauge likely exposure and guide testing.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q29_ARCHITECTURE_ID",
+      "name": "Architecture Identification",
+      "description": "Infer system architecture from observed behavior to refine which software and weaknesses are relevant.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q30_ENTRY_POINT",
+      "name": "Entry Point Mapping",
+      "description": "Identify reachable, exposed services that realistically serve as ways into an environment.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q31_VULN_SURFACE",
+      "name": "Vulnerability Surface Identification",
+      "description": "Combine host, service, and version data into prioritized hypotheses about likely weaknesses to verify safely.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q32_PORT_SCAN_TYPE",
+      "name": "Port Scan Technique Review",
+      "description": "Select port-scan techniques suited to the target's sensitivity, exposure, and monitoring.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q33_NETWORK_SCAN_TYPE",
+      "name": "Network Scan Planning",
+      "description": "Plan network-wide scanning to discover live hosts and topology across in-scope address ranges.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q34_VULN_SCAN_TYPE",
+      "name": "Vulnerability Scan Review",
+      "description": "Run and interpret vulnerability scans critically, validating findings rather than trusting raw output.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q35_TCPIP_COMM",
+      "name": "TCP/IP Communication Analysis",
+      "description": "Trace how TCP/IP sets up, maintains, and closes connections to recognize normal versus abnormal behavior.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q36_TCP_FLAGS",
+      "name": "TCP Flag Analysis",
+      "description": "Interpret TCP control flags to understand connection state and spot crafted or anomalous packets.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q37_HANDSHAKE_RESPONSE",
+      "name": "Handshake Response Analysis",
+      "description": "Read SYN-ACK, RST, FIN, and silent responses to infer port state during scanning.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q38_PACKET_CRAFT",
+      "name": "Packet Crafting Fundamentals",
+      "description": "Use controlled, authorized packet crafting to study how systems respond to specific inputs.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q39_BEHAVIOR_TEST",
+      "name": "Network Behavior Testing",
+      "description": "Validate filtering and handling behavior by observing how devices respond to controlled test packets.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q40_IPV6_SCAN",
+      "name": "IPv6 Scanning Awareness",
+      "description": "Account for IPv6 address space and discovery differences so dual-stack hosts are not left unassessed.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q41_CONTROL_AWARE",
+      "name": "Control-Aware Scanning",
+      "description": "Understand how firewalls and IDS shape scan results to assess true exposure and validate control effectiveness.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q42_EVASION_AWARENESS",
+      "name": "Evasion Technique Awareness",
+      "description": "Understand fragmentation and spoofing evasion defensively to close the inspection and verification gaps they exploit.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U04Q43_PROXY_ATTRIBUTION",
+      "name": "Proxy and Attribution Analysis",
+      "description": "Assess how proxies and source obfuscation weaken IP-based attribution and what evidence to rely on instead.",
+      "cost": 0
+    }
+  ],
+  "pointsOfInterest": [
+    {
+      "id": "POI_U04_FLAT_NETWORK_LESSON",
+      "title": "Flat Network Wake-Up",
+      "description": "A logistics depot in Gothenburg learns that one flat network let a kiosk infection reach the shipping database, and starts a segmentation plan.",
+      "latitude": 57.7089,
+      "longitude": 11.9746,
+      "showAtProgressPercent": 10,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's network backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U04_CLEAR_TEXT_PROTOCOL",
+      "title": "Clear-Text Retirement",
+      "description": "A port authority in Rotterdam retires a legacy clear-text management protocol after seeing how easily its credentials appeared in a capture.",
+      "latitude": 51.9244,
+      "longitude": 4.4777,
+      "showAtProgressPercent": 26,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's network backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U04_SCOPE_DISCIPLINE",
+      "title": "Scope Discipline",
+      "description": "A university team in Edinburgh writes a rule for testers: confirm the authorized ranges before any scan touches the wire.",
+      "latitude": 55.9533,
+      "longitude": -3.1883,
+      "showAtProgressPercent": 44,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's network backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U04_SERVICE_INVENTORY",
+      "title": "Service Inventory Cleanup",
+      "description": "A media company in Buenos Aires disables forgotten debug and file-sharing services after a scan reveals more open ports than anyone expected.",
+      "latitude": -34.6037,
+      "longitude": -58.3816,
+      "showAtProgressPercent": 60,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's network backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U04_IPV6_BLIND_SPOT",
+      "title": "IPv6 Blind Spot",
+      "description": "A telecom in Bangkok discovers that dual-stack hosts were exposed over IPv6 long after the IPv4 side was hardened.",
+      "latitude": 13.7563,
+      "longitude": 100.5018,
+      "showAtProgressPercent": 78,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's network backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U04_INSPECTION_GAP",
+      "title": "Inspection Gap Closed",
+      "description": "A bank in Bogota updates its sensors to reassemble fragmented traffic after a drill shows a split payload slipping past inspection.",
+      "latitude": 4.711,
+      "longitude": -74.0721,
+      "showAtProgressPercent": 92,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's network backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    }
+  ]
+}

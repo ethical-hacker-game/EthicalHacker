@@ -1,0 +1,389 @@
+{
+  "id": "08_insider",
+  "contentPackId": "BaseContent",
+  "name": "8. Insider Threats",
+  "description": "Investigate insider threats from a defensive and forensic perspective: recognize trust exploitation, uncover data theft hidden with steganography, detect physically implanted keyloggers and malware, control USB-based data exfiltration, and close access safely when employees leave, all within legal authorization.",
+  "stages": [
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U08Q01_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A consulting firm asks you to review a suspected insider case. A long-trusted office manager has been requesting access far beyond their role, and colleagues approved everything because of personal trust. Your authorized task is to assess how that trust was exploited and turn it into a defensive finding, not to accuse anyone without evidence.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Insiders always warn the organization before they act, so a long-trusted employee never poses a real security risk.",
+        "Trust exploitation only ever happens through phishing emails from outsiders, never from someone who already works there.",
+        "Trusted insiders can bypass controls because colleagues grant exceptions based on relationships instead of policy.",
+        "Only brand-new hires can abuse trust, because long-serving staff have already proven they would never misuse their access."
+      ],
+      "incorrectAnswerText": "Look for the option that explains how personal trust lets an insider sidestep controls that would stop an outsider.",
+      "id": "U08Q01_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why is trust exploitation by an insider so dangerous for an organization?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Publicly confront the office manager in front of the whole team to force an immediate confession before any evidence is gathered.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Document the out-of-role access requests, verify them against the access policy, and recommend least-privilege reviews and approval workflows.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U08Q01_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 50.8503,
+      "longitude": 4.3517,
+      "locationId": "BRUSSELS_TRUST_AUDIT",
+      "iconId": "",
+      "id": "U08Q01_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the trust-exploitation finding to the affected office.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U08Q01_TRUST_EXPLOITATION_AWARENESS",
+      "id": "U08Q01_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You separated evidence from suspicion and turned a trust problem into a policy fix. Unlock Trust Exploitation Awareness before the next insider case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U08Q02_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A design studio noticed confidential product schematics leaking to a competitor, yet outbound email scans show nothing but holiday photos sent by one analyst. You are authorized to examine the suspect images forensically. The leak may be hidden inside the files themselves through steganography.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Steganography encrypts the entire hard drive, so it guarantees that no file of any kind can ever leave the corporate network.",
+        "Steganography is only a compression trick used to shrink images so that they upload and send through email far more quickly.",
+        "Steganography quietly deletes files from the sender's machine right after they are sent, leaving no copy for filters to inspect.",
+        "Steganography hides data inside ordinary-looking files, so content filters that only read the visible file can miss the theft."
+      ],
+      "incorrectAnswerText": "Look for the option that explains why hidden payloads inside innocent-looking files evade ordinary content inspection.",
+      "id": "U08Q02_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why can steganography defeat standard data-loss monitoring?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Preserve the original images with hashes, run steganalysis on forensic copies, and document any extracted payload for the investigation.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Open the images directly on the analyst's own workstation and overwrite them right away so the leak is stopped before anyone else looks.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U08Q02_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 48.2082,
+      "longitude": 16.3738,
+      "locationId": "VIENNA_STEGO_FORENSICS",
+      "iconId": "",
+      "id": "U08Q02_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the hidden-data finding to the affected studio.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U08Q02_STEGANALYSIS",
+      "id": "U08Q02_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You proved the leak without destroying the evidence trail. Unlock Steganalysis Forensics before the next insider case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U08Q03_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A law firm reports that credentials keep leaking even after every password reset. During an authorized sweep you must check whether someone with physical access planted a hardware keylogger or installed malware directly on office machines. Your job is detection and evidence handling, not retaliation.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "An insider with physical access can attach keyloggers or install malware directly, bypassing network defenses entirely.",
+        "Hardware keyloggers can only ever be installed remotely by hackers over the internet, so physical access to the office is irrelevant.",
+        "Keyloggers automatically stop recording and erase themselves the moment any user on that machine changes their account password.",
+        "Antivirus software always detects a hardware device plugged in between the keyboard and the computer and blocks it before it records."
+      ],
+      "incorrectAnswerText": "Look for the option that explains why physical access lets an insider bypass network-focused defenses.",
+      "id": "U08Q03_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why do physical implants like hardware keyloggers slip past typical security tooling?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Rip out every suspicious device the moment you find it and throw it all away so the leak stops today, before logging anything at all.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Photograph and label any suspicious device in place, preserve it as evidence, check badge logs for who had access, and brief the incident team.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U08Q03_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "locationId": "LONDON_IMPLANT_SWEEP",
+      "iconId": "",
+      "id": "U08Q03_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Add this case location to the threat map so the report links the physical implant finding to the affected office.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U08Q03_PHYSICAL_IMPLANT_DETECTION",
+      "id": "U08Q03_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Good work. You found the implant, kept the chain of custody intact, and tied it to access records. Unlock Physical Implant Detection before the next insider case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U08Q04_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A hospital's audit logs show a contractor's workstation copying large volumes of patient records to removable media after hours, a pattern known as pod slurping. You are authorized to investigate the USB activity, quantify what left the building, and recommend controls that stop the next attempt.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "USB drives transfer data far too slowly to ever move a meaningful amount of information before someone would notice and stop it.",
+        "Small personal devices can quietly copy huge amounts of data in minutes, so uncontrolled USB ports are a major exfiltration channel.",
+        "Only laptops issued directly by the company are physically capable of reading from or writing to any kind of USB storage device.",
+        "Data copied onto a USB device automatically expires and erases itself the instant the device is carried outside the building."
+      ],
+      "incorrectAnswerText": "Look for the option that explains why uncontrolled removable media makes mass data theft fast and quiet.",
+      "id": "U08Q04_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why is pod slurping through USB devices such an effective insider exfiltration method?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Correlate the device logs with badge and file-access records, then recommend USB allow-listing, encryption, and endpoint device control.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Glue every USB port shut across the entire hospital tonight on your own, without telling the incident team or checking the logs first.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U08Q04_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 40.4168,
+      "longitude": -3.7038,
+      "locationId": "MADRID_USB_EXFIL_CASE",
+      "iconId": "",
+      "id": "U08Q04_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the USB exfiltration finding to the affected hospital.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U08Q04_REMOVABLE_MEDIA_CONTROL",
+      "id": "U08Q04_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You measured the exposure and turned it into device-control policy instead of panic. Unlock Removable Media Control before the next insider case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U08Q05_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A software company is terminating a senior administrator who built half the infrastructure. Leadership fears hidden accounts, scheduled scripts, or remote access that could survive the departure. You are authorized to design the offboarding so no persistent access remains, while treating the employee fairly and lawfully.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Once an employee has been escorted out of the building, it is impossible for them to affect any company system ever again.",
+        "Persistent access is only a genuine risk when the departing employee worked inside the IT department for more than ten years.",
+        "Departing insiders may retain credentials, tokens, backdoor accounts, or scheduled jobs, so access must be inventoried and revoked completely.",
+        "Deleting the departing employee's email account on their last day automatically removes every other form of access they held."
+      ],
+      "incorrectAnswerText": "Look for the option that recognizes how many forms of access can outlive the badge and the email account.",
+      "id": "U08Q05_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why does employee termination create a persistent insider-threat risk?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Skip the inventory entirely and simply trust that the departing administrator will quietly hand over every account and key on their last day.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Inventory every account, key, token, and scheduled task tied to the admin, revoke them in a coordinated window, and monitor for unexpected logins afterwards.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U08Q05_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 52.52,
+      "longitude": 13.405,
+      "locationId": "BERLIN_OFFBOARDING_REVIEW",
+      "iconId": "",
+      "id": "U08Q05_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the offboarding review to the affected company.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U08Q05_SECURE_OFFBOARDING",
+      "id": "U08Q05_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You closed every door the departure could have left open and kept the process fair and documented. Unlock Secure Offboarding to complete the unit.",
+      "stageType": 3
+    }
+  ],
+  "skills": [
+    {
+      "id": "SKILL_U08Q01_TRUST_EXPLOITATION_AWARENESS",
+      "name": "Trust Exploitation Awareness",
+      "description": "Recognize when personal trust is used to bypass access policy and convert the finding into least-privilege and approval-workflow fixes.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U08Q02_STEGANALYSIS",
+      "name": "Steganalysis Forensics",
+      "description": "Detect data hidden inside ordinary-looking files and document the extraction forensically without destroying the evidence trail.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U08Q03_PHYSICAL_IMPLANT_DETECTION",
+      "name": "Physical Implant Detection",
+      "description": "Sweep workspaces for hardware keyloggers and locally installed malware while preserving devices as evidence with a clean chain of custody.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U08Q04_REMOVABLE_MEDIA_CONTROL",
+      "name": "Removable Media Control",
+      "description": "Quantify USB-based exfiltration from device and access logs and design allow-listing, encryption, and endpoint device controls.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U08Q05_SECURE_OFFBOARDING",
+      "name": "Secure Offboarding",
+      "description": "Inventory and revoke every credential, token, and scheduled job tied to a departing employee and monitor for residual access afterwards.",
+      "cost": 0
+    }
+  ],
+  "pointsOfInterest": [
+    {
+      "id": "POI_U08_SEPARATION_OF_DUTIES",
+      "title": "Separation of Duties Workshop",
+      "description": "A bank in Copenhagen redesigns its approval chains so no single trusted employee can request, approve, and execute sensitive access on their own.",
+      "latitude": 55.6761,
+      "longitude": 12.5683,
+      "showAtProgressPercent": 15,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the separation-of-duties model as a defensive recommendation for the client's access policy.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U08_CLEAN_DESK_SWEEP",
+      "title": "Clean Desk and Port Sweep",
+      "description": "A government office in Ottawa adds a monthly physical sweep that checks desks, cabling, and exposed ports for unauthorized devices alongside the usual software scans.",
+      "latitude": 45.4215,
+      "longitude": -75.6972,
+      "showAtProgressPercent": 50,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the physical sweep routine as a defensive checklist for the client's facilities team.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U08_LEAVER_CHECKLIST",
+      "title": "Leaver Access Checklist",
+      "description": "A telecom in Tokyo publishes a joint HR-and-IT leaver checklist so account revocation, token recovery, and log review happen the same day employment ends.",
+      "latitude": 35.6762,
+      "longitude": 139.6503,
+      "showAtProgressPercent": 82,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the leaver checklist as a defensive standard for the client's offboarding process.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    }
+  ]
+}

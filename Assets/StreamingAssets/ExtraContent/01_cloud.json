@@ -1,0 +1,1406 @@
+{
+  "id": "01_cloud",
+  "contentPackId": "ExtraContent",
+  "name": "1. Cloud Computing Security",
+  "description": "Investigate cloud-based threat vectors, harden access management, reduce privacy risks, and secure APIs and interfaces from a defensive, authorization-driven assessment perspective.",
+  "stages": [
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U01Q01_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A SaaS provider discovers that attackers opened trial accounts and used its trusted cloud storage to host malicious payloads, sending download links that pass reputation filters. Analyze the abuse, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Cloud platforms automatically make any uploaded file completely safe to share with everyone.",
+        "Malware simply cannot run at all unless it is hosted directly on the victim's own internal server.",
+        "Trusted domains, free infrastructure, and easy account creation help malicious files bypass reputation-based defenses.",
+        "Attackers only ever host their malware in the cloud purely in order to save on local disk space."
+      ],
+      "incorrectAnswerText": "Look for the option that explains why legitimate cloud services give attackers a delivery advantage defenders must account for.",
+      "id": "U01Q01_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why do attackers host and distribute malware through legitimate cloud services?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Suspend the abusive accounts, preserve upload evidence, report through the abuse process, and add upload scanning and link monitoring.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Silently delete the offending files and just hope that the attackers do not quietly open brand-new trial accounts.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q01_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 47.3769,
+      "longitude": 8.5417,
+      "locationId": "ZURICH_MALWARE_HOSTING",
+      "iconId": "",
+      "id": "U01Q01_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the hosting abuse to the affected platform.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q01_CLOUD_ABUSE_DETECTION",
+      "id": "U01Q01_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You turned platform abuse into scoped evidence and a practical defensive action. Unlock Cloud Abuse Detection before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U01Q02_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A startup's monthly cloud bill triples overnight; unknown compute instances are running at full load in a region the team never uses. Analyze the suspected cryptojacking, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Noticeably faster website loading times for every single one of the company's paying customers.",
+        "A sudden and steady drop in total storage usage measured right across every available region at once.",
+        "Far more frequent password reset emails arriving from the cloud provider than is usual each week.",
+        "Unexplained compute usage, unfamiliar instances, and sudden billing spikes that do not match real workloads."
+      ],
+      "incorrectAnswerText": "Look for the option that ties stolen compute capacity to signals defenders can actually monitor.",
+      "id": "U01Q02_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Which signals most strongly suggest cryptojacking in a cloud account?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Delete the rogue instances immediately and skip the entire investigation on the assumption that the bill is the only real problem.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Isolate the rogue instances, preserve logs, rotate the compromised credentials, and add billing and usage anomaly alerts.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q02_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 64.1466,
+      "longitude": -21.9426,
+      "locationId": "REYKJAVIK_CRYPTOJACKING",
+      "iconId": "",
+      "id": "U01Q02_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the resource theft to the affected account.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q02_CRYPTOJACKING_DETECTION",
+      "id": "U01Q02_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You traced the stolen compute back to its entry point instead of only deleting symptoms. Unlock Cryptojacking Detection before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U01Q03_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "An insurance client's storage bucket holding scanned customer contracts turns out to be publicly readable; nobody attacked anything, the setting was simply never changed. Analyze the misconfiguration, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Permissive defaults and human error can expose services and data without any exploit being needed.",
+        "The cloud providers themselves always block every single kind of public access fully automatically.",
+        "Misconfigurations only ever genuinely matter on traditional self-hosted on-premise servers anyway.",
+        "Attackers simply cannot find any resources at all that are not linked directly from a public website."
+      ],
+      "incorrectAnswerText": "Look for the option that explains why simple configuration mistakes are among the most common cloud breach causes.",
+      "id": "U01Q03_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why are misconfigurations such a frequent cloud breach cause?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Document the exposure window, restrict access, and run an approved audit for similar settings across other resources.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Download the entire contract archive yourself purely to demonstrate to the client just how bad the exposure really is.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q03_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": -23.5505,
+      "longitude": -46.6333,
+      "locationId": "SAO_PAULO_OPEN_BUCKET",
+      "iconId": "",
+      "id": "U01Q03_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Add this case location to the threat map so the report links the misconfiguration to the exposed records.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q03_MISCONFIGURATION_REVIEW",
+      "id": "U01Q03_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Good work. You contained the exposure and turned one mistake into a systematic configuration review. Unlock Misconfiguration Review before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U01Q04_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "An e-commerce platform is flooded with junk traffic during its biggest sale; autoscaling keeps the site alive but the cloud bill is exploding as new instances spin up to serve the attack. Analyze the denial-of-service pressure, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Cloud platforms are completely immune to denial of service, so no action is ever truly needed at all.",
+        "Elastic scaling can absorb the traffic but convert the attack into runaway cost and resource exhaustion.",
+        "Denial of service attacks only ever affect traditional on-premise data centers and never the cloud.",
+        "Autoscaling reliably and automatically blocks every single malicious request before it ever lands."
+      ],
+      "incorrectAnswerText": "Look for the option that explains how elasticity changes the impact of a flood instead of removing it.",
+      "id": "U01Q04_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "How does a DoS attack behave differently against cloud resources?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Switch autoscaling off completely right in the middle of the flagship sale just so that the cloud bill finally stops growing.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Apply rate limiting and traffic filtering at the edge, set scaling caps with alerts, and document the attack pattern for the provider.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q04_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 19.076,
+      "longitude": 72.8777,
+      "locationId": "MUMBAI_DOS_SURGE",
+      "iconId": "",
+      "id": "U01Q04_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the traffic flood to the affected storefront.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q04_CLOUD_DOS_RESILIENCE",
+      "id": "U01Q04_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You balanced availability against cost and turned the flood into a resilience plan. Unlock Cloud DoS Resilience before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U01Q05_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "Employees at a consulting firm approved a convincing third-party app that requested mailbox access through the company's cloud identity provider; the rogue app now reads email without ever stealing a password. Analyze the identity abuse, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Cloud identity systems only really matter for logging in to individual employee laptops at the desk.",
+        "Resetting a user's password will always reliably remove every single kind of access that they hold.",
+        "Granted consents and federated trust can give attackers durable access that survives password changes.",
+        "Third-party connected apps can never read any corporate data at all under any circumstances ever."
+      ],
+      "incorrectAnswerText": "Look for the option that explains why abused consents and tokens outlive a simple password reset.",
+      "id": "U01Q05_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why is abuse of cloud identity systems so dangerous?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Revoke the malicious app's consent and tokens, restrict who can approve new app permissions, and monitor consent grants going forward.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Force a single company-wide password reset and then simply consider the entire incident closed and resolved for good.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q05_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 48.2082,
+      "longitude": 16.3738,
+      "locationId": "VIENNA_CONSENT_ABUSE",
+      "iconId": "",
+      "id": "U01Q05_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the identity abuse to the affected tenant.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q05_IDENTITY_ABUSE_RESPONSE",
+      "id": "U01Q05_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You cut the access at the consent layer where it actually lived. Unlock Identity Abuse Response before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U01Q06_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A fintech client's IAM review reveals a convenience policy written during a launch crunch: a wildcard rule grants every authenticated user full administrative control over storage. Analyze the policy risk, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Wildcard policies actually improve overall security because nobody on the team is ever once blocked.",
+        "IAM policies only ever affect how quickly the management console happens to load in the browser.",
+        "Wildcards in policies are strictly required by every single cloud provider across the whole industry.",
+        "Any compromised or careless account inherits far more power than its job requires, multiplying the blast radius."
+      ],
+      "incorrectAnswerText": "Look for the option that connects an overly broad policy to what happens when any single account goes wrong.",
+      "id": "U01Q06_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What makes a wildcard IAM policy dangerous?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Revoke absolutely everyone's storage access immediately, right in the very middle of a busy and otherwise normal business day.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Inventory who actually uses which permissions, replace the wildcard with scoped roles, and validate the change in staging first.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q06_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 55.6761,
+      "longitude": 12.5683,
+      "locationId": "COPENHAGEN_IAM_WILDCARD",
+      "iconId": "",
+      "id": "U01Q06_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Add this case location to the threat map so the report links the policy gap to the affected workloads.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q06_IAM_POLICY_REVIEW",
+      "id": "U01Q06_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Good work. You tightened the policy without breaking the business that depends on it. Unlock IAM Policy Review before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U01Q07_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A logistics company's cloud admin console is protected only by a password, and that password already appears in an old public breach collection. Analyze the missing safeguard, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Multi-factor authentication only ever really matters for personal social media accounts at home.",
+        "Admin accounts control everything below them, so a single stolen password can become full environment compromise.",
+        "Administrators are simply far too experienced and careful to ever be successfully phished at all.",
+        "A sufficiently long password makes any second authentication factor completely unnecessary forever."
+      ],
+      "incorrectAnswerText": "Look for the option that connects the privilege level of the account to the impact of one stolen credential.",
+      "id": "U01Q07_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why is missing MFA on administrative accounts a priority finding?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Enforce MFA on all privileged accounts, rotate the exposed password, and define a monitored break-glass procedure for emergencies.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Require multi-factor authentication only for brand-new hires so that the current admins are never inconvenienced.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q07_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 52.2297,
+      "longitude": 21.0122,
+      "locationId": "WARSAW_ADMIN_MFA",
+      "iconId": "",
+      "id": "U01Q07_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the weak admin login to the systems it controls.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q07_ADMIN_MFA_ENFORCEMENT",
+      "id": "U01Q07_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You closed the highest-value door first instead of treating all accounts the same. Unlock Admin MFA Enforcement before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U01Q08_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "At a gaming studio, every developer holds permanent write access to production because it was easier during early development; one stolen laptop now equals the whole platform. Analyze the privilege sprawl, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Each identity should hold only the permissions its current task requires, for only as long as it needs them.",
+        "Everyone on the team should simply share one powerful account in order to keep the auditing simple.",
+        "Least privilege actually means stripping all access away from every single employee in the company.",
+        "Permissions assigned to a user should never change at all after their initial onboarding is finished."
+      ],
+      "incorrectAnswerText": "Look for the option that limits both the scope and the duration of access without freezing the business.",
+      "id": "U01Q08_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What does least privilege actually mean in practice?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Keep the broad access because the developers have never caused an incident so far.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Move to role-based access with scheduled reviews and just-in-time elevation for production changes.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q08_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 59.9139,
+      "longitude": 10.7522,
+      "locationId": "OSLO_LEAST_PRIVILEGE",
+      "iconId": "",
+      "id": "U01Q08_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the privilege sprawl to the production systems at stake.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q08_LEAST_PRIVILEGE_DESIGN",
+      "id": "U01Q08_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You shrank the blast radius while keeping the team productive. Unlock Least Privilege Design before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U01Q09_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A health-app developer pushed a cloud API key into a public code repository; automated scanners harvest such keys within minutes of publication. Analyze the credential leak, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "API keys are completely harmless because they are not technically the same thing as a password.",
+        "Leaked keys conveniently stop working all by themselves once a repository becomes popular enough.",
+        "Only the original author of a particular commit is ever able to read what it actually contains.",
+        "A leaked key grants whatever its permissions allow to anyone who finds it, with no phishing or exploit required."
+      ],
+      "incorrectAnswerText": "Look for the option that treats a leaked key as ready-to-use access, not just an embarrassing mistake.",
+      "id": "U01Q09_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why are leaked API keys and access tokens treated as live incidents?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Revoke and rotate the key immediately, review usage logs for abuse, and add secret scanning with short-lived credentials.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just delete the offending commit from the repository history and assume that nobody managed to copy the key in time.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q09_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "locationId": "SAN_FRANCISCO_LEAKED_KEY",
+      "iconId": "",
+      "id": "U01Q09_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Add this case location to the threat map so the report links the leaked credential to the services it unlocked.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q09_SECRET_LEAK_RESPONSE",
+      "id": "U01Q09_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Good work. You treated the leak as live access and killed the key before anyone could use it. Unlock Secret Leak Response before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U01Q10_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A telecom client's support role can assign roles to other accounts, including roles stronger than its own; a helpdesk account could quietly promote itself to administrator through two hops. Analyze the delegation flaw, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Role-granting power is itself a privilege; if weaker roles can hand out stronger ones, escalation paths appear.",
+        "Delegation settings only ever affect the email signatures attached to outgoing company messages.",
+        "Roles simply can never be combined together into any more access than each one already grants alone.",
+        "Only external attackers from outside the company can ever actually misuse the role assignment process."
+      ],
+      "incorrectAnswerText": "Look for the option that treats the ability to grant roles as a privilege that must be controlled like any other.",
+      "id": "U01Q10_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why is improper role delegation a hidden escalation risk?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply trust the helpdesk team completely and leave the entire role delegation chain exactly as it is today.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Map every role that can grant roles, remove self-elevation paths, and require approval with logging for privileged assignments.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q10_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 50.0755,
+      "longitude": 14.4378,
+      "locationId": "PRAGUE_ROLE_DELEGATION",
+      "iconId": "",
+      "id": "U01Q10_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the delegation chain to the privileges it could reach.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q10_ROLE_DELEGATION_AUDIT",
+      "id": "U01Q10_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You found the escalation path hidden inside who can grant what. Unlock Role Delegation Audit before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U01Q11_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A recruitment platform shared an unencrypted database snapshot with a contractor by marking it public for an afternoon; the snapshot holds applicant CVs and contact data. Analyze the storage exposure, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Snapshots are only ever temporary, so a brief exposure does not really count as a data incident at all.",
+        "Anyone who copied the snapshot during the public window holds the full dataset permanently, regardless of later fixes.",
+        "Unencrypted data stays perfectly safe for as long as the file name attached to it looks boring enough.",
+        "Only the contractor's own internal network could ever have actually reached the public snapshot."
+      ],
+      "incorrectAnswerText": "Look for the option that recognizes exposure as irreversible once data may have been copied.",
+      "id": "U01Q11_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What makes a temporarily public snapshot a serious privacy event?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Restrict the snapshot, determine the exposure window from access logs, encrypt future exports, and follow the client's notification policy.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Quietly flip the exposed snapshot back to private again and then leave the whole event out of the final report entirely.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q11_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 50.8503,
+      "longitude": 4.3517,
+      "locationId": "BRUSSELS_SNAPSHOT_EXPOSURE",
+      "iconId": "",
+      "id": "U01Q11_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the exposed snapshot to the affected applicants.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q11_DATA_EXPOSURE_TRIAGE",
+      "id": "U01Q11_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You measured the exposure honestly instead of hiding it. Unlock Data Exposure Triage before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U01Q12_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A fitness app streams its full customer records, including health metrics, to an analytics vendor that only needs anonymous usage counts. Analyze the third-party sharing, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Once data has been shared with a vendor it simply stops being the client's responsibility at all.",
+        "Third parties that receive the data are always far more secure than the original company itself.",
+        "Every extra recipient extends the attack surface and the privacy obligations beyond the client's own controls.",
+        "Sharing many more fields than are actually needed somehow makes the resulting analytics more private."
+      ],
+      "incorrectAnswerText": "Look for the option that treats every additional data recipient as additional risk the client still owns.",
+      "id": "U01Q12_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why does third-party data sharing create privacy risk?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Abruptly cut off every single external vendor today and simply let all of the analytics dashboards go dark indefinitely.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Reduce the feed to the minimum fields the vendor needs, anonymize where possible, and review the sharing agreement and vendor access.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q12_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": -34.6037,
+      "longitude": -58.3816,
+      "locationId": "BUENOS_AIRES_VENDOR_FEED",
+      "iconId": "",
+      "id": "U01Q12_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Add this case location to the threat map so the report links the oversized data feed to the affected users.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q12_THIRD_PARTY_DATA_REVIEW",
+      "id": "U01Q12_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Good work. You shrank the data feed to what the business actually needs. Unlock Third Party Data Review before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U01Q13_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A travel agency keeps seven years of expired customer bookings, passport scans, and payment fragments in cheap cloud archive storage with no deletion schedule, far beyond any business or legal need. Analyze the retention problem, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Old data is completely worthless to attackers, so keeping it forever is entirely harmless to do.",
+        "Data stored in the cheaper archive storage tiers simply cannot ever be breached by an attacker.",
+        "Deleting any company data at all is always strictly against the law in every single situation.",
+        "Data kept past its purpose adds breach impact and legal exposure without adding business value."
+      ],
+      "incorrectAnswerText": "Look for the option that weighs the risk of stored data against the value it still provides.",
+      "id": "U01Q13_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why is poor data retention a security and privacy risk?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Define retention periods per data type, automate expiry-based deletion, and document the legal basis for what remains.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just keep absolutely everything forever on the grounds that storage is cheap and someone somewhere might need it someday.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q13_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 37.9838,
+      "longitude": 23.7275,
+      "locationId": "ATHENS_RETENTION_ARCHIVE",
+      "iconId": "",
+      "id": "U01Q13_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the oversized archive to the customers it still describes.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q13_RETENTION_GOVERNANCE",
+      "id": "U01Q13_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You turned a forgotten archive into a governed lifecycle. Unlock Retention Governance before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U01Q14_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A publishing house shares cloud documents whose hidden metadata reveals author names, internal file paths, and revision history, while a workload's metadata endpoint hands out service credentials to any process on the instance. Analyze the metadata exposure, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Metadata quietly reveals people, structure, and sometimes credentials even when the visible content looks safe.",
+        "Metadata is purely decorative information that no real attacker would ever bother to read at all.",
+        "Simply removing a document's title is enough to remove absolutely all of its embedded metadata.",
+        "Metadata exposure only ever genuinely matters for physical documents that have been printed out."
+      ],
+      "incorrectAnswerText": "Look for the option that treats the invisible layer of data as a real reconnaissance and credential source.",
+      "id": "U01Q14_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why is metadata overexposure a real risk?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply rename all of the files to something generic and then consider the entire metadata problem fully solved.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Strip metadata from published files, lock down the instance metadata service, and add the checks to the release process.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q14_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 13.7563,
+      "longitude": 100.5018,
+      "locationId": "BANGKOK_METADATA_LEAK",
+      "iconId": "",
+      "id": "U01Q14_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the hidden data layer to what it revealed.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q14_METADATA_HYGIENE",
+      "id": "U01Q14_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You secured the layer most teams never look at. Unlock Metadata Hygiene before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U01Q15_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "On a shared hosting platform, an authorized test shows one tenant's application can read temporary files written by another tenant's jobs in a shared scratch directory. Analyze the isolation failure, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Tenants that happen to share the very same underlying physical hardware are simply expected to see each other's files.",
+        "Isolation between two separate tenants only ever really matters for the large public video streaming services.",
+        "Multi-tenant clouds depend on strict boundaries; any cross-tenant read breaks the core promise every customer relies on.",
+        "Temporary files that are created on shared multi-tenant systems never contain any genuinely sensitive information."
+      ],
+      "incorrectAnswerText": "Look for the option that treats tenant separation as the foundational guarantee of shared infrastructure.",
+      "id": "U01Q15_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why is weak isolation in multi-user environments so severe?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Stop at the minimal proof, report the boundary failure to the provider responsibly, and move sensitive workloads to isolated resources meanwhile.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Keep right on reading through other tenants' private files in order to build up a far longer and more impressive list of named victims.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q15_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": -26.2041,
+      "longitude": 28.0473,
+      "locationId": "JOHANNESBURG_TENANT_BOUNDARY",
+      "iconId": "",
+      "id": "U01Q15_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Add this case location to the threat map so the report links the isolation gap to the affected platform.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q15_TENANT_ISOLATION_REVIEW",
+      "id": "U01Q15_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Good work. You proved the boundary failure with the smallest possible footprint. Unlock Tenant Isolation Review before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U01Q16_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A food-delivery app's backend API returns any customer's profile when given a numeric ID, with no token check at all; the mobile app was the only thing pretending security existed. Analyze the missing controls, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Authentication just asks what the data happens to look like, while authorization simply asks how quickly it can load.",
+        "Authentication proves who is calling; authorization decides what that caller may access, an API needs both on every request.",
+        "A sufficiently well hidden API URL is actually a perfectly acceptable substitute for ever needing either one of them.",
+        "Only the login endpoints of an API ever actually need to have any real access control applied to them at all really."
+      ],
+      "incorrectAnswerText": "Look for the option that separates proving identity from granting access, and applies both to every call.",
+      "id": "U01Q16_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What is the difference between authentication and authorization in an API?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Just obfuscate the API hostname itself so that attackers will not be able to guess where the profiles really live.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Require valid tokens on every endpoint, add object-level authorization checks, and verify the fix with approved test accounts.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q16_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 30.2672,
+      "longitude": -97.7431,
+      "locationId": "AUSTIN_OPEN_API",
+      "iconId": "",
+      "id": "U01Q16_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the unprotected API to the customer data it served.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q16_API_ACCESS_CONTROL",
+      "id": "U01Q16_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You moved the security from the app's appearance into the API itself. Unlock API Access Control before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U01Q17_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A news site embeds a weather widget whose API token, visible in the page source, can also delete articles and manage users because one master token serves every integration. Analyze the excessive permissions, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "Powerful broad tokens are actually safer because there are simply far fewer of them to manage overall.",
+        "Tokens that are embedded directly in public web pages simply cannot ever be extracted by anyone.",
+        "Any leak of the token exposes every capability it carries, not just the feature it was created for.",
+        "Token permissions only ever matter when the API behind them is written in one specific language."
+      ],
+      "incorrectAnswerText": "Look for the option that measures token risk by everything it can do, not by what it usually does.",
+      "id": "U01Q17_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why are excessive permissions on an API token dangerous?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Issue scoped, per-integration tokens with only the needed rights, revoke the master token, and audit how it was used.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Keep using the existing master token but simply ask the team to be a great deal more careful with the page source.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q17_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 55.9533,
+      "longitude": -3.1883,
+      "locationId": "EDINBURGH_MASTER_TOKEN",
+      "iconId": "",
+      "id": "U01Q17_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the oversized token to the systems it could touch.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q17_API_SCOPE_REDUCTION",
+      "id": "U01Q17_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You split one dangerous key into many harmless ones. Unlock API Scope Reduction before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U01Q18_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A parking-payment service's mobile API still accepts plain HTTP and outdated TLS versions for backward compatibility, sending card fragments and session tokens where networks can read them. Analyze the transmission weakness, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Mobile networks already encrypt absolutely everything automatically, so apps never need TLS at all.",
+        "Plain unencrypted HTTP is perfectly acceptable for as long as the payload is sent in the JSON format.",
+        "Insecure transmission of data only ever genuinely matters when the files involved are very large.",
+        "Anyone positioned on the network path can read or alter unprotected traffic, including tokens that grant account access."
+      ],
+      "incorrectAnswerText": "Look for the option that treats the network path as hostile and the transported tokens as keys.",
+      "id": "U01Q18_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What is the risk of transmitting sensitive data over insecure channels?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Encrypt only the single login call itself and leave the entire rest of the API sitting on plain HTTP purely for the sake of older phones.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Enforce modern TLS on every endpoint, disable the legacy fallbacks, rotate tokens that traveled unprotected, and add transport checks to monitoring.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q18_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": -12.0464,
+      "longitude": -77.0428,
+      "locationId": "LIMA_PLAINTEXT_API",
+      "iconId": "",
+      "id": "U01Q18_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Add this case location to the threat map so the report links the unprotected channel to the data it carried.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q18_TRANSPORT_SECURITY_REVIEW",
+      "id": "U01Q18_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Good work. You closed the listening post the network offered to anyone nearby. Unlock Transport Security Review before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U01Q19_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A booking API trusts whatever arrives in its search parameter; crafted input reaches the database query and the mobile app's polite input form was the only filter. Analyze the missing input sanitation, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "Attackers can call the API directly, so only server-side validation and safe query handling actually protect the data.",
+        "Client-side checks run closest to the user, so they are by far the most secure place to do validation.",
+        "Input sanitation is genuinely only ever needed for the parts that handle direct file uploads.",
+        "Databases reliably reject every kind of malicious input all on their own, fully automatically."
+      ],
+      "incorrectAnswerText": "Look for the option that assumes attackers skip the app and talk to the API directly.",
+      "id": "U01Q19_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why must input validation happen on the server side?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Add server-side validation, parameterized queries, and safe error handling, then verify with an approved minimal test case.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Just strengthen the mobile form's character filter a little and trust that nobody ever calls the API directly without the app.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U01Q19_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 3.139,
+      "longitude": 101.6869,
+      "locationId": "KUALA_LUMPUR_INPUT_FLAW",
+      "iconId": "",
+      "id": "U01Q19_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the unvalidated input path to the data behind it.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q19_INPUT_VALIDATION_DEFENSE",
+      "id": "U01Q19_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You moved the defense to the only place attackers cannot skip. Unlock Input Validation Defense before the next cloud case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U01Q20_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "An energy dashboard's production server still exposes a /debug console and a staging API with no authentication; both were meant to die before launch but nobody owned the cleanup. Analyze the exposed development endpoints, stay inside the client's authorization, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "Development endpoints always stay completely invisible to outsiders unless they happen to appear in the site's own menu.",
+        "They often skip production security controls, reveal internals, and offer privileged operations attackers can find by scanning.",
+        "Leftover debug consoles genuinely improve the overall production security posture by quietly adding much more logging.",
+        "Staging APIs by their very nature simply never connect to anything at all that is genuinely important in production."
+      ],
+      "incorrectAnswerText": "Look for the option that treats forgotten developer conveniences as unguarded production entrances.",
+      "id": "U01Q20_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "Why are exposed development endpoints dangerous in production?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Simply rename the /debug route to something suitably obscure so that the automated scanners out there will take a fair bit longer to find it.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Remove or gate the endpoints behind authentication and network controls, inventory all routes, and add deployment checks against regressions.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U01Q20_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 45.5017,
+      "longitude": -73.5673,
+      "locationId": "MONTREAL_DEBUG_ENDPOINT",
+      "iconId": "",
+      "id": "U01Q20_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the leftover endpoints to the systems they expose.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U01Q20_ENDPOINT_SURFACE_CLEANUP",
+      "id": "U01Q20_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You closed the doors the developers forgot they built. Unlock Endpoint Surface Cleanup to complete the cloud security unit.",
+      "stageType": 3
+    }
+  ],
+  "skills": [
+    {
+      "id": "SKILL_U01Q01_CLOUD_ABUSE_DETECTION",
+      "name": "Cloud Abuse Detection",
+      "description": "Recognize when trusted cloud services are abused for malware hosting and route the abuse into evidence, takedown, and upload controls.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q02_CRYPTOJACKING_DETECTION",
+      "name": "Cryptojacking Detection",
+      "description": "Spot unauthorized compute consumption through usage and billing anomalies and trace it to the compromised entry point.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q03_MISCONFIGURATION_REVIEW",
+      "name": "Misconfiguration Review",
+      "description": "Identify exposed cloud settings, contain them safely, and extend one finding into a systematic configuration audit.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q04_CLOUD_DOS_RESILIENCE",
+      "name": "Cloud DoS Resilience",
+      "description": "Defend elastic environments against traffic floods by combining filtering, rate limits, and scaling caps with cost alerting.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q05_IDENTITY_ABUSE_RESPONSE",
+      "name": "Identity Abuse Response",
+      "description": "Detect and revoke abused consents, tokens, and federated trust paths that survive ordinary password resets.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q06_IAM_POLICY_REVIEW",
+      "name": "IAM Policy Review",
+      "description": "Find overly broad IAM policies and replace them with scoped roles without disrupting the business that depends on them.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q07_ADMIN_MFA_ENFORCEMENT",
+      "name": "Admin MFA Enforcement",
+      "description": "Prioritize multi-factor protection for privileged accounts and design monitored break-glass procedures.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q08_LEAST_PRIVILEGE_DESIGN",
+      "name": "Least Privilege Design",
+      "description": "Shape role-based access with reviews and just-in-time elevation so identities hold only what their tasks require.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q09_SECRET_LEAK_RESPONSE",
+      "name": "Secret Leak Response",
+      "description": "Treat leaked keys and tokens as live incidents: revoke, rotate, review usage, and prevent recurrence with secret scanning.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q10_ROLE_DELEGATION_AUDIT",
+      "name": "Role Delegation Audit",
+      "description": "Map who can grant which roles, remove self-elevation chains, and add approval and logging to privileged assignments.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q11_DATA_EXPOSURE_TRIAGE",
+      "name": "Data Exposure Triage",
+      "description": "Measure exposure windows from access logs, contain insecure storage, and route incidents into honest notification decisions.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q12_THIRD_PARTY_DATA_REVIEW",
+      "name": "Third Party Data Review",
+      "description": "Minimize and govern data shared with external vendors so each recipient gets only what its purpose requires.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q13_RETENTION_GOVERNANCE",
+      "name": "Retention Governance",
+      "description": "Define purpose-based retention periods and automate deletion so stored data stops outliving its value.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q14_METADATA_HYGIENE",
+      "name": "Metadata Hygiene",
+      "description": "Strip revealing metadata from published content and lock down instance metadata services that leak credentials.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q15_TENANT_ISOLATION_REVIEW",
+      "name": "Tenant Isolation Review",
+      "description": "Verify multi-tenant boundaries with minimal-footprint proof and report isolation failures responsibly.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q16_API_ACCESS_CONTROL",
+      "name": "API Access Control",
+      "description": "Enforce authentication and object-level authorization on every API endpoint instead of trusting the client application.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q17_API_SCOPE_REDUCTION",
+      "name": "API Scope Reduction",
+      "description": "Replace master tokens with scoped per-integration credentials so a leak exposes only one narrow capability.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q18_TRANSPORT_SECURITY_REVIEW",
+      "name": "Transport Security Review",
+      "description": "Enforce modern encrypted transport end to end and rotate any secrets that ever traveled unprotected.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q19_INPUT_VALIDATION_DEFENSE",
+      "name": "Input Validation Defense",
+      "description": "Validate and safely handle all input on the server side, where attackers cannot bypass the check.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U01Q20_ENDPOINT_SURFACE_CLEANUP",
+      "name": "Endpoint Surface Cleanup",
+      "description": "Inventory exposed routes, remove or gate development leftovers, and add deployment checks that keep them gone.",
+      "cost": 0
+    }
+  ],
+  "pointsOfInterest": [
+    {
+      "id": "POI_U01_BILLING_ALARM",
+      "title": "Billing Alarm Save",
+      "description": "A nonprofit in Wellington catches cryptojacking within hours because a simple billing alert flagged compute usage its mission could never explain.",
+      "latitude": -41.2865,
+      "longitude": 174.7762,
+      "showAtProgressPercent": 12,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's remediation backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U01_SNAPSHOT_AUDIT",
+      "title": "Snapshot Audit Routine",
+      "description": "A team in Tel Aviv finds a publicly shared database snapshot during a routine weekly exposure scan, days before any outsider noticed it.",
+      "latitude": 32.0853,
+      "longitude": 34.7818,
+      "showAtProgressPercent": 24,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's remediation backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U01_KEY_ROTATION_DRILL",
+      "title": "Key Rotation Drill",
+      "description": "A logistics firm in Hamburg rehearses quarterly secret rotation so that revoking a leaked API key takes minutes instead of a crisis meeting.",
+      "latitude": 53.5511,
+      "longitude": 9.9937,
+      "showAtProgressPercent": 38,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's remediation backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U01_SHARED_RESPONSIBILITY",
+      "title": "Shared Responsibility Wake-Up",
+      "description": "A startup in Denver learns its provider secures the infrastructure but not their configurations, and finally writes down who owns which control.",
+      "latitude": 39.7392,
+      "longitude": -104.9903,
+      "showAtProgressPercent": 52,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's remediation backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U01_VENDOR_ACCESS_TRIM",
+      "title": "Vendor Access Trim",
+      "description": "An insurer in Manila reviews third-party integrations and removes half of them, each one a dormant data feed nobody had used in a year.",
+      "latitude": 14.5995,
+      "longitude": 120.9842,
+      "showAtProgressPercent": 72,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's remediation backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U01_GATEWAY_WIN",
+      "title": "API Gateway Win",
+      "description": "A bank in Geneva blocks a large scraping attempt because every API route sits behind a gateway enforcing authentication, scopes, and rate limits.",
+      "latitude": 46.2044,
+      "longitude": 6.1432,
+      "showAtProgressPercent": 90,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the lesson as a defensive improvement for the client's remediation backlog.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    }
+  ]
+}

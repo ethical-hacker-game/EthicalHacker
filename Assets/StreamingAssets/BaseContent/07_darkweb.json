@@ -1,0 +1,453 @@
+{
+  "id": "07_darkweb",
+  "contentPackId": "BaseContent",
+  "name": "7. Dark Web Threat Intelligence",
+  "description": "Investigate dark web exposure from a defensive and threat-intelligence perspective: map leaked footprints, monitor for compromised credentials, recognize illicit marketplaces, source intelligence responsibly, trace cryptocurrency flows, and watch forums for early warning, all within legal authorization.",
+  "stages": [
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U07Q01_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "A logistics client wants to know what an outside observer can already learn about them from leaked and indexed sources before attackers do. Map the organization's exposed footprint, stay inside the authorized intelligence brief, and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "It proves the company is actively being attacked right now and that an intrusion is already underway in real time.",
+        "It is only ever useful for marketing analytics and brand sentiment, with no real bearing on the company's security.",
+        "It guarantees that the corporate network has already been breached and that attackers are inside the perimeter now.",
+        "It shows what employee, infrastructure, and document details are already exposed and could seed targeted attacks."
+      ],
+      "incorrectAnswerText": "Look for the option that connects exposed information to realistic attacker advantage and a defensive response.",
+      "id": "U07Q01_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "Why does dark web footprinting matter for defenders?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Contact the leak sources directly and try to quietly buy the exposed data back yourself so the report looks thorough.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Catalogue exposed identifiers, link them to owners, and flag the riskiest leaks for remediation under the agreed brief.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U07Q01_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 52.3676,
+      "longitude": 4.9041,
+      "locationId": "AMSTERDAM_FOOTPRINT_REVIEW",
+      "iconId": "",
+      "id": "U07Q01_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the exposed footprint to the affected business.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U07Q01_DARKWEB_FOOTPRINTING",
+      "id": "U07Q01_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You turned scattered leaks into a scoped exposure picture and a defensive action. Unlock Exposure Footprinting before the next intelligence case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U07Q02_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A retail client suspects staff passwords appear in old breach collections circulating on hidden sites. Your authorized task is to confirm exposure so accounts can be protected, not to reuse any credential. Stay inside the brief and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 1,
+      "answers": [
+        "To log in as those employees yourself and personally verify that each leaked password still works.",
+        "To identify which accounts are exposed so they can be reset and protected before misuse.",
+        "To publish the full password list publicly as undeniable proof that the finding is genuinely real.",
+        "To quietly sell the verified credentials on to the highest bidder for a comfortable personal profit."
+      ],
+      "incorrectAnswerText": "Look for the option that keeps the goal defensive: protect the exposed accounts, never use them.",
+      "id": "U07Q02_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What is the legitimate purpose of monitoring for leaked credentials?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Match exposed credentials to current accounts, trigger forced resets, and recommend MFA for affected logins.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Try the leaked passwords against live production accounts yourself to see how many of them still happen to work.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U07Q02_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 53.3498,
+      "longitude": -6.2603,
+      "locationId": "DUBLIN_CREDENTIAL_MONITOR",
+      "iconId": "",
+      "id": "U07Q02_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the credential exposure to the affected accounts.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U07Q02_CREDENTIAL_MONITORING",
+      "id": "U07Q02_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You confirmed exposure and routed it into resets and MFA instead of misuse. Unlock Credential Exposure Monitoring before the next intelligence case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U07Q03_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A brand-protection client reports counterfeit goods and stolen account bundles being advertised on hidden marketplaces. You are authorized to identify and document these listings for takedown and law-enforcement referral, not to transact. Stay inside the brief and turn the observation into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "To recognize where the client's data or brand is being traded so abuse can be reported and disrupted.",
+        "To conveniently shop for discounted stolen goods and pick up cheap data for the investigator's own use.",
+        "To prove once and for all that every hidden service running on the network is inherently illegal.",
+        "To quietly advertise the investigator's own paid services to potential new clients who gather there."
+      ],
+      "incorrectAnswerText": "Look for the option that frames marketplace identification as reporting and disruption, not participation.",
+      "id": "U07Q03_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "Why does a defender identify illicit marketplaces?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Make a test purchase using the client's own funds just to confirm for yourself that the seller is genuinely real.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Document listing details, capture verifiable evidence, and route it to takedown and law-enforcement channels.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U07Q03_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 45.4642,
+      "longitude": 9.19,
+      "locationId": "MILAN_MARKETPLACE_WATCH",
+      "iconId": "",
+      "id": "U07Q03_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Add this case location to the threat map so the report links the marketplace activity to the affected brand.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U07Q03_MARKETPLACE_IDENTIFICATION",
+      "id": "U07Q03_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Good work. You documented illicit listings for disruption instead of engaging with them. Unlock Marketplace Identification before the next intelligence case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_01",
+      "id": "U07Q04_STAGE_01",
+      "characterName": "Mira",
+      "stageText": "An energy-sector client wants early warning about threats aimed at their industry, drawn from chatter across hidden sites. The value is only as good as the sourcing. Stay inside the brief and turn raw chatter into reliable, defensible intelligence.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 2,
+      "answers": [
+        "It treats every post that it finds as confirmed fact to save time and skip any tedious verification.",
+        "It keeps only the most alarming screenshots and quietly discards anything that looks calm or unremarkable.",
+        "It records the source, date, reliability, and context so claims can be assessed instead of assumed true.",
+        "It deliberately hides where the information originally came from in order to protect the final report."
+      ],
+      "incorrectAnswerText": "Look for the option that makes intelligence verifiable: sourcing, dating, and reliability over raw alarm.",
+      "id": "U07Q04_STAGE_02",
+      "characterName": "Mira",
+      "stageText": "What separates usable threat intelligence from rumor?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Tag each item with source, timestamp, and a reliability rating, then correlate before alerting the client.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Forward every single unverified threat claim straight to the client as an urgent emergency without checking it.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U07Q04_STAGE_03",
+      "characterName": "Mira",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 59.3293,
+      "longitude": 18.0686,
+      "locationId": "STOCKHOLM_INTEL_DESK",
+      "iconId": "",
+      "id": "U07Q04_STAGE_04",
+      "characterName": "Mira",
+      "stageText": "Add this case location to the threat map so the report links the intelligence to the affected sector.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U07Q04_THREAT_INTEL_SOURCING",
+      "id": "U07Q04_STAGE_05",
+      "characterName": "Mira",
+      "stageText": "Good work. You turned noise into sourced, rated intelligence the client can act on. Unlock Threat Intelligence Sourcing before the next intelligence case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_m_01",
+      "id": "U07Q05_STAGE_01",
+      "characterName": "Jax",
+      "stageText": "A finance client paid an extortion demand and wants to understand where the cryptocurrency went, working with law enforcement. You are authorized to analyze public blockchain records, not to interact with any wallet. Stay inside the brief and turn the flow into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 3,
+      "answers": [
+        "Cryptocurrency is completely anonymous by design, so tracing any transaction back to a person is impossible.",
+        "Investigators must first seize and control the wallets themselves before they can read anything on the ledger.",
+        "Only the originating exchange is ever able to see that a transaction took place anywhere on the network.",
+        "Public ledgers let investigators trace transaction flows and cluster related addresses for attribution."
+      ],
+      "incorrectAnswerText": "Look for the option that reflects how public blockchains enable tracing rather than guaranteeing anonymity.",
+      "id": "U07Q05_STAGE_02",
+      "characterName": "Jax",
+      "stageText": "What makes cryptocurrency tracing possible for investigators?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Send a small test payment to the attacker's own wallet yourself to see which exchange the funds eventually reach.",
+          "moneyReward": 40,
+          "honorReward": -15
+        },
+        {
+          "optionText": "Trace the public transaction path, cluster related addresses, and hand the analysis to law enforcement and the exchange.",
+          "moneyReward": 120,
+          "honorReward": 25
+        }
+      ],
+      "id": "U07Q05_STAGE_03",
+      "characterName": "Jax",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 47.3769,
+      "longitude": 8.5417,
+      "locationId": "ZURICH_CHAIN_ANALYSIS",
+      "iconId": "",
+      "id": "U07Q05_STAGE_04",
+      "characterName": "Jax",
+      "stageText": "Add this case location to the threat map so the report links the transaction trail to the affected client.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U07Q05_CRYPTO_TRACING",
+      "id": "U07Q05_STAGE_05",
+      "characterName": "Jax",
+      "stageText": "Good work. You followed the public trail and routed it to the right authorities instead of engaging the wallet. Unlock Cryptocurrency Tracing before the next intelligence case.",
+      "stageType": 3
+    },
+    {
+      "characterSpriteId": "npc_f_06",
+      "id": "U07Q06_STAGE_01",
+      "characterName": "Noor",
+      "stageText": "A healthcare client wants advance warning if their systems become a target of discussion on closed forums. You are authorized to observe and report, not to participate or provoke. Stay inside the brief and turn forum signals into a defensive finding.",
+      "stageType": 0
+    },
+    {
+      "moneyReward": 100,
+      "legendReward": 15,
+      "correctAnswerIndex": 0,
+      "answers": [
+        "To detect early signals, such as the client being named or new techniques emerging, so defenses can be prepared.",
+        "To join the conversation directly and try to steer the attackers away from the client toward easier targets.",
+        "To prove the forum members are committing crimes by entrapping them into admitting their plans on the record.",
+        "To collect as many member usernames as possible so that they can be published together in a single list."
+      ],
+      "incorrectAnswerText": "Look for the option that keeps the role passive and defensive: observe early signals, do not participate or entrap.",
+      "id": "U07Q06_STAGE_02",
+      "characterName": "Noor",
+      "stageText": "What is the defensive value of monitoring dark web forums?",
+      "stageType": 2
+    },
+    {
+      "options": [
+        {
+          "optionText": "Passively record relevant threads, preserve evidence, and brief the client so they can harden the named systems.",
+          "moneyReward": 120,
+          "honorReward": 25
+        },
+        {
+          "optionText": "Post active replies in the threads to bait the members into revealing much more detail about their future plans.",
+          "moneyReward": 40,
+          "honorReward": -15
+        }
+      ],
+      "id": "U07Q06_STAGE_03",
+      "characterName": "Noor",
+      "stageText": "The client needs a next step. Which response best preserves evidence and reduces risk?",
+      "stageType": 1
+    },
+    {
+      "latitude": 43.6532,
+      "longitude": -79.3832,
+      "locationId": "TORONTO_FORUM_WATCH",
+      "iconId": "",
+      "id": "U07Q06_STAGE_04",
+      "characterName": "Noor",
+      "stageText": "Add this case location to the threat map so the report links the forum chatter to the affected systems.",
+      "stageType": 4
+    },
+    {
+      "skillId": "SKILL_U07Q06_FORUM_MONITORING",
+      "id": "U07Q06_STAGE_05",
+      "characterName": "Noor",
+      "stageText": "Good work. You stayed an observer and converted early chatter into preparation time for the client. Unlock Forum Threat Monitoring to complete the unit.",
+      "stageType": 3
+    }
+  ],
+  "skills": [
+    {
+      "id": "SKILL_U07Q01_DARKWEB_FOOTPRINTING",
+      "name": "Exposure Footprinting",
+      "description": "Map an organization's leaked and indexed footprint across hidden sources and translate it into prioritized remediation.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U07Q02_CREDENTIAL_MONITORING",
+      "name": "Credential Exposure Monitoring",
+      "description": "Detect leaked credentials in breach data and drive protective resets and MFA without ever reusing them.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U07Q03_MARKETPLACE_IDENTIFICATION",
+      "name": "Marketplace Identification",
+      "description": "Recognize and document illicit marketplace activity for takedown and law-enforcement referral instead of participation.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U07Q04_THREAT_INTEL_SOURCING",
+      "name": "Threat Intelligence Sourcing",
+      "description": "Convert raw dark web chatter into sourced, dated, reliability-rated intelligence that can be defended and acted on.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U07Q05_CRYPTO_TRACING",
+      "name": "Cryptocurrency Tracing",
+      "description": "Analyze public blockchain records to trace and cluster transaction flows for attribution and law-enforcement handoff.",
+      "cost": 0
+    },
+    {
+      "id": "SKILL_U07Q06_FORUM_MONITORING",
+      "name": "Forum Threat Monitoring",
+      "description": "Passively monitor closed forums for early-warning signals and preserve evidence while remaining an observer.",
+      "cost": 0
+    }
+  ],
+  "pointsOfInterest": [
+    {
+      "id": "POI_U07_BREACH_NOTIFICATION_DRILL",
+      "title": "Breach Notification Drill",
+      "description": "A credit union in Warsaw rehearses how it would notify and reset accounts the moment leaked credentials surface, turning monitoring into a fast response.",
+      "latitude": 52.2297,
+      "longitude": 21.0122,
+      "showAtProgressPercent": 18,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the drill as a defensive playbook entry for the client's incident-response plan.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U07_SOURCE_RELIABILITY_SCALE",
+      "title": "Source Reliability Scale",
+      "description": "A national CERT in Tallinn adopts a simple reliability scale so analysts rate dark web sources consistently instead of trusting the loudest claim.",
+      "latitude": 59.437,
+      "longitude": 24.7536,
+      "showAtProgressPercent": 48,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the scale as a defensive standard for the client's intelligence reports.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    },
+    {
+      "id": "POI_U07_LEGAL_BOUNDARY_BRIEF",
+      "title": "Legal Boundary Brief",
+      "description": "A research team in Singapore writes a rule for investigators: observe and report illicit activity, never transact or entrap, and escalate to law enforcement.",
+      "latitude": 1.3521,
+      "longitude": 103.8198,
+      "showAtProgressPercent": 80,
+      "moneyReward": 80,
+      "honorReward": 15,
+      "legendReward": 5,
+      "decisions": [
+        {
+          "optionText": "Capture the boundary brief as a compliance reminder for the client's engagement rules.",
+          "moneyReward": 60,
+          "honorReward": 15,
+          "legendReward": 5
+        }
+      ]
+    }
+  ]
+}

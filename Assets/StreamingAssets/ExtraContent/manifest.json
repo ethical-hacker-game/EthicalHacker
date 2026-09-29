@@ -1,0 +1,11 @@
+{
+  "contentId": "ExtraContent",
+  "contentName": "Extra Content",
+  "version": "1.0.0",
+  "scenarios": [
+    {
+      "name": "1. Cloud Computing Security",
+      "file": "01_cloud.json"
+    }
+  ]
+}
